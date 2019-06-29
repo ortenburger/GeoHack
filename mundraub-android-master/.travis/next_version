@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# This shows the next version but does not create the tag.
+#
+
+cd "`dirname \"$0\"`"
+
+./version-add "`./latest_version`" 1
+

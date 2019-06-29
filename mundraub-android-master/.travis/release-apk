@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd "`dirname \"$0\"`"
+
+cd ../app/build
+echo -n ./app/build/ && find | grep "\.apk$" | grep release

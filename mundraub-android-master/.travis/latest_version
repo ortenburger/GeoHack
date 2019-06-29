@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Show the latest version from the tag.
+#
+
+cd "`dirname \"$0\"`"
+
+./all_versions | tail -n 1
+
