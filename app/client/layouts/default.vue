@@ -114,7 +114,6 @@
             });
         firebaseApp.auth().onAuthStateChanged(user => {
           this.authUser = user;
-          this.change_data();
           console.log('State Chage', user.uid);
 
         });
