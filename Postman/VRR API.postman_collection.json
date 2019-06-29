@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "9ecc6020-e3e4-4c80-fe43-3af7f785c9b8",
+		"name": "VRR API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test Call",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://openservice-test.vrr.de/static02/XML_STOPFINDER_REQUEST?sessionID=0&requestID=0&language=DE&coordOutputFormat=WGS84&place_sf=Duisburg&placeState_sf=empty&type_sf=stop&name_sf=Amster&nameState_sf=empty&itdDateYear=2017&itdDateMonth=10&itdDateDay=24&itdTimeHour=11&itdTimeMinute=9&coordOutputFormatTail=0",
+					"protocol": "https",
+					"host": [
+						"openservice-test",
+						"vrr",
+						"de"
+					],
+					"path": [
+						"static02",
+						"XML_STOPFINDER_REQUEST"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "0"
+						},
+						{
+							"key": "requestID",
+							"value": "0"
+						},
+						{
+							"key": "language",
+							"value": "DE"
+						},
+						{
+							"key": "coordOutputFormat",
+							"value": "WGS84"
+						},
+						{
+							"key": "place_sf",
+							"value": "Duisburg"
+						},
+						{
+							"key": "placeState_sf",
+							"value": "empty"
+						},
+						{
+							"key": "type_sf",
+							"value": "stop"
+						},
+						{
+							"key": "name_sf",
+							"value": "Amster"
+						},
+						{
+							"key": "nameState_sf",
+							"value": "empty"
+						},
+						{
+							"key": "itdDateYear",
+							"value": "2017"
+						},
+						{
+							"key": "itdDateMonth",
+							"value": "10"
+						},
+						{
+							"key": "itdDateDay",
+							"value": "24"
+						},
+						{
+							"key": "itdTimeHour",
+							"value": "11"
+						},
+						{
+							"key": "itdTimeMinute",
+							"value": "9"
+						},
+						{
+							"key": "coordOutputFormatTail",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trip Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://openservice-test.vrr.de/static02/XML_TRIP_REQUEST2?sessionID=0&requestID=0&language=DE&itdDateYear=2018&itdDateMonth=11&itdDateDay=24&itdTimeHour=10&itdTimeMinute=9&coordOutputFormatTail=0&type_origin=stop&name_origin=20016051&type_destination=stop&name_destination=20016032",
+					"protocol": "https",
+					"host": [
+						"openservice-test",
+						"vrr",
+						"de"
+					],
+					"path": [
+						"static02",
+						"XML_TRIP_REQUEST2"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "0"
+						},
+						{
+							"key": "requestID",
+							"value": "0"
+						},
+						{
+							"key": "language",
+							"value": "DE"
+						},
+						{
+							"key": "itdDateYear",
+							"value": "2018"
+						},
+						{
+							"key": "itdDateMonth",
+							"value": "11"
+						},
+						{
+							"key": "itdDateDay",
+							"value": "24"
+						},
+						{
+							"key": "itdTimeHour",
+							"value": "10"
+						},
+						{
+							"key": "itdTimeMinute",
+							"value": "9"
+						},
+						{
+							"key": "coordOutputFormatTail",
+							"value": "0"
+						},
+						{
+							"key": "type_origin",
+							"value": "stop"
+						},
+						{
+							"key": "name_origin",
+							"value": "20016051"
+						},
+						{
+							"key": "type_destination",
+							"value": "stop"
+						},
+						{
+							"key": "name_destination",
+							"value": "20016032"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop Taffel Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://openservice-test.vrr.de/static02/XML_DMTTP_REQUEST?sessionID=0&requestID=0&language=DE&itdDateYear=2017&itdDateMonth=11&itdDateDay=24&itdTimeHour=10&itdTimeMinute=9&coordOutputFormatTail=0&type_origin=stop&name_origin=20016051&type_destination=stop&name_destination=20016032",
+					"protocol": "https",
+					"host": [
+						"openservice-test",
+						"vrr",
+						"de"
+					],
+					"path": [
+						"static02",
+						"XML_DMTTP_REQUEST"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "0"
+						},
+						{
+							"key": "requestID",
+							"value": "0"
+						},
+						{
+							"key": "language",
+							"value": "DE"
+						},
+						{
+							"key": "itdDateYear",
+							"value": "2017"
+						},
+						{
+							"key": "itdDateMonth",
+							"value": "11"
+						},
+						{
+							"key": "itdDateDay",
+							"value": "24"
+						},
+						{
+							"key": "itdTimeHour",
+							"value": "10"
+						},
+						{
+							"key": "itdTimeMinute",
+							"value": "9"
+						},
+						{
+							"key": "coordOutputFormatTail",
+							"value": "0"
+						},
+						{
+							"key": "type_origin",
+							"value": "stop"
+						},
+						{
+							"key": "name_origin",
+							"value": "20016051"
+						},
+						{
+							"key": "type_destination",
+							"value": "stop"
+						},
+						{
+							"key": "name_destination",
+							"value": "20016032"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Departure Monitor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://openservice-test.vrr.de/static02/XML_DM_REQUEST?language=DE&coordOutputFormatTail=0&name_dm=20016051&type_dm=stopID&useProxFootSearch=0&itdDateTimeDepArr=dep&line_dm=bvr:88935:K:R:j17",
+					"protocol": "https",
+					"host": [
+						"openservice-test",
+						"vrr",
+						"de"
+					],
+					"path": [
+						"static02",
+						"XML_DM_REQUEST"
+					],
+					"query": [
+						{
+							"key": "mode ",
+							"value": " direct",
+							"disabled": true
+						},
+						{
+							"key": "language",
+							"value": "DE"
+						},
+						{
+							"key": "coordOutputFormatTail",
+							"value": "0"
+						},
+						{
+							"key": "name_dm",
+							"value": "20016051"
+						},
+						{
+							"key": "type_dm",
+							"value": "stopID"
+						},
+						{
+							"key": "useProxFootSearch",
+							"value": "0"
+						},
+						{
+							"key": "itdDateTimeDepArr",
+							"value": "dep"
+						},
+						{
+							"key": "line_dm",
+							"value": "bvr:88935:K:R:j17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soll Stops",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://openservice-test.vrr.de/static02/XML_DMTTP_REQUEST?mode = direct&language=DE&coordOutputFormatTail=0&name_ss=20016051&type_ss=stopID&useProxFootSearch=0",
+					"protocol": "https",
+					"host": [
+						"openservice-test",
+						"vrr",
+						"de"
+					],
+					"path": [
+						"static02",
+						"XML_DMTTP_REQUEST"
+					],
+					"query": [
+						{
+							"key": "mode ",
+							"value": " direct"
+						},
+						{
+							"key": "language",
+							"value": "DE"
+						},
+						{
+							"key": "coordOutputFormatTail",
+							"value": "0"
+						},
+						{
+							"key": "name_ss",
+							"value": "20016051"
+						},
+						{
+							"key": "type_ss",
+							"value": "stopID"
+						},
+						{
+							"key": "useProxFootSearch",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STT ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://openservice-test.vrr.de/static02/XML_STT_REQUEST?mode = direct&language=DE&coordOutputFormatTail=0&name_stt=20016051&type_stt=stopID&useProxFootSearch=0&itdDateTimeDepArr=dep&line=bvr:88935:K:R:j17&mrgSt = 1&date",
+					"protocol": "https",
+					"host": [
+						"openservice-test",
+						"vrr",
+						"de"
+					],
+					"path": [
+						"static02",
+						"XML_STT_REQUEST"
+					],
+					"query": [
+						{
+							"key": "mode ",
+							"value": " direct"
+						},
+						{
+							"key": "language",
+							"value": "DE"
+						},
+						{
+							"key": "coordOutputFormatTail",
+							"value": "0"
+						},
+						{
+							"key": "name_stt",
+							"value": "20016051"
+						},
+						{
+							"key": "type_stt",
+							"value": "stopID"
+						},
+						{
+							"key": "useProxFootSearch",
+							"value": "0"
+						},
+						{
+							"key": "itdDateTimeDepArr",
+							"value": "dep"
+						},
+						{
+							"key": "line",
+							"value": "bvr:88935:K:R:j17"
+						},
+						{
+							"key": "mrgSt ",
+							"value": " 1"
+						},
+						{
+							"key": "date",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

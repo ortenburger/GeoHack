@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "2cfc7602-e6f8-6dac-ad5f-9acf0a0ac078",
+		"name": "Rout360",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GraphHopper",
+			"item": [
+				{
+					"name": "Get Route ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graphhopper.com/api/1//route?point=50.04963%2C8.569411&point=50.048238%2C8.574176&type=geojson&locale=de-DE&vehicle=foot&weighting=fastest&elevation=true&key=e341f9a9-da78-4cfd-bb37-3c682e921182&instructions=false&points_encoded=false",
+							"protocol": "https",
+							"host": [
+								"graphhopper",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"",
+								"route"
+							],
+							"query": [
+								{
+									"key": "point",
+									"value": "50.04963%2C8.569411"
+								},
+								{
+									"key": "point",
+									"value": "50.048238%2C8.574176"
+								},
+								{
+									"key": "type",
+									"value": "geojson"
+								},
+								{
+									"key": "locale",
+									"value": "de-DE"
+								},
+								{
+									"key": "vehicle",
+									"value": "foot"
+								},
+								{
+									"key": "weighting",
+									"value": "fastest"
+								},
+								{
+									"key": "elevation",
+									"value": "true"
+								},
+								{
+									"key": "key",
+									"value": "e341f9a9-da78-4cfd-bb37-3c682e921182"
+								},
+								{
+									"key": "instructions",
+									"value": "false"
+								},
+								{
+									"key": "points_encoded",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Graphhopper Isochron Local",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8989/route?point=52.352745,13.208583&point=52.350053,13.174338&pt.earliest_departure_time=2018-07-15T07%3A14%3A39Z&arrive_by=false&pt.max_walk_distance_per_leg=100000&pt.limit_solutions=1&vehicle=pt&elevation=false&use_miles=false&points_encoded=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"route"
+							],
+							"query": [
+								{
+									"key": "point",
+									"value": "52.352745,13.208583"
+								},
+								{
+									"key": "point",
+									"value": "52.350053,13.174338"
+								},
+								{
+									"key": "pt.earliest_departure_time",
+									"value": "2018-07-15T07%3A14%3A39Z"
+								},
+								{
+									"key": "arrive_by",
+									"value": "false"
+								},
+								{
+									"key": "pt.max_walk_distance_per_leg",
+									"value": "100000"
+								},
+								{
+									"key": "pt.limit_solutions",
+									"value": "1"
+								},
+								{
+									"key": "locale",
+									"value": "en-US",
+									"disabled": true
+								},
+								{
+									"key": "vehicle",
+									"value": "pt"
+								},
+								{
+									"key": "elevation",
+									"value": "false"
+								},
+								{
+									"key": "use_miles",
+									"value": "false"
+								},
+								{
+									"key": "points_encoded",
+									"value": "false"
+								},
+								{
+									"key": "pt.profile",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Graphhopper Routing",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://graphhopper.com/api/2/route?point=51.131,12.414&point=48.224,3.867&vehicle=car&key=e341f9a9-da78-4cfd-bb37-3c682e921182",
+							"protocol": "https",
+							"host": [
+								"graphhopper",
+								"com"
+							],
+							"path": [
+								"api",
+								"2",
+								"route"
+							],
+							"query": [
+								{
+									"key": "point",
+									"value": "51.131,12.414"
+								},
+								{
+									"key": "point",
+									"value": "48.224,3.867"
+								},
+								{
+									"key": "vehicle",
+									"value": "car"
+								},
+								{
+									"key": "locale",
+									"value": "de",
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "e341f9a9-da78-4cfd-bb37-3c682e921182"
+								},
+								{
+									"key": "buckets",
+									"value": "4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Graphhopper Isochron Local 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8989/isochrone?point=52.352745,13.208583&time_limit=1200&vehicle=car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"isochrone"
+							],
+							"query": [
+								{
+									"key": "point",
+									"value": "52.352745,13.208583"
+								},
+								{
+									"key": "pt.earliest_departure_time",
+									"value": "2018-07-15T07%3A14%3A39Z",
+									"disabled": true
+								},
+								{
+									"key": "locale",
+									"value": "en-US",
+									"disabled": true
+								},
+								{
+									"key": "pt.profile",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "time_limit",
+									"value": "1200"
+								},
+								{
+									"key": "vehicle",
+									"value": "car"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Polygon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sources\": [\r\n    {\r\n      \"id\": \"1\",\r\n\r\n      \"lat\": 51.434322,\r\n      \"lng\": 6.769022,\r\n      \"tm\": {\r\n        \"transit\": {}\r\n      }\r\n    }\r\n  ],\r\n  \"edgeWeight\": \"time\",\r\n  \"polygon\": {\r\n    \"values\": [\r\n      600,\r\n      1200,\r\n      1800\r\n    ],\r\n    \"intersectionMode\": \"union\",\r\n    \"serializer\": \"geojson\",\r\n    \"srid\": \"4326\",\r\n    \"decimalPrecision\": 4\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://service.route360.net/france/v1/polygon?key=6UWF8CL835KXAJZSZ126160059182",
+					"protocol": "https",
+					"host": [
+						"service",
+						"route360",
+						"net"
+					],
+					"path": [
+						"france",
+						"v1",
+						"polygon"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "6UWF8CL835KXAJZSZ126160059182"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ge Route",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"edgeWeight\": \"time\",\r\n  \"maxEdgeWeight\": \"1000\",\r\n  \"sources\": [\r\n    {\r\n      \"id\": \"POI:0\",\r\n      \"lat\": 52.5494892,\r\n      \"lng\": 13.42883045,\r\n      \"tm\": {\r\n        \"car\": {}\r\n      }\r\n    }\r\n  ],\r\n  \"targets\": [\r\n    {\r\n      \"id\": \"Home 1\",\r\n      \"lat\": 52.53068102,\r\n      \"lng\": 13.50658456\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "https://api.targomo.com/westcentraleurope/v1/route?key=6UWF8CL835KXAJZSZ126160059182",
+					"protocol": "https",
+					"host": [
+						"api",
+						"targomo",
+						"com"
+					],
+					"path": [
+						"westcentraleurope",
+						"v1",
+						"route"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "6UWF8CL835KXAJZSZ126160059182"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
