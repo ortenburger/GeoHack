@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "7454008c-4413-42af-a15e-620084b3a6f5",
+		"name": "Overpass",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Overpass Luxus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n[out:json];\n// fetch area “Vienna” to search in\n//area(3601800298)->.searchArea;\narea(3600062761)->.searchArea; \n// gather results\n  \n\n//area[name=\"Duisburg\"];\n//area[name=\"Ruhrgebiet\"];\n(  \n  \n  way[\"name\"=\"Tesla\"] (area.searchArea);\n  relation[\"name\"=\"Tesla\"] (area.searchArea);\n  node[\"name\"=\"Tesla\"] (area.searchArea);\n  \n    way[\"name\"=\"Apple Store\"] (area.searchArea);\n  relation[\"name\"=\"Apple Store\"] (area.searchArea);\n  node[\"name\"=\"Apple Store\"] (area.searchArea);\n  \n  way[\"name\"=\"Apple\"] (area.searchArea);\n  relation[\"name\"=\"Apple\"] (area.searchArea);\n  node[\"name\"=\"Apple\"] (area.searchArea);\n  \n  way[\"name\"=\"Peek & Cloppenburg\"] (area.searchArea);\n  relation[\"name\"=\"Peek & Cloppenburg\"] (area.searchArea);\n  node[\"name\"=\"Peek & Cloppenburg\"] (area.searchArea);\n  \n  \n   way[\"name\"=\"Swarovsky\"] (area.searchArea);\n  node[\"name\"=\"Swarovsky\"] (area.searchArea);\n     \n\trelation[\"name\"=\"Swarovsky\"] (area.searchArea);\n  \n     way[\"name\"=\"Laurèl\"] (area.searchArea);\n  node[\"name\"=\"Laurèl\"] (area.searchArea);\n     \n\trelation[\"name\"=\"Laurèl\"] (area.searchArea);\n\n);\n\n// print results\nout body;\n>;\nout skel qt;"
+				},
+				"url": {
+					"raw": "https://z.overpass-api.de/api/interpreter",
+					"protocol": "https",
+					"host": [
+						"z",
+						"overpass-api",
+						"de"
+					],
+					"path": [
+						"api",
+						"interpreter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Overpass-api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "area[name=\"België / Belgique / Belgien\"];\r\n(  relation\r\n    [\"boundary\"=\"administrative\"]\r\n    [\"admin_level\"=\"6\"]\r\n (area);\r\n);\r\n\r\n(._;>;);\r\n/*end of auto repair*/\r\nout;"
+				},
+				"url": {
+					"raw": "https://lz4.overpass-api.de/api/interpreter",
+					"protocol": "https",
+					"host": [
+						"lz4",
+						"overpass-api",
+						"de"
+					],
+					"path": [
+						"api",
+						"interpreter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
