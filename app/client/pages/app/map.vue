@@ -2,19 +2,9 @@
     <v-app>
         <v-container>
             <v-switch v-model="show" :label="`Anzeigen: ${show.toString()}`"></v-switch>
-
-
-            <v-layout row align-center>
-                <v-flex xs-6 r-2>
-                    <h3>In der Nähe:</h3>
-                </v-flex>
-                <v-flex xs-6>
-                    <v-select :items="['Frauenarzt','Männerarzt']" label="Fachrichtung"></v-select>
-                </v-flex>
-
-            </v-layout>
-
-
+            <v-btn @click="get_data" :disabled="loading">
+                get_line
+            </v-btn>
             <no-ssr>
                 <l-map class="mini-map" :zoom="12" :center="[ 51.2917076298,7.2510191991 ]">
                     <l-tile-layer
@@ -95,9 +85,16 @@
                         <l-geo-json
                                 :geojson="stadteile"
                                 :options="options"
+                                :options-style="styleFunction"
+                                v-for="(val1, key) in stadteile" :key="key"
                         >
 
                         </l-geo-json>
+                        <v-goe-json
+                                :geojson="geojsons"
+                        >
+
+                        </v-goe-json>
                     </div>
 
                 </l-map>
@@ -113,7 +110,7 @@
   import {stadteile} from "./Stadtbezirke_EPSG4326_JSON.js";
 
   var api_host =
-      "https://ohsrb65n38.execute-api.eu-central-1.amazonaws.com/proxy/";
+      "https://graphhopper.com/api/1//route?point=50.04963%2C8.569411&point=50.048238%2C8.574176&type=geojson&locale=de-DE&vehicle=foot&weighting=fastest&elevation=true&key=e341f9a9-da78-4cfd-bb37-3c682e921182&instructions=false&points_encoded=false";
 
   // var api_host = "http://localhost:5000/";
   // if (!location.hostname.includes("127.0.0.1") && !location.hostname.includes("localhost")) {
@@ -125,12 +122,12 @@
     layer.bindPopup("kljlkjlkjlk");
   }
 
-  axios.defaults.headers.post = {
+  axios.defaults.headers.get = {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Credentials": "true",
     "Content-Type": "application/json"
   };
-  axios.defaults.method = "post";
+  axios.defaults.method = "get";
   var api_aindex = axios.create({
     url: api_host
   });
@@ -142,6 +139,8 @@
       // Travel time describes the stage on which it is traveling
       users: users,
       banks: banks,
+      point_a: [51.217469, 6.804767],
+      point_b: [51.2191094, 6.8043112],
       acts: acts,
       show: false,
       geojson: null,
@@ -207,7 +206,7 @@
         this.users[user].act.id = i;
       }
       ;
-      this.stadteile = stadteile[0];
+      this.stadteile = stadteile[0].features;
       console.log(this.stadteile);
 
     },
@@ -217,14 +216,25 @@
           onEachFeature: this.onEachFeatureFunction
         };
       },
+      styleFunction() {
+        return () => {
+          return {
+            weight: 2,
+            color: "#9ca8f1",
+            opacity: 1,
+            fillColor: "#7b83e4",
+            fillOpacity: 0.02
+          };
+        };
+      },
       onEachFeatureFunction() {
         return (feature, layer) => {
           layer.bindTooltip(
               "<div>BEZIRK:" +
-            feature.properties.BEZIRK +
-            "</div><div>NAME: " +
-            feature.properties.NAME +
-            "</div>",
+              feature.properties.BEZIRK +
+              "</div><div>NAME: " +
+              feature.properties.NAME +
+              "</div>",
               {permanent: false, sticky: true}
           );
         };
