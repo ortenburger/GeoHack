@@ -63,6 +63,12 @@
                     >
 
                     </l-geo-json>
+                    <l-geo-json
+                            :geojson="routes"
+                            :options-style="styleFunction"
+                    >
+
+                    </l-geo-json>
 
                 </l-map>
             </no-ssr>
@@ -74,6 +80,7 @@
   import axios from "axios";
   import Vue from "vue";
   import {stadteile} from "./Stadtbezirke_EPSG4326_JSON.js";
+  import {routes} from "./routes.js";
 
   var app_key = "e341f9a9-da78-4cfd-bb37" + "-" + "3c682e921182";
   // import {icon} from "leaflet";
@@ -90,6 +97,7 @@
 
       // Travel time describes the stage on which it is traveling
       address: null,
+      routes:routes,
       center: [51.2917076298, 7.2510191991],
       origin: "51.217469, 6.804767",
       dest: "51.2191094, 6.8043112",
