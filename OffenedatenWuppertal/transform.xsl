@@ -15,16 +15,35 @@
 			"type": "Feature",
 			"properties": {
 		</xsl:text>
-		<xsl:for-each select="ExtendedData/SchemaData/SimpleData">
-			<xsl:text>"</xsl:text><xsl:value-of select="@name" /><xsl:text>": "</xsl:text><xsl:value-of select="text()" /><xsl:text>"</xsl:text><xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
-		</xsl:for-each>
-		<xsl:text>},
-			"geometry": {
+		<xsl:apply-templates select="ExtendedData/SchemaData/SimpleData" />
+		<xsl:text>}</xsl:text>
+		<xsl:apply-templates select="Point|Polygon" />
+		<xsl:text>}</xsl:text><xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
+	</xsl:template>
+	<xsl:template match="SimpleData">
+		<xsl:text>"</xsl:text><xsl:value-of select="@name" /><xsl:text>": "</xsl:text><xsl:value-of select="translate(text(), '\n', '')" /><xsl:text>"</xsl:text><xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
+	</xsl:template>
+	<xsl:template match="Point">
+		<xsl:text>
+	 		, "geometry": {
 				"type": "Point",
 				"coordinates": [
 		</xsl:text>
-		<xsl:value-of select="tokenize(Point/coordinates/text(), ',')[1]" /><xsl:text>, </xsl:text>
-		<xsl:value-of select="tokenize(Point/coordinates/text(), ',')[2]" />
-		<xsl:text>]}}</xsl:text><xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
+		<xsl:value-of select="tokenize(coordinates/text(), ',')[1]" /><xsl:text>, </xsl:text>
+		<xsl:value-of select="tokenize(coordinates/text(), ',')[2]" />
+		<xsl:text>]}</xsl:text>
+	</xsl:template>
+	<xsl:template match="Polygon">
+		<xsl:text>
+	 		, "geometry": {
+				"type": "Polygon",
+				"coordinates": [[
+		</xsl:text>
+		<xsl:for-each select="tokenize(outerBoundaryIs/LinearRing/coordinates/text(), ' ')">
+			<xsl:text>[</xsl:text><xsl:value-of select="tokenize(., ',')[1]" /><xsl:text>, </xsl:text>
+			<xsl:value-of select="tokenize(., ',')[2]" /><xsl:text>]</xsl:text>
+			<xsl:if test="position()!=last()">,</xsl:if>
+		</xsl:for-each>
+		<xsl:text>]]}</xsl:text>
 	</xsl:template>
 </xsl:stylesheet>
