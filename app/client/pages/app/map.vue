@@ -2,31 +2,6 @@
     <v-app>
         <v-container>
             <v-switch v-model="show" :label="`Anzeigen: ${show.toString()}`"></v-switch>
-            <v-expansion-panel>
-                <v-expansion-panel-content>
-                    <template v-slot:header>
-                        <div>Future</div>
-                    </template>
-                    <v-layout row>
-                        <v-flex pl-4>
-                            <v-slider
-                                    wrap
-                                    color="orange darken-1"
-                                    :label="'Age: ' + age"
-                                    v-model="age"
-                                    step="1"
-                                    max="100"
-                                    min="30"
-                                    thumb-label="always"
-                            ></v-slider>
-                        </v-flex>
-
-                        <v-flex pl-4>
-                            <v-switch color="red darken-2" v-model="sex" :label='sex?"singles":"all"'></v-switch>
-                        </v-flex>
-                    </v-layout>
-                </v-expansion-panel-content>
-            </v-expansion-panel>
 
 
             <v-layout row align-center>
@@ -41,7 +16,7 @@
 
 
             <no-ssr>
-                <l-map class="mini-map" :zoom="13" :center="[users[0].lat_lon[0],users[0].lat_lon[1]]">
+                <l-map class="mini-map" :zoom="12" :center="[ 51.2917076298,7.2510191991 ]">
                     <l-tile-layer
                             url="https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"
                     ></l-tile-layer>
@@ -118,9 +93,7 @@
                     </div>
                     <div v-if="show">
                         <l-geo-json
-                                v-for="(val, idx) in stadteile"
-                                :geojson="val.geometry"
-                                v-key="idx"
+                                :geojson="stadteile"
                                 :options="options"
                         >
 
@@ -163,13 +136,7 @@
   });
 
   export default {
-    computed: {
-      options() {
-        return {
-          onEachFeature: this.onEachFeatureFunction
-        };
-      },
-    },
+
     data: () => ({
 
       // Travel time describes the stage on which it is traveling
@@ -205,25 +172,10 @@
         fillOpacity: 0.3
       },
       loading: false,
-      geojsons: [{type: "Point", coordinates: [8.43586, 49.01273]}]
+      geojsons: [{type: "Point", coordinates: [7.2510191991, 51.2917076298]}]
     }),
     methods: {
-      onEachFeatureFunction() {
-        return (feature, layer) => {
-          layer.bindTooltip(
-              "TEXT:TEST",
-              {permanent: false, sticky: true}
-          );
-        };
-      },
-      options: function () {
-        console.log({
-          onEachFeature: this.onEachFeatureFunction
-        });
-        return {
-          onEachFeature: this.onEachFeatureFunction
-        }
-      },
+
       get_data: function (start_loc) {
         this.loading = true;
         this.geojsons = [];
@@ -255,16 +207,29 @@
         this.users[user].act.id = i;
       }
       ;
-      this.stadteile = stadteile[0].features;
-      axios
-          .get(
-              "https://rawgit.com/gregoiredavid/france-geojson/master/regions/pays-de-la-loire/communes-pays-de-la-loire.geojson"
-          )
-          .then(response => {
-            this.geojson = response.data;
-          });
+      this.stadteile = stadteile[0];
+      console.log(this.stadteile);
 
-    }
+    },
+    computed: {
+      options() {
+        return {
+          onEachFeature: this.onEachFeatureFunction
+        };
+      },
+      onEachFeatureFunction() {
+        return (feature, layer) => {
+          layer.bindTooltip(
+              "<div>BEZIRK:" +
+            feature.properties.BEZIRK +
+            "</div><div>NAME: " +
+            feature.properties.NAME +
+            "</div>",
+              {permanent: false, sticky: true}
+          );
+        };
+      },
+    },
   }
   ;
 </script>
