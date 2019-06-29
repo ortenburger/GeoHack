@@ -17,7 +17,7 @@
 		</xsl:text>
 		<xsl:apply-templates select="ExtendedData/SchemaData/SimpleData" />
 		<xsl:text>}</xsl:text>
-		<xsl:apply-templates select="Point|Polygon" />
+		<xsl:apply-templates select="Point|Polygon|MultiGeometry" />
 		<xsl:text>}</xsl:text><xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
 	</xsl:template>
 	<xsl:template match="SimpleData">
@@ -45,5 +45,25 @@
 			<xsl:if test="position()!=last()">,</xsl:if>
 		</xsl:for-each>
 		<xsl:text>]]}</xsl:text>
+	</xsl:template>
+	<xsl:template match="MultiGeometry">
+		<xsl:text>
+	 		, "geometry": {
+				"type": "MultiLineString",
+				"coordinates": [
+		</xsl:text>
+		<xsl:for-each select="LineString">
+			<xsl:text>[</xsl:text>
+			<xsl:for-each select="tokenize(coordinates/text(), ' ')">
+				<xsl:text>[</xsl:text><xsl:value-of select="tokenize(., ',')[1]" /><xsl:text>, </xsl:text>
+				<xsl:value-of select="tokenize(., ',')[2]" /><xsl:text>]</xsl:text>
+				<xsl:if test="position()!=last()">,</xsl:if>
+			</xsl:for-each>
+			<xsl:text>]</xsl:text>
+			<xsl:if test="position()!=last()">
+				<xsl:text>,</xsl:text>
+			</xsl:if>
+		</xsl:for-each>
+		<xsl:text>]}</xsl:text>
 	</xsl:template>
 </xsl:stylesheet>
