@@ -1,0 +1,385 @@
+<<<<<<< HEAD
+<div [ngClass]="{'float-left':true, 'sidecontainerleft':true,'ausgeblendet':this.state=='hidden'}">
+	<div class="containerSearch float-left">
+		<ngb-tabset type="pills"> <ngb-tab id="freesearchtab" title="Freie Suche">
+		<ng-template ngbTabContent>
+		<div class="tabContent">
+		<div class="form-group">
+			<!--<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="large" color="#fff" type="ball-spin-clockwise"></ngx-spinner>-->
+			<form [formGroup]="searchForm" (ngSubmit)="login()" class="searchForm">
+				<div class="">
+					<input type="text" formControlName="searchPattern"
+						class="form-control searchinput"
+						placeholder="z.B. Dein Ort, Interesse, Projekt ..." />
+					<!--  old search button
+					<div class="input-group-append">
+						<button (click)="search()"
+							class="btn btn-outline-secondary search-button" type="submit">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+					</div>
+					-->
+					<div class="searchbutton float-right">
+						<div *ngIf="state=='visible'" class="searchbuttonPrepend">
+						<button (click)="search()"
+							class="btn  search-button" type="submit">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+					    </div> 
+					</div>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" formControlName="searchInDescription"
+						class="form-check-input" /> <label class="form-check-label"
+						for="searchInDescription">Beschreibung einschließen</label>
+				</div>
+			</form>
+
+			
+			<div class="list-group search-results" *ngIf="hasResults">
+				<div *ngIf="osmNodes.length > 0">
+					<br> 
+					<label>Ergebnisse</label>
+					<div *ngFor="let elem of osmNodes">
+						<div [ngClass]="{'list-group-item':true,'list-group-item-action':true,'selected-item':isCurrentElement(elem) }" (click)="show(elem)"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> {{elem.name}}</div>
+
+					</div>
+				</div>
+				<div *ngIf="dataGroups.length > 0">
+					<br>
+					<label>Daten-Gruppen</label>
+					<div class="list-group-item list-group-item-action"
+						*ngFor="let group of dataGroups">{{group.name}}</div>
+				</div>
+				<div>
+					<br /> <br />
+					<button class="btn btn-sm" (click)="clearResults()">Suche
+						zurücksetzen</button>
+				</div>
+			</div>
+			<div class="list-group" *ngIf="searched && !hasResults">
+				<p>
+					<br>keine Suchergebnisse.
+				</p>
+			</div>
+</div>
+		</div>
+		</ng-template> </ngb-tab> <ngb-tab id="topictab"> <ng-template ngbTabTitle>Nach
+		Themen</ng-template> <ng-template ngbTabContent>
+		<div class="tabContent">
+		<br>
+		<div class="row">
+			<div class="col">
+				<h4>BLI-Dimensionen</h4>
+				<div class="form-check"
+					*ngFor="let dimension of bliService.dimensions">
+					<input class="form-check-input" name="{{dimension.name}}"
+						(click)="toggleDimension(dimension)" type="checkbox" /> <label
+						class="form-check-label">{{dimension.name}}</label>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col">
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary" (click)="showbli()">Anzeigen</button>
+				</div>
+			</div>
+		</div>
+		</div>
+		</ng-template> </ngb-tab> </ngb-tabset>
+	</div>
+
+	<div class="ToggleSearch float-right">
+<!-- 		<button *ngIf="state=='visible'" class="btn btn-link" -->
+<!-- 			(click)="toggleVisibility();">&lt;&lt;</button> -->
+<!-- 		<button *ngIf="state=='hidden'" class="btn btn-link" -->
+<!-- 			(click)="toggleVisibility();">&gt;&gt;</button> -->
+	    <div *ngIf="state=='visible'" class="searchetogglePrepend">
+	      <div (click)="toggleVisibility();" class="form-group item-detail name">
+	      	<label for="elementOsmid" class="col-sm-1 col-form-label"><i class="fa fa-angle-double-left" aria-hidden="true"></i></label>
+	      </div>
+	    </div> 
+	    <div *ngIf="state=='hidden'" class="searchetogglePrepend">
+	      <div (click)="toggleVisibility();" class="form-group item-detail name">
+	      	<label for="elementOsmid" class="col-sm-1 col-form-label"><i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+	      </div>
+	    </div> 
+	</div>
+
+</div>
+
+<div class="float-right sidecontainerright" *ngIf="nodeService.detailView">
+    <div *ngIf="authService.loggedIn" class="searcheditPrepend">
+      <div class="form-group item-detail name">
+      	<label for="elementOsmid" class="col-sm-1 col-form-label"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></label>
+      </div>
+    </div> 
+	<div class="container searchdetails">
+		<div class="elementdetails">
+			<div class="form-group row item-detail name">
+				<label for="elementOsmid" class="col-sm-1 col-form-label"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></label>
+				<div class="col">
+					<input type="text" readonly class="form-control-plaintext"
+						id="elementName" value="{{nodeService.detailView.name}}">
+				</div>
+			</div>
+			<div class="form-group row item-detail">
+				<label for="elementOsmid" class="col-sm-4 col-form-label"> <strong>OSM-ID</strong>
+				</label>
+				<div class="col">
+					<input type="text" readonly class="form-control-plaintext"
+						id="elementOsmid" value="{{nodeService.detailView.osmId}}">
+				</div>
+			</div>
+			<div class="form-group row item-detail">
+				<label for="elementTyp" class="col-sm-4 col-form-label"> <strong>Typ</strong>
+				</label>
+				<div class="col">
+					<input type="text" readonly class="form-control-plaintext"
+						id="elementTyp" value="{{nodeService.detailView.osmType}}">
+				</div>
+			</div>
+			<div *ngFor="let tag of nodeService.detailView.tags"
+				class="form-group row item-detail">
+				<label for="elementKey" class="col-sm-4 col-form-label"> <strong>{{translateTagKey(tag.key)}}</strong>
+				</label>
+				<div class="col">
+					<input type="text" readonly class="form-control-plaintext"
+						id="elementKey" value="{{tag.value}}">
+				</div>
+			</div>
+		</div>
+		<div class="elementdiscription">
+			<div class="form-group row item-detail">
+				<label for="elementdiscription" class="col-sm-3 col-form-label">
+					<strong>Beschreibung</strong>
+				</label>
+			</div>
+			<div *ngIf="!authService.loggedIn" class="form-group row item-detail">
+				<div class="col">{{nodeService.detailView.description}}</div>
+			</div>
+			<div *ngIf="authService.loggedIn" class="form-group">
+		    	<textarea class="form-control" id="descriptionTextarea" rows="15">{{nodeService.detailView.description}}</textarea>
+		  </div>
+		</div>
+		<div class="elementbli">
+			<div class="form-group row item-detail">
+				<label for="elementBli" class="col-sm col-form-label"> <strong>BLI-Dimensionen</strong>
+				</label>
+			</div>
+			<div *ngFor="let dimension of nodeService.detailView.dimensions"
+				class="list-group">
+				<div class="list-group-item list-group-item-action">{{dimension.name}}</div>
+			</div>
+		</div>
+		<div class="elementpartner">
+			<div class="form-group row item-detail">
+				<label for="elementPartner" class="col-sm col-form-label"> <strong>Netzwerkpartner</strong>
+				</label>
+			</div>
+			<div *ngFor="let partner of nodeService.detailView.peers"
+				class="list-group">
+				<div class="list-group-item list-group-item-action">
+					<i class="fa fa-map-marker" aria-hidden="true"></i>{{partner.name}}<label
+						class="switch"><input type="checkbox" (change)="togglePeerVisibility(nodeService.detailView,partner)"><span
+						class="slider round"></span></label>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+</div>
+=======
+<div [ngClass]="{'float-left':true, 'sidecontainerleft':true,'ausgeblendet':this.state=='hidden'}">
+	<div class="containerSearch float-left">
+		<ngb-tabset type="pills"> <ngb-tab id="freesearchtab" title="Freie Suche">
+		<ng-template ngbTabContent>
+		<div class="tabContent">
+		<div class="form-group">
+			<!--<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="large" color="#fff" type="ball-spin-clockwise"></ngx-spinner>-->
+			<form [formGroup]="searchForm" (ngSubmit)="login()" class="searchForm">
+				<div class="">
+					<input type="text" formControlName="searchPattern"
+						class="form-control searchinput"
+						placeholder="z.B. Dein Ort, Interesse, Projekt ..." />
+					<!--  old search button
+					<div class="input-group-append">
+						<button (click)="search()"
+							class="btn btn-outline-secondary search-button" type="submit">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+					</div>
+					-->
+					<div class="searchbutton float-right">
+						<div *ngIf="state=='visible'" class="searchbuttonPrepend">
+						<button (click)="search()"
+							class="btn  search-button" type="submit">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+					    </div>
+					</div>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" formControlName="searchInDescription"
+						class="form-check-input" /> <label class="form-check-label"
+						for="searchInDescription">Beschreibung einschließen</label>
+				</div>
+			</form>
+
+
+			<div class="list-group search-results" *ngIf="hasResults">
+				<div *ngIf="osmNodes.length > 0">
+          <div class ="searchbox-heading">Ergebnisse</div>
+          <div class ="searchbox-subheading">Elemente:</div>
+					<div *ngFor="let elem of osmNodes">
+						<div [ngClass]="{'list-group-item':true,'list-group-item-action':true,'selected-item':isCurrentElement(elem) }" (click)="show(elem)"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> {{elem.name}}</div>
+
+					</div>
+				</div>
+				<div *ngIf="dataGroups.length > 0">
+					<br>
+					<label>Daten-Gruppen</label>
+					<div class="list-group-item list-group-item-action"
+						*ngFor="let group of dataGroups">{{group.name}}</div>
+				</div>
+				<div>
+					<br /> <br />
+					<button class="btn btn-sm" (click)="clearResults()">Suche
+						zurücksetzen</button>
+				</div>
+			</div>
+			<div class="list-group" *ngIf="searched && !hasResults">
+					<div class="searchbox-text-only">keine Suchergebnisse.</div>
+			</div>
+</div>
+		</div>
+		</ng-template> </ngb-tab> <ngb-tab id="topictab"> <ng-template ngbTabTitle>Nach
+		Themen</ng-template> <ng-template ngbTabContent>
+		<div class="tabContent">
+		<br>
+		<div class="row">
+			<div class="col">
+				<h4>BLI-Dimensionen</h4>
+				<div class="form-check"
+					*ngFor="let dimension of bliService.dimensions">
+					<input class="form-check-input" name="{{dimension.name}}"
+						(click)="toggleDimension(dimension)" type="checkbox" /> <label
+						class="form-check-label">{{dimension.name}}</label>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col">
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary" (click)="showbli()">Anzeigen</button>
+				</div>
+			</div>
+		</div>
+		</div>
+		</ng-template> </ngb-tab> </ngb-tabset>
+	</div>
+
+	<div class="ToggleSearch float-right">
+<!-- 		<button *ngIf="state=='visible'" class="btn btn-link" -->
+<!-- 			(click)="toggleVisibility();">&lt;&lt;</button> -->
+<!-- 		<button *ngIf="state=='hidden'" class="btn btn-link" -->
+<!-- 			(click)="toggleVisibility();">&gt;&gt;</button> -->
+	    <div *ngIf="state=='visible'" class="searchetogglePrepend">
+	      <div (click)="toggleVisibility();" class="form-group item-detail name">
+	      	<label for="elementOsmid" class="col-sm-1 col-form-label"><i class="fa fa-angle-double-left" aria-hidden="true"></i></label>
+	      </div>
+	    </div>
+	    <div *ngIf="state=='hidden'" class="searchetogglePrepend">
+	      <div (click)="toggleVisibility();" class="form-group item-detail name">
+	      	<label for="elementOsmid" class="col-sm-1 col-form-label"><i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+	      </div>
+	    </div>
+	</div>
+
+</div>
+
+<div class="float-right sidecontainerright" *ngIf="nodeService.detailView">
+    <div *ngIf="authService.loggedIn" class="searcheditPrepend">
+      <div class="form-group item-detail name">
+      	<label for="elementOsmid" class="col-sm-1 col-form-label"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></label>
+      </div>
+    </div>
+	<div class="container searchdetails">
+		<div class="elementdetails">
+			<div class="form-group row item-detail name">
+				<label for="elementOsmid" class="col-sm-1 col-form-label"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></label>
+				<div class="col">
+					<input type="text" readonly class="form-control-plaintext"
+						id="elementName" value="{{nodeService.detailView.name}}">
+				</div>
+			</div>
+			<div class="form-group row item-detail">
+				<label for="elementOsmid" class="col-sm-4 col-form-label"> <strong>OSM-ID</strong>
+				</label>
+				<div class="col">
+					<input type="text" readonly class="form-control-plaintext"
+						id="elementOsmid" value="{{nodeService.detailView.osmId}}">
+				</div>
+			</div>
+			<div class="form-group row item-detail">
+				<label for="elementTyp" class="col-sm-4 col-form-label"> <strong>Typ</strong>
+				</label>
+				<div class="col">
+					<input type="text" readonly class="form-control-plaintext"
+						id="elementTyp" value="{{nodeService.detailView.osmType}}">
+				</div>
+			</div>
+			<div *ngFor="let tag of nodeService.detailView.tags"
+				class="form-group row item-detail">
+				<label for="elementKey" class="col-sm-4 col-form-label"> <strong>{{translateTagKey(tag.key)}}</strong>
+				</label>
+				<div class="col">
+					<input type="text" readonly class="form-control-plaintext"
+						id="elementKey" value="{{tag.value}}">
+				</div>
+			</div>
+		</div>
+		<div class="elementdiscription">
+			<div class="form-group row item-detail">
+				<label for="elementdiscription" class="col-sm-3 col-form-label">
+					<strong>Beschreibung</strong>
+				</label>
+			</div>
+			<div *ngIf="!authService.loggedIn" class="form-group row item-detail">
+				<div class="col">{{nodeService.detailView.description}}</div>
+			</div>
+			<div *ngIf="authService.loggedIn" class="form-group">
+		    	<textarea class="form-control" id="descriptionTextarea" rows="15">{{nodeService.detailView.description}}</textarea>
+		  </div>
+		</div>
+		<div class="elementbli">
+			<div class="form-group row item-detail">
+				<label for="elementBli" class="col-sm col-form-label"> <strong>BLI-Dimensionen</strong>
+				</label>
+			</div>
+			<div *ngFor="let dimension of nodeService.detailView.dimensions"
+				class="list-group">
+				<div class="list-group-item list-group-item-action">{{dimension.name}}</div>
+			</div>
+		</div>
+		<div class="elementpartner">
+			<div class="form-group row item-detail">
+				<label for="elementPartner" class="col-sm col-form-label"> <strong>Netzwerkpartner</strong>
+				</label>
+			</div>
+			<div *ngFor="let partner of nodeService.detailView.peers"
+				class="list-group">
+				<div class="list-group-item list-group-item-action">
+					<i class="fa fa-map-marker" aria-hidden="true"></i>{{partner.name}}<label
+						class="switch"><input type="checkbox" (change)="togglePeerVisibility(nodeService.detailView,partner)"><span
+						class="slider round"></span></label>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+</div>
+>>>>>>> c963dcb0fd6ebf66309311f35811137fa53dc457

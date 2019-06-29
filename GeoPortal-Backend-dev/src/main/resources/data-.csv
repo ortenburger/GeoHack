@@ -1,0 +1,121 @@
+"Wert:
+* Pflichtangabe",Name: *,OSM-ID,Organisationsform,Gehört zu: ,Kurzbeschreibung,Homepage,Straße*,Nr*,PLZ*,Stadtteil Auswahlmenü,Ort*,Land*,E-Mail*       ,Öffnungszeiten ,Dimension des Guten Lebens*,Themen mit denen sich befasst wird,Gründungsjahr ,Wichtigste Netzwerkpartner I  ,OSM - ID,Wichtigste Netzwerkpartner II,OSM - ID,Wichtigste Netzwerkpartner III,OSM - ID,Wichtigste Netzwerkpartner IV,OSM - ID,Wichtigste Netzwerkpartner V,OSM - ID,Wichtigste Netzwerkpartner VI,OSM - ID,Wichtigste Netzwerkpartner VII,OSM - ID,"Wichtigster Netzwerkpartner VIII 
+",OSM-ID,Wichtigster Netzwerkpartner IX,OSM-ID,Wichtigster Netzwerkpartner X,OSM-ID,"Wichtigster Netzwerkpartner XI 
+",OSM-ID,"Wichtigster Netzwerkpartner XII 
+",OSM-ID,Hauptamtliche Mitarbeiter,ehrenamtliche Mitarbeiter; ,Räumlicher Aktionsradius ,Eintragsdatum,Woher hast du diese Information?* (Quelle/Erhebungsmethode) ,Welche Erhebungsmethode wurde verwendet?
+Angabemöglichkeit,Text,Zahl,Auswahl,"Text -> übergeordnetes Projekt/Initiative muss ähnlich der Netzwerkpartner gefunden oder erstellt und eingeladen werden
+",Text,Adresse,Text,Zahl,Zahl,Auswahl,Text,"Auswahl
+(Voreinstellung Deutschland)",Adresse,Auswahl,Auswahl,Schlagworte,Auswahl,Text -> suche nach Projekt in Datenbank,,,,,,,,,,,,Text -> suche nach Projekt in Datenbank,,Text -> suche nach Projekt in Datenbank,,,,,,,,,,Auswahl,Auswahl,Auswahl,Datum,Auswahl: eigene Erhebung oder Quelle angeben,Schlagworte
+Anmerkungen,,,"Auswahlmöglichkeite: Verein, Bürgerinitiative,Unternehmen, Bildungseinrichtung","wenn sich z. B. der Fahrradverleih als Projekt eintragen will, aber auch zu Utopiastadt gehört, schreibt er in Spalte B seinen Namen und hier „Utopiastadt“ ",,,,,,,,,"Bitte um Diskussion mit AP2: wie geht man hier mit der Emailadresse um insbesondere da auch Personen Emailadresse eintragen können, denen diese nicht gehören? Wird automatisch eine Email versand, die ermöglicht diese Angabe zu bestätigen oder löschen? Was ist da der Standard?",Wie kann die Eingabe hier möglichst nutzerfreundlich vereinheitlicht werden?,,automatischer Vorschlag von ähnlichen und am meisten verwendeten Tags,,"Falls das Projekt nicht in der Datenbank ist wird dem User angeboten entweder die Adresse des Projektes anzugeben (ein Punkt wird erzeugt) und/oder eine Mailadresse anzugeben, an die eine Mail geschickt werden kann",,,,,,,,,,,,,,"es können mehr als 3 Netzwerkpartner angegeben werden, so viele wie der Betroffene eingeben möchte",,,,,,,,,,Vorschlag Auswahlmöglichkeiten: <5; 5-10; 10-20; 20-50; 50-100; >100 ,Vorschlag Auswahlmöglichkeiten: <5; 5-10; 10-20; 20-50; 50-100; >100 ,"Vorschlag Auswahlmöglichkeiten: in einem Stadtteil, in mehreren Stadtteilen; stadtweit; landesweit; bundesweit; international","Wird automatisch ergänzt, um die Aktualität von Eingaben zu prüfen. Es sollte ein Mechanismus entwickelt werden, der bei nicht über Schnittstellen gelieferten Daten, sicherstellt bzw. zunächst kenntlicht macht, dass Daten eventuell veraltert sind und eine erneute Prüfung brauchen. ",Diese Angabe ist nur bei Datenimporten ohne API von beispielsweise in einem Projekt entstandenen Datensätzen relevant. ,"nur anzeigen, wenn vorher ""eigene Erhebung"" ausgewählt wurde."
+,Aufbruch am Arrenberg e.V.  ,4618692813,Verein,,"Stadtteilarbeit. Co2 neutrales ""Klimaquartier Arrenberg"" (geteilt in Ernährung, Energie, Mobilität), Teilaspekt Ernährung (Essbarer Arrenberg): Anregung Kosum nachhaltiger regionaler Produkte (Restaurant Day, Urban Farming, Märkte, Foodsharing Anlaufpunkte/ Plattformen, Teilaspekt Energie (Energiereicher Arrenberg): Nachhaltige Energieversorung fördern/ aufbauen (Fern- und Erdwärme, Wind- und Wasserkraft, Wärmepumpen, Einergieeinspaarung) Teilaspekt Mobilität (Mobiler Arrenberg) Nachhaltige Mobilität fördern (E Bikes, Ladeinfrastruktur, Fahrräder, Carsharingsysteme, Elektromobilität)",http://aufbruch-am-arrenberg.de/index.php/de/,Simonsstraße,49,41117,Elberfeld West,Wuppertal,Germany,info@aufbruch-am-arrenberg.de,,"Wohnen
+Gesundheit
+Bildung
+Gemeinschaft
+Engagement
+Umwelt
+Sicherheit
+Zufriedenheit
+Infrastruktur ",Quartiersverein; Ernährung; Stadtteilbüro,2008, Wuppertaler Stadtwerke,288928970,Utopiastadt,2189947895,Bergische Universität Wuppertal,24476537,,,,,,,,,,,,,,,,,,,<5,50-100,in einem Stadtteil,,Telefoninterview im WTW-Projekt des TransZent,leitfadengestützte Telefoninterviews im Schneeballverfahren
+,Büro für Quartierentwicklung          ,4618674177,GmbH,,"Unterstützung für Immobilienbesitzer bei nachhaltiger Entwicklung ihrer Immobilien, Aufwertung von Quartieren, Beratung für Eigentümer und Investoren (Finanzierung von Modernisierungs- und Sanierungsmaßnehmen, Verwaltung und Bewirtschaftung, Planungsleistungen und Konzeptentwicklung (für Modernisierung, Sanierung, Instandhaltung, Umfeldgestaltung, Enwicklung von Brachflächen, Begleitung geföderter Maßnahmen (Landes, oder EU Mittel)",http://www.quartierentwicklung.de,Bromberger Straße,39-41,42281,"Hatzfeld
+
+Sedansberg",Wuppertal,Germany,nikolai.spiez@büro-quartierentwicklung.de,,Wohnen,,2006,"Bürgerforum Oberbarmen 
+",4618692815,Wir in Wichlinghausen  ,236234174,Vier Zwo Zwo ,4618705011,Stadt Wuppertal,252025084,Ölberg Eg,253247987,Unterbarmer Bürgerverein,335605692,Nordstädter Bürgerverein,288147624,Haus und Grund Wuppertal,3362691156,,,,,,,,,5-10,,stadtweit,,,
+,Unterbarmer Bürgerverein 1898 e.V.,335605692,Verein,,"Verbesserung der Lebensqualität und des Lebensumfeldes der Anwohner*innen (Radwege, Infrastruktur, Bürgersteinabsenkungen,  Integrationsarbeit, Jugend und Kinderförderung), Imagekampagnen für Unterbarmen (Kampagne ""u""), Planungs- und Gestaltungsarbeit an (historischen) Plätzen, Gebäuden und Wegen (Schwebebahnstation Adlerbrücke, Beleuchtung der Hauptkirche, Schwebebahnbrücke an der Kornmühle), Dialoge und Austausch zwischen den Religionen (vor allem mit der islamischen Glaubensgemeinschaft in Oberbarmen) schaffen, fördern und ermöglichen, Urbane Natur im Quartier wieder sichtbar machen (die fünf Bachläufe in die Wupper beschildern und so Information für die Bürger*innen schaffen und diesen ermöglichen die Natur im Quartier wieder verstärkt wahrzunehmen/ zu beachten), Teil des Projekts Trassenpfad (Trassenpate für den Unterbarmer Abschnitt der Nordbahntrasse)",http://www.unterbarmer-buergerverein.de,Friedrich-Engels-Allee,263,42285,Unterbarmen,Wuppertal,Germany,kontakt@unterbarmer-buergerverein.de,,"Wohnen
+Gesundheit 
+Bildung 
+Gemeinschaft 
+Engagement 
+Umwelt 
+Sicherheit
+Zufriedenheit
+Infrastruktur",,1898,Hatzfelder Bürgerverein;  ,288812458,Rotter Bürgerverein,236405557,Kothener Freunde,144525229, Junior Universität Wuppertal  ,251022418,CVJM Adlerbrücke ,3018283884,Diakonie Wuppertal ,4644158656,TV Friesen (Sportverein);  ,282084283,evangelische Kirchengemeinden ,,Förderverein Adlerbrücke,171272968," Freundeskreis Pauluskirche
+",32473643,Caritas Wuppertal; ,207187283,,,20-50,>100,in einem Stadtteil,,,
+,Utopiastadt,61236154,Verein,,"Überregionaler Denkraum und Projektpartner rud um zukunftsfähige und integrierte Stadtentwicklung,  Forum Mirke (Stadtteilkonferenz/ Vernetzung im Quartier), Veranstaltungsort/ Raum für alternative Kultur (Konzerte, Lesungen, Premieren), Werkstätten (Recycling und Upcycling, Fahrradwerkstätten), Raum für Kreativ und Gesellschaftspolitische Arbeit (Atelierräume, Büroräume für Initiativen, Projekte und kulturelle, gesellschaftspolitische Organisationen/ Initiativen zb. Bergische Gartenarche, OpenDaTal/dev/tal, Hackerspace, Utopiastadtgarten)",http://neu.clownfisch.eu/utopia-stadt/,Mirker Straße,48,42105,Nordstadt,Wuppertal,Germany,info@utopiastadt.eu,,"Arbeit
+Wohnen
+Gesundheit 
+Bildung
+Gemeinschaft
+Engagement
+Umwelt
+Sicherheit
+Zufriedenheit
+Infrastruktur
+Kultur und Freizeit",,2011 (Planung seit 2009),Wirtschaftsförderung Wuppertal,3131638086,"die alte Feuerwache Wuppertal 4634926043, ",,"Bergische Gesellschaft,  ",3131638096,Bergische Universität Wuppertal         ,24476537,"Stadtverwaltung Wuppertal,  ",252025084,"Ölbergenossenschaft,  ",,"TransZent,     ",47148048,"Humboldt Universität Berlin, ",2342631502,Hebebühne  ,1801884782,Wohngruppe Malerstraße ,4644158658,"Zukunftsakademie NRW,",1783867251, Urbanisten Dortmund ,53540063,>100,,landesweit,,,
+,Nordstädter Bürgerverein Barmen e.V.,288147624,Verein,,"Ausrichten von Veranstaltungen und Festen im Viertel und im Barmer Nordpark (Wichlinghauser Stadtteilfest, Familienfest im Nordpark), Unterhaltung, Instandhaltung und Stiftungen für den Nordpark (Pflege des dortigen Wildgeheges, Stiftung von Bänken für die Parkanlage), Verbesserung des Umfelds Nordpark für seine Anwohner*innen (Säuberung und Pflege von Kinderspielplätzen), Führungen durch den Nordpark für Schulklassen und KIndergartengruppen, weitere gemeinnützige Tätigkeiten im Quartier, Herausgabe des Vereinsmagazins ""Nordpark Echo""",http://www.nbv-barmen.de/index.php,Seydlitzstrasse,4,42281,"Hatzfeld
+
+Sedansberg",Wuppertal,Germany,info@nbv-barmen.de,,"Wohnen
+Gesundheit
+Bildung
+Gemeinschaft 
+Engagement
+Umwelt
+Sicherheit
+Zufriedenheit
+Infrastruktur
+Kultur und Freizeit",,1893,"Stadt Wuppertal,  ",252025084,Vier Zwo Zwo (Quartierbüro Wichlinghausen)  ,4618705011,"Wir in Wichlinghausen,  ",236234174,K1 Art Cafe ,3726315598,Verein für Islam und Frieden  ,4634980472,Hatzfelder Bürgerverein,288812458,"Kindertagesstätten,  Schulen im Quartier",,"Türkischer Kulturverein,  ",3151384025,Bürgerverein Nächstebreck,1413045545,Bürgerverein Langerfeld  ,4618705010,"Rotter Bürgerverein,  ",236405557,,,20-50,>100,in einem Stadtteil,,,
+,Bürgerforum Oberbarmen,38352230,Verein,,"Vertretung der Interessen der Bürger*innen und Vereine Vorort (Themenforen für Bürger*innen, Podiumsdiskussionen mit (lokalen) Politiker*innen zu aktuellen für den Stadtteil relevanten Themen, Themen die nachteilig für Oberbarmen sein könnten versuchen zu ändern, Aufmerksamkeit für den Leerstand entwickeln und kommunizieren), Mitarbeit und Kooperation in Förderprojekten für die Menschen in Oberbarmen ""Soziale Stadt"" (integrativen künstlerischen Dialog initiieren, Memory Mapping Aufarbeitung der NS Zeit im Quartier, Veranstaltung von Konzerten/ Auftrittsmöglichkeiten für Jugend- und Nachwuchsbands), Trägerschaft für Veranstaltungen des Kunstforums OASE entlang der Berliner Straße, Erneuerung der digitalen Suchergebnisse für das Projektgebiet, Mitarbeit im Arbeitskreis Berliner Straße (Leerstand thematisieren, Straßenhausmeister für die Berliner Straße, Wünsche der Bürger in die Politik transferieren)",http://wuppertal-oberbarmen.de,Stennert,8,42275,Barmen Mitte,Wuppertal,Germany,faerberei@wtal.de,,"Wohnen
+Gesundheit
+Bildung
+Gemeinschaft
+Engagement
+Umwelt
+Sicherheit
+Zufriedenheit
+Infrastruktur
+Kultur und Freizeit",,1997,Vier Zwo Zwo  ,4618705011,Stadtteilentwicklung  Büro für Quartierentwicklung  ,4618674177,Immanuelskirche ,38810413,die Färberei  ,645105687,verschiedene Schulen im ganzen Quartier,,,,,,,,,,,,,,,,10-20,50-100,in einem Stadtteil,,,
+,Rotter Bürgerverein 1902 e.V.,236405557,Verein,,"Einsetzen für die gemeinsamen Interessen der Bürger*innen des Quartiers, Arbeitskreis Rott/ Handlungskonzept Quartier Rott (Regelmäßige Treffen um die Schwachstellen des Quartiers abzustellen, allgemein das Ziel Missstände des Viertels zu beheben beispielsweise Verbesserungs- und Pflegearbeiten an Spielplätzen), Bürgerbegehren zur Bewahrung des Carnaper Platzes, Versuch der Rettung und Sanierung der Waldhof Arkaden durch Spendenaufruf (gelungen), Beteiligung an Reinigungs- und Säuberungsarbeiten in Rott (Beteiligung am sogenannten Picobello Tag an dem Schulen ihr Umfeld aufräumen, der Bürgerverein prämiert die aktivste Schule mit 100€), Ausrichtung des Unicef Herbst- und Kinderfestes, Organisation von Kurzreisen und Tagesfahrten",http://www.flotterrotter.de,Eschenstraße ,140,42283,Rott,Wuppertal,Germany,faerberei@wtal.de,,"Wohnen
+Gesundheit
+Bildung
+Gemeinschaft
+Engagement
+Umwelt
+Sicherheit
+Zufriedenheit
+Infrastruktur
+Kultur und Freizeit",,1902,Unterbarmer Bürgerverein ,236405557,"Hatzfelder Bürgerverein,  ",288812458,Nordstädter Bürgerverein,236425254,"Kothener Freunde,  ",144525229,Stadtverband Wuppertal,,"Nächstebrecker Bürgerverein,  ",1413045545,,,,,,,,,,,,,"an die 500 Mitglieder, 6-8 aktive",,in einem Stadtteil,,,
+,Verein für Islam und Frieden e.V.,4618692817,Verein,,"Arabische Schule (Arabischunterricht für Anfänger und Fortgeschrittene), Kinder- und Jugendarbeit (Jungen- und Mädchengruppen, Kooperation mit Wegweiser, Aufklärung und Präventivarbeit gegen die Radikalisierung von Jugendlichen, Islamkurse für Jugendliche), die täglichen fünf Gebete, Freitagspredigt, Aufklärungs- und Öffentlichkeitsarbeit (Übersetzung der Freitagspredigt in die deutsche Sprache, verschiedene Veranstaltungen und Vorträge zu relevanten aktuellen Themen, Transparenz schaffen und Ängste vor dem Islam relativieren), Pflege der islamischen Identität",http://www.moschee-assalam.de/haupt/index.php,Am Diek ,40,42277,Wichlinghausen,Wuppertal,Germany,info@rotter-buergerverein.de,,"Bildung
+Gemeinschaft 
+Engagement
+Umwelt
+Sicherheit
+Zufriedenheit",,2006,"Politische Parteien in Wuppertal (vor allem SPD),  ",,"Stadtverwaltung (besonders das Ressort Zuwanderung&Integration),   ",4873554805,Wuppertaler Initiative für Demokratie und Toleranz ,4634980473,Katholikenrat  ,4644158660,Interessenvertretung Wuppertaler Moscheen  ,,Bürgerforum Oberbarmen ,4618692815,"evangelische Kirchen,  ",,"Nordstädter Bürgerverein,  ",236425254, Runder Tisch der Religionen in Wuppertal,,,,,,,,20-50,>100,stadtweit,,,
+,Alte Feuerwache Wuppertal,153796010,GmbH,,"Internationales Jugend- und Begegnungszentrum (offene Kinder- und Jugendeinrichtung, pädagogische und interkulturelle Angebote, Integrationsarbeit Integration der unterschiedlichen Menschen aus verschiedenen Ländern, Flüchtlingshilfe, Bildungsarbeit z.B. mit dem Projekt „Quadratkilometer Bildung“ zur Verbesserung der Bildungschancen von Kindern und Jugendlichen), Zusammenkunfts- und Austauschort für Menschen um Ideen für ein gelingendes Zusammenleben zu entwickeln und auf Problemlagen hinzuweisen, verschiedene Arbeit für Kinder und Jugendliche (Offener Kinder und Jugendbereich, Intensivbetreuung, Kulturwerkstatt für Kinder, Therapie und Beratung, Frühförderung, Mittagstisch, Arbeit für Eltern und Erwachsene (Begleitung und Hilfe für Eltern und junge Familien, Familienhebammen, Sprachfördergruppe, verschiedene Gruppen und Vereine die sich regelmäßig in der alten Feuerwache treffen z.B. das „Cafe Kinderwagen“ als Austauschort für junge Mütter und Väter) Quartiers- und Stadtteilarbeit (Kampagnen wie „Armer Anfang ist schwer“ „M.ein Quartier“ und „Quadratkilometer Bildung“), Kulturarbeit (Kulturwerkstatt mit vielfältigen Kulturangeboten für Kinder und Jugendliche, „Talflimmern“ Filmvorführungen im Hof der alten Feuerwache in den Sommermonaten)",http://www.altefeuerwache-wuppertal.de,Gathe ,6,42107,Osterbaum,Wuppertal,Germany,info@altefeuerwache-wuppertal.de,,"Bildung
+Gemeinschaft
+Engagement
+Umwelt
+Sicherheit
+Zufriedenheit
+Infrastruktur
+Kultur und Freizeit",,1991,"Arbeitskreis Nordstadt,  ",,Utopiastadt ,2189947895,"Schulen im Quartier,  / Viertel,  ",,Mirker Forum (Utopiastadt),,,,,,,,,,,,,,,,,,20-50,,in einem Stadtteil,,,
+,Wir in Wichlinghausen e.V.,1642019885,Verein,,"Organisation von regelmäßig und unregelmäßig stattfindenden Veranstaltungen vor Ort (Wochenmarkt, Austauschabend für Vermieter*innen, Treffen zwischen Vermieter*innen und Bürger*innen zur Planung der Behebung des Leerstandes in Wichlinghausen), Besseren und sauberen Zustand des Viertels ermöglichen (Verschönerungs- und Säuberungsarbeiten im Quartier), Attraktive und Aktive Nutzung zentraler Flächen und Plätze (Nutzung des Wichlinghauser Marktes), Kulturelles Leben vor Ort anregen, Erhalt und Sanierung der historischen bergischen Fachwerkhäuser vor Ort, Herstellen des Kontaktes von lokalen Arbeitgeber*innen und den Bürger*innen zur städtischen lokalen Politik (Wünsche der Bürger*innen kommunizieren/ vermitteln/ weiterleiten, mithelfen dafür Lösungen zu entwickeln), Wichlinghausen als Standort für neue Arbeitgeber*innen ins Gespräch bringen",http://wuppertal-wichlinghausen.de,Postfach 250 203l,,42238,Wichlinghausen,Wuppertal,Germany,"wiw@wuppertal-wichlinghausen.de ,  kornelialueken@gmx.de",,"Arbeit 
+Wohnen 
+Gesundheit
+Bildung 
+Gemeinschaft
+Engagement 
+Umwelt
+Sicherheit 
+Zufriedenheit 
+Infrastruktur  
+Kultur und Freizeit",,"1981, seit 2011 als WiW",Vier Zwo Zwo ,4618705011,"Nordstädter Bürgerverein,  ",236425254,Bürgerforum Oberbarmen  ,4618692815,Wichlinghauser Kicker e.V. ,4618705012,Bezirksvertretung Wichlinghausen-Oberbarmen,186022448,,,,,,,,,,,,,,,10-20,50-100,in einem Stadtteil,,,
+,Hof zur Hellen,101514073,Unternehmen,,"Demonstrationsbetrieb Ökologischer Landbau, Hofcafe, Biokiste …, außerdem könnte hier eine kurze Geschichte stehen",www.hofzurhellen.de,Windrather Straße,197,42553,Neviges,Velbert-Neviges,Germany,info@hofzurhellen.de,"Hofcafe: Sa,So, Feiertags ab 11 Uhr","Gesundheit
+Umwelt
+Bildung",Ernährung,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Recherche im Internet (hofzurhellen.de),
+,AWO Ortsverein West,274574027,Verein,,,http://www.awo-nr.de/Bergisch-Land.726.0.html,Honsberger Str.,38,42857,,Remscheid,Germany,stefan.wagner@awo-remscheid-west.de,Di.: 09:00 - 12:00 Uhr Do.: 12:00 - 15:00 Uhr,Bildung,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Recherche im Projekt MOSAIK,
+,Familienbildungswerk Bergisches Land,274574027,Verein,,"Sabine Hofmann
+Familienbildungswerk Bergisch-Land
+in Trägerschaft
+der AWO gemeinnützigen Kooperationsgesellschaft
+Remscheid Leverkusen Mettmann mbH",,Honsberger Str.,38,42857,,Remscheid,Germany,fbw-remscheid@awo-kreis- mettmann.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Freie Jugendarbeit Remscheid-Mitte e. V. Kraftstation (angrenzend),2420666807,Verein,,Christin Pomp (Leitung Jugendkulturbereich),http://www.awo- nr.de/Bergisch-Land.726.0.html,Honsberger Str.,2,42857,,Remscheid,Germany,pomp@kraftstation.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Stadtteil e. V. Lindenhof,274574027,Verein,,"Ute Friedrich-Zielas (Jugendhilfe, Stadtteilarbeit)
+(Kontakt besteht bereits, da Sie den Stadtteilrundgang mit den Detroiter Studenten gemacht hat)
+Ralf Noll (Geschäftsführer)
+Kinder- und Jugendhilfe, Stadtteilsozialarbeit, interkulturelle Arbeit, Familienbildung, Altenhilfe (Betreiben das Spielhaus Rosenhügel)",,Honsberger Str.,38,42857,,Remscheid,Germany,r.noll@stadtteil-rs.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Mehrgenerationenhaus Lindenhof,274574027,,,,,Honsberger Str.,38,42857,,Remscheid,Germany,u.friedrich-zielas(at)stadtteil- rs.de,Montag 08:00 bis 17:00 Uhr Dienstag 08:00 bis 17:00 Uhr Mittwoch 08:00 bis 17:00 Uhr Donnerstag 08:00 bis 17:00 Uhr Freitag 08:00 bis 17:00 Uhr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,"Frauengruppe „Kardelen“ Väterkreis/Mütterkreis (gehören zur Ev. Kirche),
+Os Campinos de Remscheid e. V.",1144632527,Verein,,,http://www.der-neue- lindenhof.de,Postfach 10 07 08,,42807,,Remscheid,Germany,info@oscampinos.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Ayasofya Moschee,274573087,,,,http://www.oscampinos.de/,Honsberger Str.,73,42857,,Remscheid,Germany,info@oscampinos.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,D. I. T. I. B. Remscheid e. V.,321150513,Verein,,,,Stachelhauser Str.,41,42859,,Remscheid,Germany,kontakt@ditib-rs.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Evangelische Stadtkirchengemeinde,274574027,,,Neuer Lindenhof Honsberg,"http://www.ditib-rs.de, https://www.facebook.com/pages/Diya net-Camii-DITIB- Remscheid/288366711198097",Honsberger Str.,38,42857,,Remscheid,Germany,Karina.Grund@kklennep.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Evangelische Stadtkirchengemeinde,255067071,,,Kleiderstube,,Honsberger Str.,48,42857,,Remscheid,Germany,Karina.Grund@kklennep.de,Do.: 9-12 Uhr und 14-17 Uhr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

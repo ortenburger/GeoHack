@@ -1,0 +1,6 @@
+.left-aligned-widget{
+	margin-left:0;
+	position:absolute;
+	left:0;
+	float:left;
+}

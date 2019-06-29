@@ -1,0 +1,154 @@
+<div class="container">
+  <div class="widget-wrap big-widget">
+    <div *ngIf="authService.profileRetrieved">
+	  <h4>Benutzerprofil</h4>
+	  <br>
+			<p>Hallo {{currentUser.username}},</p>
+			<p>hier finden Sie alle Einstellungen für ihr Profil.</p>
+
+		<hr>
+	  <h4>Kontodaten</h4>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label">Rolle</label>
+          <div class="input-group-append">
+            <input id="tmx-settings-pw" class="form-control" placeholder="{{currentUser.roles[0].name}}" disabled="" type="text">
+            <div class="input-group-text">
+              <span class="input-group-addon">
+                <i class="fa fa-address-card"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Benutzername</label>
+          <div class="input-group-append">
+            <input id="tmx-settings-pw" class="form-control" placeholder="{{currentUser.username}}" disabled="" type="text">
+            <div class="input-group-text">
+              <span class="input-group-addon">
+                <i class="fa fa-address-book"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">E-Mail Adresse</label>
+          <div class="input-group-append">
+            <input type="email" class="form-control" id="exampleInputEmail1" disabled="" aria-describedby="emailHelp" placeholder="max.mustermann@geoportal.de">
+            <div class="input-group-text">
+              <span class="input-group-addon">
+                <i class="fa fa-at"></i>
+              </span>
+            </div>
+          </div>
+
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <div class="input-group-append">
+            <input type="password" class="form-control" id="exampleInputPassword1" disabled="" placeholder="******">
+            <div class="input-group-text">
+              <span class="input-group-addon">
+                <i class="fa fa-key"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+		<h3>Benutzerdaten</h3>
+        <div class="form-group">
+          <label class="control-label">Vorname</label>
+          <div class="input-group-append">
+            <input id="tmx-settings-pw" class="form-control" placeholder="Vorname" type="text">
+            <div class="input-group-text">
+              <span class="input-group-addon">
+                <i class="fa fa-user"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Nachname</label>
+          <div class="input-group-append">
+            <input id="tmx-settings-pw" class="form-control" placeholder="Nachname" type="text">
+            <div class="input-group-text">
+              <span class="input-group-addon">
+                <i class="fa fa-user"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <label for="adress">Adresse</label>
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="input-group-prepend">
+                    <i class="fa fa-map"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Straße">
+              </div>
+            </div>
+            <div class="col-2">
+              <input type="text" class="form-control" placeholder="Nr.">
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="input-group-prepend">
+                    <i class="fa fa-map"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Stadt">
+              </div>
+            </div>
+
+            <div class="col-3">
+              <input type="text" class="form-control" placeholder="PLZ">
+            </div>
+          </div>
+        </div>
+<br>
+        <button type="submit" class="btn btn-primary">Speichern</button>
+      </form>
+
+
+      <div class="hspace">
+      </div>
+      <div *ngIf="currentUser.isAdmin">
+        <div>
+          <h2>Administrator-Optionen</h2>
+        </div>
+        <div class="hspace"></div>
+        <div>
+          <a routerLink="/#admin/bliDimensions" href="#">BLI-Dimensionen bearbeiten</a>
+        </div>
+        <div>
+          <a routerLink="/#categories" href="#">Kategorien bearbeiten</a>
+        </div>
+        <div>
+          <a routerLink="/#adminDataGroups" href="#">Datengruppen bearbeiten</a>
+        </div>
+      </div>
+
+      <div *ngIf="debug">
+        Debug:
+        <pre>UserId: {{currentUser.id}}</pre>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,97 @@
+<div class="elementwrap">
+	<form [formGroup]="form">
+		<div class="elementinfo">
+			<div class="form-group card-header edit_header">
+				<div (click)="descCollapsed= !descCollapsed"
+					[attr.aria-expanded]="!descCollapsed" aria-controls="collapseDescription"
+					class="collapseDescription">
+					<h5><i class="" aria-hidden="true">&nbsp;</i>Dieser Ort und seine Netzwerke<i
+						[ngClass]="{'fa':true,'fa-lg':true,'fa-angle-down':!descCollapsed,'fa-angle-right':descCollapsed, 'fa-right':true}"
+						aria-hidden="true">&nbsp;</i></h5>
+				</div>
+			</div>
+			<div id="collapseDescription" [ngbCollapse]="descCollapsed">
+				<div class="card">
+					<div class="card-body">
+						<div class="form-group">
+							<ul class="list-group">
+								<li class="list-group-item"
+									*ngFor="">
+									<button type="submit" class="btn btn-secondary btn-sm create-entry-tag"
+										>Entfernen</button>
+								</li>
+							</ul>
+						</div>
+						<div class="form-group row">
+							<label for="elementLegalform" class="col-sm-3 col-form-label"><strong>Rechtsform</strong></label>
+							<div class="col">
+								<input type="text" class="form-control" id="elementLegalform" value="{{node.getOsmTagValue('operator:type')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="elementBenefittothepublic" class="col-sm-3 col-form-label"><strong>Gemeinnützigkeit</strong></label>
+							<div class="col-sm-9">
+								<!-- <input type="text" class="form-control" id="elementBenefittothepublic" formControlName="welfare" placeholder="Keine Angabe bisher."> -->
+
+							    <select class="form-control" id="elementBenefittothepublic" formControlName="welfare">
+							    	<option selected disabled>Keine Angabe bisher.</option>
+									<option>Ja</option>
+									<option>Nein</option>
+							    </select>
+							</div>
+						</div>
+
+  <div class="form-group">
+
+  </div>
+
+						<div class="form-group row">
+							<label for="elementFoundingyear" class="col-sm-3 col-form-label"><strong>Gründungsjahr</strong></label>
+							<div class="col">
+								<input type="text" class="form-control" id="elementFoundingyear" value="{{node.getOsmTagValue('start_date')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+						<div class="form-group row">
+								<label class="col-sm-3 col-form-label">
+									<strong>Netzwerkpartner*innen</strong>
+								</label>
+								<div class="col-sm-9">
+
+									<div *ngFor="let partner of node.peers"
+										class="">
+										<div class="list-group-item list-group-item-action">
+											<i class="fa fa-map-marker" aria-hidden="true">&nbsp;</i><span>{{partner.name}}</span>
+											<button type="submit" class="btn btn-secondary btn-sm create-entry-tag"
+								(click)="node.removePeer(partner)">Entfernen</button>
+										</div>
+									</div>
+
+								</div>
+						</div>
+						<div class="form-group row">
+              <label class="col-sm-3 col-form-label"></label>
+						<div class="col">
+							<button type="button" class="btn btn-primary btn-block" (click)="modalService.open('networkpartnersearch',true,undefined,{node:node})"><i aria-hidden="true" class="fa fa-plus-circle fa-lg"></i> Netzwerkpartner*innen hinzufügen</button>
+						</div>
+						</div>
+						<div class="form-group row">
+								<label class="col-sm-3 col-form-label">
+									<strong>Räumlicher Aktionsradius</strong>
+								</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="aktionsradius" formControlName="aktionsradius" placeholder="Keine Angabe bisher.">
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+

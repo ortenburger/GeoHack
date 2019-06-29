@@ -1,0 +1,15 @@
+    <div class="modal-header">
+      <h4 class="modal-title">Dieser Wert ist nur im Quellportal bearbeitbar!</h4>
+    </div>
+    <div class="modal-body">
+		<div class="modal-wrap modaltest">
+			<div class="modal-wrap-com">
+				<div class="container">
+					<div markdown [src]="'assets/markdown/Eingabefeld_nicht_bearbeitbar.md'"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="modal-footer"> 
+    	<button type="button" class="btn btn-primary" (click)="modalService.close('Close click')" ngbAutofocus>Alles Klar</button>
+    </div>

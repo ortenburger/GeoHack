@@ -1,0 +1,20 @@
+
+    <div class="modal-header">
+      <h4 class="modal-title">Achtung</h4>
+    </div>
+    <div class="modal-body">
+		<div class="modal-wrap modaltest">
+		<div class="modal_wrap">
+			<div class="container">
+					<h1>Achtung! Ungespeicherte Änderungen</h1>
+					<p>Du hast die Änderungen noch nicht veröffentlicht. Was möchtest Du machen?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="modal-footer"> 
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Änderungen verwerfen</button>
+      <button type="button" class="btn btn-primary" (click)="modalService.close('Close click')" ngbAutofocus>Auf dieser Seite bleiben</button>
+    </div>
+
+

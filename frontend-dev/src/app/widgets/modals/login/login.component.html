@@ -1,0 +1,84 @@
+
+    <div class="modal-header">
+      <h4 class="modal-title">Anmelden</h4>
+      <button type="button" class="close" aria-label="Close"  (click)="modalService.close('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+		<div class="modal-wrap modaltest">
+			<div class="modal-wrap">
+				<div class="container">
+
+				<!-- old part -->
+
+					<div *ngIf="!authService.loggedIn">
+
+						<h4>Anmeldungs</h4>
+
+						<div class="login_ex exclamation">
+									<i class="gp_warning big_icon" aria-hidden="true">&nbsp;</i>
+									<p>Nur angemeldete Nutz*innen können Orte des Guten Lebens anlegen und bearbeiten.</p>
+								</div>
+						<form [formGroup]="loginForm" (ngSubmit)="login()">
+							<div class="form-group">
+								<label for="username">Benutzername</label> <input type="text"
+									formControlName="username" class="form-control"
+									[ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+								<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+									<div *ngIf="f.username.errors.required">Username is required</div>
+								</div>
+							</div>
+							<!--
+							<div class="form-group">
+								<label for="username">E-Mail</label> <input type="text"
+									formControlName="username" class="form-control"
+									[ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+								<div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+									<div *ngIf="f.email.errors.required">E-Mail is required</div>
+								</div>
+							</div>
+							 -->
+							<div class="form-group">
+								<label for="password">Passwort</label> <input type="password"
+									formControlName="password" class="form-control"
+									[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+								<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+									<div *ngIf="f.password.errors.required">Password is required</div>
+									<div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+								</div>
+							</div>
+							  <div class="form-check">
+							    <input type="checkbox"
+										formControlName="savelogin" class="form-check-input"
+										[ngClass]="{ 'is-invalid': submitted && f.savelogin.errors }" />
+							    <label class="form-check-label" for="savelogin">Eingeloggt bleiben</label>
+							  </div>
+							  <br>
+							<button [disabled]="sending && ! authService.loginFailed" class="btn btn-primary">Anmelden</button>
+							<div *ngIf="authService.loginFailed">Anmeldung fehlgeschlagen.</div>
+					    <div class="divider"></div>
+					    <div class="">
+
+					      Neu beim Geoportal des Guten Lebens?
+					      <br/><br/>
+					      <button class="btn btn-secondary" routerLink="/register">Registrieren</button>
+							</div>
+						</form>
+					</div>
+					<div *ngIf="authService.loggedIn" >
+					<div> Sie sind bereits eingeloggt.</div>
+					</div>
+				<!-- old part -->
+
+				<!-- new part -->
+					<div markdown [src]="'assets/markdown/modal-content/Anmelden.md'"></div>
+				</div>
+				<a href="https://www.openstreetmap.org/login" target="_blank"><button class="btn btn-lg btn-outline-primary" (click)="modalService.open(login,true)">Mit OpenStreetMap anmelden</button></a>
+			</div>
+		</div>
+	</div>
+    <div class="modal-footer">
+      <a href="https://www.openstreetmap.org/login" target="_blank"><button class="btn btn-lg btn-outline-primary" (click)="modalService.open(login,true)">Mit OpenStreetMap anmelden</button></a>
+    	<a href="https://www.openstreetmap.org/user/new" target="_blank"><button type="button" class="btn btn-primary" ngbAutofocus>Bei Openstreetmap registrieren</button></a>
+    </div>

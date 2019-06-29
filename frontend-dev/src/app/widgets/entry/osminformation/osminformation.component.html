@@ -1,0 +1,172 @@
+<div class="elementwrap">
+	<form [formGroup]="form">
+		<div class="elementinfo">
+			<div class="form-group card-header">
+				<div (click)="infoCollapsed= !infoCollapsed"
+					[attr.aria-expanded]="!infoCollapsed" aria-controls="collapseInfo"
+					class="collapseInfo">
+					<h5><i class="" aria-hidden="true">&nbsp;</i>Allgemeine
+					Informationen<i
+						[ngClass]="{'fa':true,'fa-lg':true,'fa-angle-down':!infoCollapsed,'fa-angle-right':infoCollapsed, 'fa-right':true}"
+						aria-hidden="true">&nbsp;</i></h5>
+				</div>
+			</div>
+			<div id="collapseInfo" [ngbCollapse]="infoCollapsed">
+				<div class="card">
+					<div class="card-body">
+
+					<div class="form-group row item-detail d-none">
+
+							<label for="elementOsmid" class="col-sm-3 col-form-label">
+								<strong>Name</strong>
+							</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="name" formControlName="name" >
+							</div>
+						</div> 
+
+						<div class="form-group row item-detail">
+							<label for="elementOsmid" class="col-sm-3 col-form-label">
+								<strong>OSM-ID</strong>
+							</label>
+							<div class="col">
+								<input type="text" class="form-control" id="elementOsmid" value="{{node.getOsmId()}}" disabled>
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+
+		<!-- 					<div class="form-group row item-detail">
+							<label for="elementTyp" class="col-sm-3 col-form-label">
+								<strong>Typ</strong>
+							</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="elementTyp" value="{{node.getOsmType()}}" disabled>
+							</div>
+							<div class="col-sm-1">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div> -->
+
+		<!-- 					<div *ngFor="let tag of node.osmtags"
+							class="form-group row item-detail">
+							<label for="elementKey" class="col-sm-3 col-form-label">
+								<strong>{{translateTagKey(tag.key)}}</strong>
+							</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="elementKey"value="{{tag.value}}" disabled>
+							</div>
+							<div class="col-sm-1">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div> -->
+
+						<div class="form-group row item-detail">
+							<label class="col-sm-3 col-form-label">
+								<strong>Name</strong>
+							</label>
+							<div class="col">
+								<input type="text" class="form-control" id="name" value="{{node.getOsmTagValue('name')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+
+						<div class="form-group row item-detail">
+							<label class="col-sm-3 col-form-label">
+								<strong>Website</strong>
+							</label>
+							<div class="col">
+								<input type="text" class="form-control" id="website" value="{{node.getOsmTagValue('source')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+						<div class="form-group row item-detail">
+							<label class="col-sm-3 col-form-label">
+								<strong>Straße</strong>
+							</label>
+							<div class="col">
+								<input type="text" class="form-control" id="addr:street" value="{{node.getOsmTagValue('addr:street')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+						<div class="form-group row item-detail">
+							<label class="col-sm-3 col-form-label">
+								<strong>Hausnummer</strong>
+							</label>
+							<div class="col">
+								<input type="text" class="form-control" id="addr:housenumber" value="{{node.getOsmTagValue('addr:housenumber')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+						<div class="form-group row item-detail">
+							<label class="col-sm-3 col-form-label">
+								<strong>Postleitzahl</strong>
+							</label>
+							<div class="col">
+								<input type="text" class="form-control" id="addr:postcode" value="{{node.getOsmTagValue('addr:postcode')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+						<div class="form-group row item-detail">
+							<label class="col-sm-3 col-form-label">
+								<strong>Stadt</strong>
+							</label>
+							<div class="col">
+								<input type="text" class="form-control" id="addr:city" value="{{node.getOsmTagValue('addr:city')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+						<div class="form-group row item-detail">
+							<label class="col-sm-3 col-form-label">
+								<strong>Land</strong>
+							</label>
+							<div class="col">
+								<input type="text" class="form-control" id="addr:country" value="{{node.getOsmTagValue('addr:country')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+						<div class="form-group row item-detail">
+							<label class="col-sm-3 col-form-label">
+								<strong>E-Mail</strong>
+							</label>
+							<div class="col">
+								<input type="text" class="form-control" id="email" value="{{node.getOsmTagValue('email')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+						<div class="form-group row item-detail">
+							<label class="col-sm-3 col-form-label">
+								<strong>Öffnungszeiten</strong>
+							</label>
+							<div class="col">
+								<input type="text" class="form-control" id="opening_hours" value="{{node.getOsmTagValue('opening_hours')}}" disabled placeholder="Keine Angabe bisher.">
+							</div>
+							<div class="col-auto">
+								<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="icon_big gp_osmlink"></i></a>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

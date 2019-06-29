@@ -1,0 +1,67 @@
+    <div class="modal-header">
+		<h4 class="modal-title">Netzwerkpartner suchen</h4>
+      	<button type="button" class="close" aria-label="Close" (click)="this.close()">
+			<span aria-hidden="true">&times;</span>
+		</button>
+    </div>
+    <div class="modal-body">
+		<div class="modal-wrap modaltest">
+
+			<div class="modal-wrap modalsearchPartner">
+			<div class="container">
+
+<!-- only when elements existing! -->
+<!-- 				<div class="form-group row">
+					<label class="col-sm-3 col-form-label">
+						<strong>Netzwerkpartner sind...</strong>
+					</label>
+				</div>
+				<div class="form-group">
+					<ul class="list-group">
+						<li class="list-group-item">
+						<i class="fa fa-map-marker fa-lg" aria-hidden="true">&nbsp;</i>Dummy
+						<label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+						</li>
+					</ul>
+				</div> -->
+<!-- only when elements existing! -->
+				<form  class="searchForm">
+					<div class="form-group row">
+						<label class="col-sm-5 col-form-label">
+							<strong>Netzwerkpartner Suche</strong>
+						</label>
+					</div>
+					<div class="form-group row">
+						<div class="col-10">
+							<input type="text" class="form-control searchinput" [formControl]="searchPattern" placeholder="z.B. Name eines Vereins" />
+						</div>
+						<div class="col-2">
+							<button type="button" class="btn btn-secondary" (click)="search()" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</div>
+					</div>
+
+					<br>
+<!--  results -->
+					<div class="form-group">
+						<ul class="list-group">
+							<li class="list-group-item" *ngFor="let result of geoportalResultNodes">
+							<i class="fa fa-map-marker fa-lg" aria-hidden="true">&nbsp;</i>{{result.getName()}}
+							<label class="switch"><input (click)="togglePeer(result)" [checked]="node.hasPeer(result)" type="checkbox"><span class="slider round"></span></label>
+							</li>
+						</ul>
+					</div>
+<!--  results -->
+
+<!-- 						<div>
+							<button class="btn add-button" type="submit">Auswahl hinzufügen</button>
+						</div> -->
+
+				</form>
+			</div>
+		</div>
+
+		</div>
+	</div>
+    <div class="modal-footer">
+    	<button type="button" class="btn btn-primary" (click)="close.emit(true)">Auswahl hinzufügen</button>
+    </div>

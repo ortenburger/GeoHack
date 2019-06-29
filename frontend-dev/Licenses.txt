@@ -1,0 +1,44 @@
+Dependencies:
+    "@angular-devkit/core": "^0.6.5", MIT
+    "@angular-devkit/schematics": "^0.6.5", MIT
+    "@angular/animations": "^6.1.8", MIT
+    "@angular/common": "^6.1.8", MIT
+    "@angular/compiler": "^6.1.8", MIT
+    "@angular/core": "^6.1.8", MIT
+    "@angular/forms": "^6.1.8", MIT
+    "@angular/http": "^6.1.8", MIT
+    "@angular/platform-browser": "^6.1.8", MIT
+    "@angular/platform-browser-dynamic": "^6.1.8", MIT
+    "@angular/router": "^6.1.8", MIT
+    "@ng-bootstrap/ng-bootstrap": "^3.3.0", MIT
+    "@types/openlayers": "^4.6.12", MIT
+    "angular-font-awesome": "^3.1.2", MIT
+    "core-js": "^2.5.4", MIT
+    "font-awesome": "^4.7.0", (OFL-1.1 AND MIT)
+    "npm": "^6.4.1", Artistic-2.0
+    "ol": "^5.2.0", BSD-2-Clause
+    "rxjs": "^6.3.2", Apache-2.0
+    "tooltip.js": "^1.3.0", MIT
+    "zone.js": "~0.8.26"MIT
+
+devDependencies:
+    "@angular-devkit/build-angular": "^0.7.5", MIT
+    "@angular/cli": "^6.2.5", MIT
+    "@angular/compiler-cli": "^6.1.8", MIT
+    "@angular/language-service": "^6.1.8", MIT
+    "@types/jasmine": "~2.8.6", MIT
+    "@types/jasminewd2": "~2.0.3", MIT
+    "@types/node": "~8.9.4", MIT
+    "codelyzer": "~4.2.1",
+    "jasmine-core": "~2.99.1", MIT
+    "jasmine-spec-reporter": "~4.2.1", Apache-2.0
+    "karma": "~1.7.1", MIT
+    "karma-chrome-launcher": "~2.2.0", MIT
+    "karma-coverage-istanbul-reporter": "^2.0.4", MIT
+    "karma-jasmine": "~1.1.1", MIT
+    "karma-jasmine-html-reporter": "^0.2.2", MIT
+    "ngx-spinner": "^6.1.2", MIT
+    "protractor": "^5.4.1", MIT
+    "ts-node": "~5.0.1", MIT
+    "tslint": "~5.9.1", Apache-2.0
+    "typescript": "~2.7.2" Apache-2.0

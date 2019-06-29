@@ -1,0 +1,534 @@
+{
+  "id": 42,
+  "created": 1561575107802,
+  "name": "Utopiastadt",
+  "description": "Überregionaler Denkraum und Projektpartner rund um zukunftsfähige und integrierte Stadtentwicklung, Forum Mirke (Stadtteilkonferenz/ Vernetzung im Quartier), Veranstaltungsort/ Raum für alternative Kultur (Konzerte, Lesungen, Premieren), Werkstätten (Recycling und Upcycling, Fahrradwerkstätten), Raum für Kreativ und Gesellschaftspolitische Arbeit (Atelierräume, Büroräume für Initiativen, Projekte und kulturelle, gesellschaftspolitische Organisationen/ Initiativen zb. Bergische Gartenarche, OpenDaTal/dev/tal, Hackerspace, Utopiastadtgarten)",
+  "createdBy": {
+    "id": 17,
+    "username": "system"
+  },
+  "osmId": 4543376881,
+  "lastChanged": 1561623871985,
+  "changedBy": {
+    "id": 20,
+    "username": "admin"
+  },
+  "type": "NODE",
+  "dataGroups": [],
+  "peers": [
+    {
+      "id": 40,
+      "created": 1561575100978,
+      "name": "Aufbruch am Arrenberg e.V.",
+      "description": "Stadtteilarbeit. Co2 neutrales \"Klimaquartier Arrenberg\" (geteilt in Ernährung, Energie, Mobilität), Teilaspekt Ernährung (Essbarer Arrenberg): Anregung Konsum nachhaltiger regionaler Produkte (Restaurant Day, Urban Farming, Märkte, Foodsharing Anlaufpunkte/ Plattformen, Teilaspekt Energie (Energiereicher Arrenberg): Nachhaltige Energieversorgung fördern/ aufbauen (Fern- und Erdwärme, Wind- und Wasserkraft, Wärmepumpen, Einergieeinspaarung) Teilaspekt Mobilität (Mobiler Arrenberg) Nachhaltige Mobilität fördern (E Bikes, Ladeinfrastruktur, Fahrräder, Carsharingsysteme, Elektromobilität)",
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 4618692813,
+      "lastChanged": 1561575302412,
+      "changedBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "type": "NODE",
+      "dataGroups": [],
+      "bliDimensions": [
+        {
+          "id": 32,
+          "name": "Sicherheit",
+          "description": " Statistische und gefühlte Sicherheit vor Verbrechen und Unfällen aber auch Präventionsarbeit.",
+          "slug": null
+        },
+        {
+          "id": 33,
+          "name": "Zufriedenheit",
+          "description": "Die persönliche Zufriedenheit mit dem eigenen Leben und der Umgebung, wie der Nachbarschaft, dem Quartier und der Stadt oder dem Dorf.",
+          "slug": null
+        },
+        {
+          "id": 34,
+          "name": "Infrastruktur",
+          "description": "Städtische Infrastruktur z.B. für Verkehr aber auch lokale Einkaufsmöglichkeiten.",
+          "slug": null
+        },
+        {
+          "id": 25,
+          "name": "Wohnbedingungen",
+          "description": " Wohnqualität in Wuppertal, inklusive Wohnungsgröße und -qualität, Wohnumgebung, Miethöhe und weitere Aspekte wie Leerstand und Aussehen der Straßenzüge.",
+          "slug": null
+        },
+        {
+          "id": 26,
+          "name": "Gesundheit",
+          "description": " Ein langes, gesundes Leben und die Voraussetzungen dazu wie eine gute medizinische Versorgung und gesundheitsfördernde Angebote und Umgebung (Ernährung, Bewegung, Bildungsarbeit).",
+          "slug": null
+        },
+        {
+          "id": 28,
+          "name": "Bildung",
+          "description": "Vielfältige hochwertige Bildungsangebote, sowohl schulische Bildung(-sabschlüsse) als auch Weiterbildungsangebote, Workshops und Ausbildungsmöglichkeiten.",
+          "slug": null
+        },
+        {
+          "id": 29,
+          "name": "Gemeinschaft",
+          "description": "Die Einbindung in soziale Beziehungen mit FreundInnen, Familie, NachbarInnen und MitbürgerInnen, sowie auch Unterstützungsnetzwerke, Nachbarschaftshilfe und öffentliche Räume.",
+          "slug": null
+        },
+        {
+          "id": 30,
+          "name": "Engagement/Beteiligung",
+          "description": "Die Möglichkeiten der Menschen ihre Umgebung zu gestalten, ob im Ehrenamt, in Wahlen oder durch Bürgerbeteiligung.",
+          "slug": null
+        },
+        {
+          "id": 31,
+          "name": "Umwelt",
+          "description": "Eine saubere Umwelt mit frischer Luft, sauberen Gewässern und Parks, Umweltschutzprojekte und umweltfreundliche Flächennutzung.",
+          "slug": null
+        }
+      ],
+      "tags": [
+        {
+          "id": 38,
+          "key": "_gpd:aktionsradius",
+          "value": "im Ortsteil",
+          "displayName": null,
+          "source": "import"
+        },
+        {
+          "id": 39,
+          "key": "_gpd:erhebungsmethode",
+          "value": "Telefoninterview im WTW-Projekt des TransZent",
+          "displayName": null,
+          "source": "import"
+        }
+      ],
+      "lon": 7.127844333648682,
+      "lat": 51.247615814208984
+    },
+    {
+      "id": 43,
+      "created": 1561575107561,
+      "name": "Bergische Universität Wuppertal",
+      "description": "",
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 24476537,
+      "lastChanged": 1561621016848,
+      "changedBy": {
+        "id": 21,
+        "username": "sam"
+      },
+      "type": "WAY",
+      "dataGroups": [],
+      "bliDimensions": [],
+      "tags": [],
+      "lon": 7.149456024169922,
+      "lat": 51.244873046875
+    },
+    {
+      "id": 1904,
+      "created": 1561578470702,
+      "name": "Bob Kulturwerk, 38-40, Wichlinghauser Straße, Bergisches Plateau, Gemarkung Barmen, Wuppertal, Regierungsbezirk Düsseldorf, Nordrhein-Westfalen, 42277, Deutschland",
+      "description": "",
+      "createdBy": {
+        "id": 20,
+        "username": "admin"
+      },
+      "osmId": 6015789123,
+      "lastChanged": 1561579084911,
+      "changedBy": {
+        "id": 20,
+        "username": "admin"
+      },
+      "type": "NODE",
+      "dataGroups": [],
+      "bliDimensions": [],
+      "tags": [],
+      "lon": 7.2185868,
+      "lat": 51.2782124
+    },
+    {
+      "id": 49,
+      "created": 1561575107857,
+      "name": "Stadt Wuppertal",
+      "description": null,
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 252025084,
+      "lastChanged": 1561575387452,
+      "changedBy": null,
+      "type": "WAY",
+      "dataGroups": [],
+      "bliDimensions": [],
+      "tags": [],
+      "lon": 7.200001239776611,
+      "lat": 51.27216339111328
+    },
+    {
+      "id": 55,
+      "created": 1561575101126,
+      "name": "Wirtschaftsförderung Wuppertal",
+      "description": null,
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 3131638086,
+      "lastChanged": 1561575310404,
+      "changedBy": null,
+      "type": "NODE",
+      "dataGroups": [],
+      "bliDimensions": [],
+      "tags": [],
+      "lon": 7.159621715545654,
+      "lat": 51.2367057800293
+    },
+    {
+      "id": 56,
+      "created": 1561575106486,
+      "name": "Alte Feuerwache Wuppertal",
+      "description": "Internationales Jugend- und Begegnungszentrum (offene Kinder- und Jugendeinrichtung, pädagogische und interkulturelle Angebote, Integrationsarbeit Integration der unterschiedlichen Menschen aus verschiedenen Ländern, Flüchtlingshilfe, Bildungsarbeit z.B. mit dem Projekt „Quadratkilometer Bildung“ zur Verbesserung der Bildungschancen von Kindern und Jugendlichen), Zusammenkunfts- und Austauschort für Menschen um Ideen für ein gelingendes Zusammenleben zu entwickeln und auf Problemlagen hinzuweisen, verschiedene Arbeit für Kinder und Jugendliche (Offener Kinder und Jugendbereich, Intensivbetreuung, Kulturwerkstatt für Kinder, Therapie und Beratung, Frühförderung, Mittagstisch, Arbeit für Eltern und Erwachsene (Begleitung und Hilfe für Eltern und junge Familien, Familienhebammen, Sprachfördergruppe, verschiedene Gruppen und Vereine die sich regelmäßig in der alten Feuerwache treffen z.B. das „Cafe Kinderwagen“ als Austauschort für junge Mütter und Väter) Quartiers- und Stadtteilarbeit (Kampagnen wie „Armer Anfang ist schwer“ „M.ein Quartier“ und „Quadratkilometer Bildung“), Kulturarbeit (Kulturwerkstatt mit vielfältigen Kulturangeboten für Kinder und Jugendliche, „Talflimmern“ Filmvorführungen im Hof der alten Feuerwache in den Sommermonaten)",
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 153796010,
+      "lastChanged": 1561575315315,
+      "changedBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "type": "WAY",
+      "dataGroups": [],
+      "bliDimensions": [
+        32,
+        33,
+        34,
+        {
+          "id": 35,
+          "name": "Freizeit und Kultur",
+          "description": "Barrierefreier Zugang und gute Angebote zur Freizeitgestaltung wie Kunst und Kultur und auch die Zeit, diese zu nutzen.",
+          "slug": null
+        },
+        28,
+        29,
+        30,
+        31
+      ],
+      "tags": [
+        {
+          "id": 64,
+          "key": "_gpd:aktionsradius",
+          "value": "im Ortsteil",
+          "displayName": null,
+          "source": "import"
+        }
+      ],
+      "lon": 7.146681785583496,
+      "lat": 51.26411437988281
+    },
+    {
+      "id": 120,
+      "created": 1561575107738,
+      "name": "Freifunk Wuppertal",
+      "description": "Der Verein Freifunk Rheinland e.V. wurde von Aktivisten aus der Region Düsseldorf und Wuppertal gegründet um nicht nur individuell sondern als Körperschaft handeln zu können. Dabei ist es das Ziel der Funkzelle Wuppertal die technische Umsetzung eines freien, autarken und bürgernahen Netzwerkes zu ermöglichen. Über die Betreibung der Internetseite wird eine Firmware bereitgestellt, mit der Internetrouter modifiziert werden und somit einen Teil des Internet-Zugangs 'spenden'. Wenn mehrere Router sich in einem geringen räumlichen Abstand zueinander befinden, wird das Netzwerk robuster und die Verbindung deutlich schneller. Das Ziel ist somit, eine Eigendynamik zu schaffen, damit mehr und mehr private Haushalte sich anschließen. Zudem hat die Funkzelle angefangen, städtische Gebäude mit entsprechend modifizierten Routern auszustatten, welche eine größere und weitere Vernetzung mit sich bringen (z.B. Rathausturm Elberfeld).",
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 6049466058,
+      "lastChanged": 1561575363535,
+      "changedBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "type": "NODE",
+      "dataGroups": [],
+      "bliDimensions": [
+        33,
+        34,
+        25,
+        30
+      ],
+      "tags": [
+        {
+          "id": 158,
+          "key": "_gpd:aktionsradius",
+          "value": "im gesamten Ort",
+          "displayName": null,
+          "source": "import"
+        }
+      ],
+      "lon": 7.144989967346191,
+      "lat": 51.26673889160156
+    },
+    {
+      "id": 57,
+      "created": 1561575101144,
+      "name": "Bergische Struktur- und Wirtschaftsförderungsgesellschaft mbH",
+      "description": null,
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 6050601407,
+      "lastChanged": 1561575313319,
+      "changedBy": null,
+      "type": "NODE",
+      "dataGroups": [],
+      "bliDimensions": [],
+      "tags": [],
+      "lon": 7.08034610748291,
+      "lat": 51.165138244628906
+    },
+    {
+      "id": 58,
+      "created": 1561575101200,
+      "name": "Wohnungsgenossenschaft Ölberg eG",
+      "description": null,
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 6050613758,
+      "lastChanged": 1561575314463,
+      "changedBy": null,
+      "type": "NODE",
+      "dataGroups": [],
+      "bliDimensions": [],
+      "tags": [],
+      "lon": 7.138179302215576,
+      "lat": 51.25881576538086
+    },
+    {
+      "id": 59,
+      "created": 1561575101205,
+      "name": "TransZent",
+      "description": null,
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 6050610430,
+      "lastChanged": 1561575317366,
+      "changedBy": null,
+      "type": "NODE",
+      "dataGroups": [],
+      "bliDimensions": [],
+      "tags": [],
+      "lon": 7.1526570320129395,
+      "lat": 51.2552604675293
+    },
+    {
+      "id": 60,
+      "created": 1561575101212,
+      "name": "Humboldt Universität Berlin",
+      "description": "",
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 120456814,
+      "lastChanged": 1561577688938,
+      "changedBy": {
+        "id": 20,
+        "username": "admin"
+      },
+      "type": "WAY",
+      "dataGroups": [],
+      "bliDimensions": [],
+      "tags": [],
+      "lon": 13.392064094543457,
+      "lat": 52.51950454711914
+    },
+    {
+      "id": 61,
+      "created": 1561575104860,
+      "name": "Hebebühne e.V.",
+      "description": "Der Kulturverein Hebebühne e.V. versteht sich als eine Plattform für die Umsetzung und Ausstellung von künstlerischen Ideen der Bürger Wuppertals sowie der Kunstwerke junger Künstler. Letztgenanntere werden konzeptionell unterstützt (Öffentlichkeitsarbeit, Planung, Durchführung, Vermittlung von finanzieller Unterstützung) und somit bei ersten Schritten in den Kunstmarkt begleitet. Dabei ist es dem Verein ausdrücklich wichtig, nicht auf regionale oder lokale Künstler fokussiert zu sein, sondern zieht auch viele Kunstschaffende aus der weiteren Region (Düsseldorf, Köln, Essen, Bonn) an. Neben den Kunstausstellungen werden zudem verschiedene Veranstaltungsformate realisiert, welche jedoch auch stark mit den sich engagierenden Mitgliedern und deren Ideen zusammenhängen. Dabei ist es in letzter Zeit zu mehreren Konzerten und Lesungen gekommen. Die Hebebühne beteiligt sich zudem regelmäßig und produktiv an der Wuppertaler Performancenacht.",
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 169012125,
+      "lastChanged": 1561575319523,
+      "changedBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "type": "WAY",
+      "dataGroups": [],
+      "bliDimensions": [
+        33,
+        35,
+        29
+      ],
+      "tags": [
+        {
+          "id": 130,
+          "key": "_gpd:aktionsradius",
+          "value": "im gesamten Ort",
+          "displayName": null,
+          "source": "import"
+        }
+      ],
+      "lon": 7.143848419189453,
+      "lat": 51.26646423339844
+    },
+    {
+      "id": 62,
+      "created": 1561575106052,
+      "name": "Wohngruppe Malerstraße/KomMal e.V.",
+      "description": "Der Verein ist mit der Verwaltung des Mehrgenerationenhauses in der Malerstraße betraut. Die Inbetriebnahme, der Ausbau, sowie die Konzipierung des Projektes fand noch außerhalt des Vereinsrahmens statt. Das Haus soll ein generationsübergreifendes und barrierefreies Wohnen in einem energiesparendem Passivhaus ermöglichen. Der Verein KomMal dient nun als Kommunikationstreff, um das Projekt zum Einen der Öffentlichkeit zugänglich zu machen, sich andererseits an Initiativen und Stadtteilarbeiten organisiert beteiligen zu können. Bei Projekten des Vereins steht der Aspekt der Förderung von Kunst und Kultur im Vordergrund. Ausstellungen werden in den Gemeinschaftsräumen ausgerichtet, zudem finden in unregelmäßigen Abständen Lesungen statt. Als neue Ausrichtung wird die Vernetzung des Vereins sowie dessen Einbringung in die Quartiersarbeit angestrengt. Der Verein möchte sich zudem zunehmend in die Flüchtlingshilfe miteinklinken.",
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 4644158658,
+      "lastChanged": 1561575320340,
+      "changedBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "type": "NODE",
+      "dataGroups": [],
+      "bliDimensions": [
+        33,
+        35,
+        25,
+        29,
+        30,
+        31
+      ],
+      "tags": [
+        {
+          "id": 143,
+          "key": "_gpd:aktionsradius",
+          "value": "im Ortsteil",
+          "displayName": null,
+          "source": "import"
+        }
+      ],
+      "lon": 7.134419918060303,
+      "lat": 51.264671325683594
+    },
+    {
+      "id": 63,
+      "created": 1561575101232,
+      "name": "die Urbanisten e.V. Dortmund",
+      "description": null,
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 6050640058,
+      "lastChanged": 1561575321300,
+      "changedBy": null,
+      "type": "NODE",
+      "dataGroups": [],
+      "bliDimensions": [],
+      "tags": [],
+      "lon": 7.438089847564697,
+      "lat": 51.5126838684082
+    },
+    {
+      "id": 159,
+      "created": 1561575107742,
+      "name": "/dev/tal e.V.",
+      "description": "",
+      "createdBy": {
+        "id": 17,
+        "username": "system"
+      },
+      "osmId": 1497543573,
+      "lastChanged": 1561624331638,
+      "changedBy": {
+        "id": 20,
+        "username": "admin"
+      },
+      "type": "NODE",
+      "dataGroups": [],
+      "bliDimensions": [
+        32,
+        33,
+        34,
+        35,
+        {
+          "id": 23,
+          "name": "Einkommen",
+          "description": "Materielle Ausstattung der Menschen (Einkommen und andere finanzielle Leistungen wie Rente oder Arbeitslosengeld).",
+          "slug": null
+        },
+        {
+          "id": 24,
+          "name": "Arbeit",
+          "description": "Die Verfügbarkeit von guten und sicheren Arbeitsplätzen.",
+          "slug": null
+        },
+        25,
+        26,
+        {
+          "id": 27,
+          "name": "Work-Life-Balance",
+          "description": "",
+          "slug": null
+        },
+        28,
+        29,
+        30,
+        31
+      ],
+      "tags": [
+        {
+          "id": 4552,
+          "key": "_gpd:aktionsradius",
+          "value": "Überregional",
+          "displayName": null,
+          "source": null
+        }
+      ],
+      "lon": 7.145033836364746,
+      "lat": 51.266719818115234
+    }
+  ],
+  "bliDimensions": [
+    33,
+    34,
+    35,
+    24,
+    29,
+    30
+  ],
+  "tags": [
+    {
+      "id": 1009,
+      "key": "_gpd:sharing_offers",
+      "value": "Foodsharing Kühlschrank",
+      "displayName": null,
+      "source": null
+    },
+    {
+      "id": 1010,
+      "key": "_gpd:sustainable_nutrition",
+      "value": "Foodsharing Kühlschrank",
+      "displayName": null,
+      "source": null
+    },
+    {
+      "id": 54,
+      "key": "_gpd:aktionsradius",
+      "value": "überregional",
+      "displayName": null,
+      "source": null
+    }
+  ],
+  "lon": 7.145003318786621,
+  "lat": 51.266807556152344
+}

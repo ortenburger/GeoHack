@@ -1,0 +1,19 @@
+
+    <div class="modal-header">
+    	<h4 class="modal-title">Etwas Eintragen</h4>
+		<button type="button" class="close" aria-label="Close" (click)="this.close()">
+			<span aria-hidden="true">&times;</span>
+		</button>
+    </div>
+    <div class="modal-body">
+		<div class="modal-wrap modaltest">
+		<div class="modal-wrap">
+			<div class="container">
+				<div markdown [src]="'assets/markdown/modal-content/Etwas_eintragen.md'"></div>
+			</div>
+		</div>
+		</div>
+	</div>
+    <div class="modal-footer"> 
+    	<button type="button" class="btn btn-primary" (click)="activeModal.close()" ngbAutofocus>Alles klar!</button>
+    </div>

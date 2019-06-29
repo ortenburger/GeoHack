@@ -1,0 +1,48 @@
+#!/bin/bash
+
+api=entwicklungssystem.transformationsstadt.de:18080/geoportal
+path=accounts/authenticate
+username=admin
+password=admin
+  
+
+geoportal_get_token(){
+    export geoportal_bearer=$(curl -v -X POST ${api}/accounts/authenticate/ -H "Accept: application/json" -H "Content-Type: application/json" -d '{"username":"'${username}'","password":"'${password}'"}'|jq -r .Bearer)
+}
+
+geoportal_get_user(){
+    curl -v -X GET ${api}/accounts/currentUser/ -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer ${geoportal_bearer}"
+}
+geoportal_get_bli_dimensions(){
+    curl -v -X GET ${api}/BliDimensions/all/ -H "Accept: application/json" -H "Content-Type: application/json"
+}
+
+geoportal_get_categories(){
+    curl -v -X GET ${api}/Categories/all/ -H "Accept: application/json" -H "Content-Type: application/json"
+}
+
+geoportal_get_category(){
+    curl -v -X GET ${api}/Categories/${1:-}/DataGroups/ -H "Accept: application/json" -H "Content-Type: application/json"
+}
+geoportal_get_elements_all(){
+    curl -v -X GET ${api}/GeoElements/all/ -H "Accept: application/json" -H "Content-Type: application/json"
+}
+
+geoportal_patch_element(){
+    curl -v -X POST ${api}/GeoElements/${1:-}/ -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer ${geoportal_bearer}" -d @utopiastadt.json
+}
+
+geoportal_patch_element(){
+    curl -v -X PATCH ${api}/GeoElements/ -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer ${geoportal_bearer}" -d @utopiastadt.json
+}
+
+geoportal_get_by_osmid(){
+    curl -v -X GET ${api}/GeoElements/byOsmId/nodes/4543376881 -H "Accept: application/json" -H "Content-Type: application/json"
+}
+
+geoportal_get_by_bbox(){
+    curl -v -X GET ${api}'/GeoElements/byBoundingBox/?minX=6.85534732055664&minY=51.157188370168086&maxX=7.43865267944336&maxY=51.36258219686752' -H "Accept: application/json" -H "Content-Type: application/json"
+}
+geoportal_search(){
+    curl -v -X GET ${api}'/search/?q=Utopiastadt' -H "Accept: application/json" -H "Content-Type: application/json"
+}

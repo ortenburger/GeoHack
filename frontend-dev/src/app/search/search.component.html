@@ -1,0 +1,723 @@
+<div
+	[ngClass]="{'float-left':true, 'sidecontainerleft':true,'ausgeblendet':this.state=='hidden'}">
+	<div class="containerSearch float-left">
+		<!--
+		<ngb-tabset type="pills"> <ngb-tab id="freesearchtab"
+			title="Mache deinen Ort des Guten Lebens sichtbar">
+			 <ng-template ngbTabContent>
+			 -->
+		<div class="tabContent">
+
+			<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="large" color="#fff" type="ball-spin-clockwise"></ngx-spinner>
+			<div class="searchtitle">Mache deinen Ort des Guten Lebens
+				sichtbar</div>
+			<form [formGroup]="searchForm" class="searchForm">
+				<!--
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" /> <label
+						class="form-check-label"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>Alle Orte sehen</label>
+				</div>-->
+				<div class="list-group-item list-group-item-action">
+					<i aria-hidden="true" class="fa fa-map-marker fa-lg"></i> Alle Orte
+					sehen <label class="switch"><input type="checkbox" (change)="toggleAllPlaces($event)" checked="showAll == true"><span class="slider round"></span> </label>
+				</div>
+				<div class="">
+					<!-- search field -->
+<!-- 					  <app-autosuggest (termChanged)="termChanged(term)"></app-autosuggest> -->
+					<!-- old search input  -->
+					<!--
+					<input type="text" formControlName="searchPattern"
+						class="form-control searchinput" placeholder="Wie heißt dein Ort?" />
+					-->
+					<app-autosuggest formControlName="searchPattern" (selected)="search($term)"></app-autosuggest>
+					<!--  old search button
+					<div class="input-group-append">
+						<button (click)="search()"
+							class="btn btn-outline-secondary search-button" type="submit">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+					-->
+				</div>
+        <div class="searchbutton float-right">
+					<!--<div *ngIf="state=='visible'" class="searchbuttonPrepend">-->
+          <div class="searchbuttonPrepend">
+						<button (click)="search()" class="btn  search-button"
+							type="submit">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+
+				<!--
+				<div class="form-check">
+					<input type="checkbox" formControlName="searchInDescription"
+						class="form-check-input" /> <label class="form-check-label"
+						for="searchInDescription">Beschreibung einschließen</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" /> <label
+						class="form-check-label">Themen filtern</label>
+				</div>
+				-->
+			</form>
+
+			<div *ngIf="searched" class="search-results-wrap">
+				<div class="" *ngIf="searched && this.osmNodes.length == 0">
+					<div class="searchbox-heading">Orte des Guten Lebens</div>
+					<div class="searchbox-text-only">
+						<i class="gp_warning uiicon" aria-hidden="true"></i>
+						Zu deinem Suchbegriff konnten wir leider kein Ort des Guten Lebens
+						finden.<br>
+					</div>
+				</div>
+				<div class="list-group search-results"
+					*ngIf="this.osmNodes.length > 0">
+					<div class="searchbox-heading">Orte des Guten Lebens</div>
+					<div *ngIf="osmNodes.length > 0">
+						<div *ngFor="let elem of osmNodes">
+							<div
+								[ngClass]="{'list-group-item':true,'list-group-item-action':true,'selected-item':isCurrentElement(elem) }"
+								(click)="show(elem)">
+								<i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+								{{elem.name}}
+								<!--<label class="switch"><input type="checkbox"><span class="slider round"></span> </label>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div *ngIf="nominatimNodes.length > 0">
+					<div class="searchbox-subheading">Noch nicht als Orte des
+						Guten Lebens markiert</div>
+					<div *ngFor="let elem of nominatimNodes">
+						<div
+							[ngClass]="{'list-group-item':true,'list-group-item-action':true,'selected-item':isCurrentElement(elem) }"
+							(click)="showOsmElement(elem)">
+							<i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+							{{elem.name}}
+							<!--<label class="switch"><input type="checkbox"><span class="slider round"></span> </label>-->
+							<div *ngIf="elem.knownEntity()" class="elemexists">
+								<i class="fa fa-check fa-1" aria-hidden="true"></i>Im GeoPortal
+								vorhanden
+							</div>
+						</div>
+					</div>
+					<div class="list-group"
+						*ngIf="searched && this.nominatimNodes.length == 0">
+						<div class="searchbox-text-only">
+							Zu deinem Sucherbegriff konnten wir keinen Ort finden. Mehr
+							Informationen zu unserer Quelle findest du hier:
+							https://www.openstreetmap.de/.<br>
+						</div>
+					</div>
+				</div>
+				<div *ngIf="dataGroups.length > 0">
+					<br> <label>Daten-Gruppen</label>
+					<div class="list-group-item list-group-item-action"
+						*ngFor="let group of dataGroups">{{group.name}}</div>
+				</div>
+
+
+				<!--
+			<div class="list-group search-results" *ngIf="searched && !hasResults">
+				<div class="searchbox-text-only">
+					keine Suchergebnisse.<br>
+				</div>
+			</div>
+			-->
+
+				<div class="list-group"
+					*ngIf="searched && this.nominatimNodes.length == 0">
+					<div class="searchbox-subheading">Noch nicht als Orte des
+						Guten Lebens markiert</div>
+					<div class="searchbox-text-only">
+						<i class="gp_warning uiicon" aria-hidden="true"></i>
+						Zu deinem Sucherbegriff konnten wir keinen Ort finden. Mehr
+						Informationen zu unserer Quelle findest du hier:
+						https://www.openstreetmap.de/.<br>
+					</div>
+				</div>
+				<div class="list-group" *ngIf="hasResults">
+					<div class="searchreset">
+						<button class="btn btn-outline-secondary  "
+							(click)="clearResults()">Suche zurücksetzen</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- </ng-template> </ngb-tab>  -->
+		<!--
+		<ngb-tab id="topictab">
+			<ng-template ngbTabTitle>Nach Themen</ng-template>
+			<ng-template ngbTabContent>
+				<div class="tabContent">
+					<div class="row">
+						<div class="col">
+			       			<h4 class="searchreset">BLI-Dimensionen</h4>
+			        		<app-bli [displayType]="'checkboxesArray_icons'" [dimensions]="dimensionsFilterArray" (changed)="filterChanged($event)"></app-bli>
+						</div>
+					</div>
+						<br>
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary" (click)="showbli()">Filter anwenden</button>
+							</div>
+						</div>
+					</div>
+						<br>
+				</div>
+			</ng-template>
+		</ngb-tab>
+		-->
+		<!--  </ngb-tabset> -->
+	</div>
+
+	<div class="ToggleSearch float-right">
+		<div *ngIf="state=='visible'" class="searchetogglePrepend">
+			<div (click)="toggleVisibility();"
+				class="form-group item-detail name">
+				<label for="elementOsmid" class="col-sm-1 col-form-label"><i
+					class="fa fa-angle-double-left" aria-hidden="true"></i></label>
+			</div>
+		</div>
+		<div *ngIf="state=='hidden'" class="searchetogglePrepend">
+			<div (click)="toggleVisibility();"
+				class="form-group item-detail name">
+				<label for="elementOsmid" class="col-sm-1 col-form-label"><i
+					class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div [ngClass]="{'float-right':true, 'sidecontainerright':true,'ausgeblendet':detailsState()=='hidden'}"
+*ngIf="nodeService.detailView">
+	<div class="searcheditPrepend">
+		<div *ngIf="detailsState()=='visible'" class="searchedetailstogglePrepend">
+			<div (click)="toggleVisibilityDetails();"
+				class="form-group item-detail name">
+				<label for="elementSearchDetails"
+					class="col-sm-1 col-form-label"><i
+					class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+			</div>
+		</div>
+		<div *ngIf="detailsState()=='hidden'" class="searchedetailstogglePrepend">
+			<div (click)="toggleVisibilityDetails();"
+				class="form-group item-detail name">
+				<label for="elementSearchDetails"
+					class="col-sm-1 col-form-label"><i
+					class="fa fa-angle-double-left" aria-hidden="true"></i></label>
+			</div>
+		</div>
+	</div>
+	<div class="searchdetails">
+	<div class="elementdetails">
+				<div class="form-group row item-detail name">
+					<label for="elementOsmid" class="col-sm-1 col-form-label"><i
+						class="fa fa-map-marker fa-lg" aria-hidden="true"></i></label>
+					<div class="col">
+						<input type="text" readonly class="form-control-plaintext"
+							id="elementName" value="{{nodeService.detailView.name}}">
+					</div>
+					<!--
+					<div class="col">
+						<span class="form-control-plaintext"
+							id="elementName">{{nodeService.detailView.getDate()}}</span>
+					</div>
+					 -->
+				</div>
+			</div>
+		<div class="elementwrap">
+			<div class="elementinfo">
+				<div class="form-group">
+					<div (click)="infoCollapsed= !infoCollapsed"
+						[attr.aria-expanded]="!infoCollapsed" aria-controls="collapseInfo"
+						class="collapseInfo">
+						<i class="_fa _fa-undo _fa-lg listicon info" aria-hidden="true">&nbsp;</i>Allgemeine
+						Informationen<i [ngClass]="{'fa':true,'fa-lg':true,'fa-angle-down':!infoCollapsed,'fa-angle-right':infoCollapsed, 'fa-right':true}"
+							aria-hidden="true">&nbsp;</i>
+					</div>
+				</div>
+				<div id="collapseInfo" [ngbCollapse]="infoCollapsed">
+					<div class="card">
+						<div class="card-body detailbox">
+							<div class="form-group row item-detail">
+								<label for="elementOsmid" class="col-sm-4 col-form-label">
+									<strong>OSM-ID</strong>
+								</label>
+								<div class="col">
+									<span class="form-control-plaintext"
+										id="elementOsmid" >{{nodeService.detailView.osmId}}</span>
+								</div>
+							</div>
+							<!-- <div class="form-group row item-detail">
+								<label for="elementTyp" class="col-sm-4 col-form-label">
+									<strong>Typ</strong>
+								</label>
+								<div class="col">
+									<span class="form-control-plaintext"
+										id="elementTyp">{{nodeService.detailView.osmType}}</span>
+								</div>
+							</div> -->
+
+							<!-- <div *ngFor="let tag of nodeService.detailView.osmtags"
+								class="form-group row item-detail">
+								<label for="elementKey" class="col-sm-4 col-form-label">
+									<strong>{{translateTagKey(tag.key)}}</strong>
+								</label>
+								<div class="col">
+									<span class="form-control-plaintext" id="elementKey">{{tag.value}}</span>
+								</div>
+								<div class="col-sm-1">
+									<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a>
+								</div>
+							</div> -->
+							
+							<!-- <div *ngFor="let tag of nodeService.detailView.tags"
+								class="form-group row item-detail">
+								<label for="elementKey" class="col-sm-4 col-form-label">
+									<strong>{{translateTagKey(tag.key)}}</strong>
+								</label>
+								<div class="col">
+									<span class="form-control-plaintext"
+										id="elementKey">{{tag.value}}</span>
+								</div>
+							</div> -->
+							
+							<div class="form-group row item-detail">
+								<label class="col-sm-4 col-form-label">
+									<strong>Name</strong>
+								</label>
+								<div class="col">
+									<div *ngIf="nodeService.detailView.getOsmTagValue('name')">
+										<span class="form-control-plaintext" id="elementKey" >{{nodeService.detailView.getOsmTagValue('name')}}</span>
+									</div>
+									<div *ngIf="!nodeService.detailView.getOsmTagValue('name')"> 
+											<span class="form-control-plaintext text-muted" id="elementKey" >Keine Angabe bisher.</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a>
+								</div>
+							</div>
+							
+							<div class="form-group row item-detail">
+								<label class="col-sm-4 col-form-label">
+									<strong>Homepage</strong>
+								</label>
+								<div class="col">
+									<div *ngIf="nodeService.detailView.getOsmTagValue('contact:websit')">
+										<span class="form-control-plaintext" id="elementKey" >{{nodeService.detailView.getOsmTagValue('contact:websit')}}</span>
+									</div>
+									<div *ngIf="!nodeService.detailView.getOsmTagValue('contact:websit')"> 
+											<span class="form-control-plaintext text-muted" id="elementKey" >Keine Angabe bisher.</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a>
+								</div>
+							</div>
+							
+							<div class="form-group row item-detail">
+								<label class="col-sm-4 col-form-label">
+									<strong>Straße</strong>
+								</label>
+								<div class="col">
+									<div *ngIf="nodeService.detailView.getOsmTagValue('addr:street')">
+										<span class="form-control-plaintext" id="elementKey" >{{nodeService.detailView.getOsmTagValue('addr:street')}}</span>
+									</div>
+									<div *ngIf="!nodeService.detailView.getOsmTagValue('addr:street')"> 
+											<span class="form-control-plaintext text-muted" id="elementKey" >Keine Angabe bisher.</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a>
+								</div>
+							</div>
+							
+							<div class="form-group row item-detail">
+								<label class="col-sm-4 col-form-label">
+									<strong>Hausnummer</strong>
+								</label>
+								<div class="col">
+									<div *ngIf="nodeService.detailView.getOsmTagValue('addr:housenumber')">
+										<span class="form-control-plaintext" id="elementKey" >{{nodeService.detailView.getOsmTagValue('addr:housenumber')}}</span>
+									</div>
+									<div *ngIf="!nodeService.detailView.getOsmTagValue('addr:housenumber')"> 
+											<span class="form-control-plaintext text-muted" id="elementKey" >Keine Angabe bisher.</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a>
+								</div>
+							</div>
+							
+							<div class="form-group row item-detail">
+								<label class="col-sm-4 col-form-label">
+									<strong>PLZ</strong>
+								</label>
+								<div class="col">
+									<div *ngIf="nodeService.detailView.getOsmTagValue('addr:postcode')">
+										<span class="form-control-plaintext" id="elementKey" >{{nodeService.detailView.getOsmTagValue('addr:postcode')}}</span>
+									</div>
+									<div *ngIf="!nodeService.detailView.getOsmTagValue('addr:postcode')"> 
+											<span class="form-control-plaintext text-muted" id="elementKey" >Keine Angabe bisher.</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a>
+								</div>
+							</div>
+							
+							<div class="form-group row item-detail">
+								<label class="col-sm-4 col-form-label">
+									<strong>Stadt</strong>
+								</label>
+								<div class="col">
+									<div *ngIf="nodeService.detailView.getOsmTagValue('addr:city')">
+										<span class="form-control-plaintext" id="elementKey" >{{nodeService.detailView.getOsmTagValue('addr:city')}}</span>
+									</div>
+									<div *ngIf="!nodeService.detailView.getOsmTagValue('addr:city')"> 
+											<span class="form-control-plaintext text-muted" id="elementKey" >Keine Angabe bisher.</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a>
+								</div>
+							</div>
+							
+							<div class="form-group row item-detail">
+								<label class="col-sm-4 col-form-label">
+									<strong>Land</strong>
+								</label>
+								<div class="col">
+									<div *ngIf="nodeService.detailView.getOsmTagValue('addr:country')">
+										<span class="form-control-plaintext" id="elementKey" >{{nodeService.detailView.getOsmTagValue('addr:country')}}</span>
+									</div>
+									<div *ngIf="!nodeService.detailView.getOsmTagValue('addr:country')"> 
+											<span class="form-control-plaintext text-muted" id="elementKey" >Keine Angabe bisher.</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a>
+								</div>
+							</div>
+							
+							<div class="form-group row item-detail">
+								<label class="col-sm-4 col-form-label">
+									<strong>E-Mail</strong>
+								</label>
+								<div class="col">
+									<div *ngIf="nodeService.detailView.getOsmTagValue('email')">
+										<span class="form-control-plaintext" id="elementKey" >{{nodeService.detailView.getOsmTagValue('email')}}</span>
+									</div>
+									<div *ngIf="!nodeService.detailView.getOsmTagValue('email')"> 
+											<span class="form-control-plaintext text-muted" id="elementKey" >Keine Angabe bisher.</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a>
+								</div>
+							</div>
+							
+							<div class="form-group row item-detail">
+								<label class="col-sm-4 col-form-label">
+									<strong>Öffnungszeiten</strong>
+								</label>
+								<div class="col">
+									<div *ngIf="nodeService.detailView.getOsmTagValue('opening_hours')">
+										<span class="form-control-plaintext" id="elementKey" >{{nodeService.detailView.getOsmTagValue('opening_hours')}}</span>
+									</div>
+									<div *ngIf="!nodeService.detailView.getOsmTagValue('opening_hours')"> 
+											<span class="form-control-plaintext text-muted" id="elementKey" >Keine Angabe bisher.</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+			<div class="elementinfo">
+				<div class="form-group">
+					<div (click)="goodLifeCollapse= !goodLifeCollapse"
+						[attr.aria-expanded]="!infoCollapsed" aria-controls="collapseInfo"
+						class="collapseInfo">
+						<i class="listicon gp_betterlife" aria-hidden="true">&nbsp;</i>Ort des Guten  Lebens<i [ngClass]="{'fa':true,'fa-lg':true,'fa-angle-down':!goodLifeCollapse,'fa-angle-right':goodLifeCollapse, 'fa-right':true}"
+							aria-hidden="true">&nbsp;</i>
+					</div>
+				</div>
+				<div id="collapseInfo" [ngbCollapse]="goodLifeCollapse">
+					<div class="card">
+						<div *ngIf="showGoodLife()" class="card-body detailbox">
+
+							<div *ngIf="nodeService.detailView.dimensions.length > 0" class="elementbli">
+								<div class="form-group row item-detail">
+									<label for="elementBli" class="col-sm col-form-label">
+										<strong>Dimensionen des Guten Lebens</strong>
+									</label>
+								</div>
+								<br>
+								<app-bli class="bli-app" [node]="nodeService.detailView" [displayType]="'icons_and_labels'"></app-bli>
+							</div>
+
+							<div *ngIf="nodeService.detailView.getDescription()" class="elementdescription">
+								<div class="form-group row item-detail">
+									<label for="description" class="col-sm col-form-label">
+											<strong>Beschreibung</strong>
+									</label>
+								</div>
+								<div name="description" class="col">{{nodeService.detailView.description}}</div>
+							</div>
+
+						</div>
+						<div *ngIf="!showGoodLife()" class="card-body detailbox">
+							<label class="col-sm ">
+									Keine Angabe bisher.
+							</label>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="elementtitle d-none">
+				<strong>Ein Ort des Guten Lebens in den Kategorien...</strong>
+			</div>
+			<div class="elementdiscription">
+				<div class="">
+					<div class="form-group">
+						<div (click)="descCollapsed = !descCollapsed"
+							[attr.aria-expanded]="!descCollapsed"
+							aria-controls="collapseDescription" class="collapseDescription">
+                <i class="_fa _fa-undo _fa-lg listicon gp_network" aria-hidden="true">&nbsp;</i>Dieser Ort und sein Netzwerk<i [ngClass]="{'fa':true,'fa-lg':true,'fa-angle-down':!descCollapsed,'fa-angle-right':descCollapsed, 'fa-right':true}"
+								aria-hidden="true">&nbsp;</i>
+						</div>
+					</div>
+					<div id="collapseDescription" [ngbCollapse]="descCollapsed">
+						<div class="card ">
+
+							<div class="card-body detailbox">
+
+								<div *ngIf="nodeService.detailView.getOsmTagValue('operator:type')" class="form-group row item-detail">
+									<label for="rechtsform" class="col-sm-4 col-form-label">
+										<strong>Rechtsform</strong>
+									</label>
+									<div class="col">
+										<span class="form-control-plaintext" id="elementKey">{{nodeService.detailView.getOsmTagValue('operator:type')}}<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a></span>
+									</div>
+								</div>
+
+
+								<div *ngIf="nodeService.detailView.hasTag('_gpd:welfare')" class="form-group row item-detail">
+									<label for="welfare" class="col-sm-4 col-form-label">
+										<strong>Gemeinnützigkeit</strong>
+									</label>
+									<div class="col">
+										<span class="form-control-plaintext" id="elementKey">{{nodeService.detailView.getTagValue('_gpd:welfare')}}</span>
+									</div>
+								</div>
+
+
+
+								<div *ngIf="nodeService.detailView.getOsmTagValue('start_date')" class="form-group row item-detail">
+									<label for="start_date" class="col-sm-4 col-form-label">
+										<strong>Gründungsjahr</strong>
+									</label>
+									<div class="col">
+										<span class="form-control-plaintext" id="elementKey">{{nodeService.detailView.getOsmTagValue('start_date')}}<a href="http://www.openstreetmap.org/copyright" target="_blank"><i aria-hidden="true" class="listicon gp_osmlink"></i></a></span>
+									</div>
+								</div>
+
+								<div class="elementpartner">
+									<div class="form-group row item-detail">
+										<label for="elementPartner" class="col-sm col-form-label">
+											<strong>Netzwerkpartner</strong></label>
+									</div>
+									<div *ngFor="let partner of nodeService.detailView.peers"
+										class="list-group">
+										<div class="list-group-item list-group-item-action">
+											<i class="fa fa-map-marker" aria-hidden="true"></i>{{partner.name}}<label
+												class="switch"><input type="checkbox"
+												[checked]="mapService.hasNode(partner)"
+												(change)="togglePeerVisibility(partner)"><span
+												class="slider round"></span></label>
+										</div>
+									</div>
+								</div>
+
+
+
+
+								<div *ngIf="nodeService.detailView.getTagValue('_gpd:aktionsradius')" class="form-group row item-detail">
+									<label for="aktionsradius" class="col-sm-4 col-form-label">
+										<strong>Aktionsradius</strong>
+									</label>
+									<div class="col">
+										<span class="form-control-plaintext" id="elementKey">{{nodeService.detailView.getTagValue('_gpd:aktionsradius')}}</span>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="elementSharing">
+				<div class="">
+					<div class="form-group ">
+
+						<div (click)="sharingCollapsed = !sharingCollapsed"
+							[attr.aria-expanded]="sharingCollapsed" aria-controls="collapseSharing"
+							class="collapseSharing">
+							<i class="listicon gp_sharing" aria-hidden="true">&nbsp;</i>Dieser Ort und seine Sharing- und Giving-Angebote<i [ngClass]="{'fa':true,'fa-lg':true,'fa-angle-down':!sharingCollapsed,'fa-angle-right':sharingCollapsed, 'fa-right':true}"
+								aria-hidden="true">&nbsp;</i>
+						</div>
+					</div>
+					<div id="collapseSharing" [ngbCollapse]="sharingCollapsed">
+						<div class="card container">
+							<div *ngIf="showSharing()" class="card-body detailbox">
+
+								<div *ngIf="nodeService.detailView.hasTag('_gpd:sharing_offers')" class="form-group row item-detail">
+									<label for="elementKey" class="col-sm-4 col-form-label">
+										<strong>Angebote des Teilen und Schenkes</strong>
+									</label>
+									<div class="col">
+										<span class="form-control-plaintext"
+											id="elementKey">{{nodeService.detailView.getTagValue('_gpd:sharing_offers')}}</span>
+									</div>
+								</div>
+
+								<div *ngIf="nodeService.detailView.hasTag('_gpd:sharing_organisator')" class="form-group row item-detail">
+									<label for="elementKey" class="col-sm-4 col-form-label">
+										<strong>Organisator*in</strong>
+									</label>
+									<div class="col">
+										<span class="form-control-plaintext"
+											id="elementKey">{{nodeService.detailView.getTagValue('_gpd:sharing_organisator')}}</span>
+									</div>
+								</div>
+
+
+								<div *ngIf="nodeService.detailView.hasTag('_gpd:sharing_free_offers')" class="form-group row item-detail">
+									<label for="elementKey" class="col-sm-4 col-form-label">
+										<strong>Kostenfreie Angebote</strong>
+									</label>
+									<div class="col">
+										<span class="form-control-plaintext"
+											id="elementKey">{{nodeService.detailView.getTagValue('_gpd:sharing_free_offers')}}</span>
+									</div>
+								</div>
+
+								<div *ngIf="nodeService.detailView.hasTag('_gpd:sharing_nonfree_offers')" class="form-group row item-detail">
+									<label for="elementKey" class="col-sm-4 col-form-label">
+										<strong>Kostenpflichtige Angebote</strong>
+									</label>
+									<div class="col">
+										<span class="form-control-plaintext"
+											id="elementKey">{{nodeService.detailView.getTagValue('_gpd:sharing_nonfree_offers')}}</span>
+									</div>
+								</div>
+
+
+
+							</div>
+							<div *ngIf="!showSharing()" class="card-body detailbox">
+								<label class="col-sm ">
+										Keine Angabe bisher.
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="elementNutrition">
+				<div class="">
+					<div class="form-group ">
+
+						<div (click)="nutritionCollapsed = !nutritionCollapsed"
+							[attr.aria-expanded]="sharingCollapsed" aria-controls="collapseNutrition"
+							class="collapseNutrition">
+							<i class="listicon gp_food" aria-hidden="true">&nbsp;</i>Dieser Ort und nachhaltige Ernährung<i [ngClass]="{'fa':true,'fa-lg':true,'fa-angle-down':!nutritionCollapsed,'fa-angle-right':nutritionCollapsed, 'fa-right':true}"
+								aria-hidden="true">&nbsp;</i>
+						</div>
+					</div>
+					<div id="collapseNutrition" [ngbCollapse]="nutritionCollapsed">
+						<div class="card container">
+							<div *ngIf="showSustainableNutrtition()" class="card-body detailbox">
+
+								<div *ngIf="nodeService.detailView.hasTag('_gpd:sustainable_nutrition')" class="form-group row item-detail">
+									<label for="elementKey" class="col-sm-4 col-form-label">
+										<strong>Angebote zum Thema nachhaltige Ernährung</strong>
+									</label>
+									<div class="col">
+										<span class="form-control-plaintext"
+											id="elementKey">{{nodeService.detailView.getTagValue('_gpd:sustainable_nutrition')}}</span>
+									</div>
+								</div>
+
+								<div *ngIf="nodeService.detailView.hasTag('_gpd:sustainable_nutrition_assortment')" class="form-group row item-detail">
+									<label for="elementKey" class="col-sm-4 col-form-label">
+										<strong>Sortiment</strong>
+									</label>
+									<div class="col">
+										<span class="form-control-plaintext"
+											id="elementKey">{{nodeService.detailView.getTagValue('_gpd:sustainable_nutrition_assortment')}}</span>
+									</div>
+								</div>
+							</div>
+							<div *ngIf="!showSustainableNutrtition()" class="card-body detailbox">
+								<label class="col-sm ">
+										Keine Angabe bisher.
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<br>
+			<div *ngIf="!nodeService.detailView.knownEntity()" class="elementnew exclamation list-group-item">
+				<i class="gp_warning icon_big" aria-hidden="true">&nbsp;</i>
+				<p>Dieser Ort ist noch nicht Teil des GeoPortals des Guten Lebens. Wenn du ihn bearbeitest, wird er als Ort des Guten Lebens sichtbar.</p>
+			</div>
+		</div>
+
+		<div class="elementfooter">
+			<div class="elementedit">
+				<div *ngIf="authService.isLoggedIn()" class="elementeditbuttonwrap">
+					<button type="button" (click)="edit(nodeService.detailView)" class="btn btn-primary elementeditbutton">Diesen Ort bearbeiten</button>
+				</div>
+				<div *ngIf="!authService.isLoggedIn()" class="elementeditbuttonwrap">
+					<button class="btn btn-primary" title="Du musst angemeldet sein um Orte zu bearbeiten." alt="Du musst angemeldet sein um Orte zu bearbeiten." type="button" (click)='edit(nodeService.detailView)' class="btn btn-primary elementeditbutton">Diesen Ort bearbeiten</button>
+				</div>
+			</div>
+			<div class="elementlastedit">Letzte Änderung: {{nodeService.detailView.last_change_date | date:medium}}</div>
+		</div>
+	</div>
+</div>
+

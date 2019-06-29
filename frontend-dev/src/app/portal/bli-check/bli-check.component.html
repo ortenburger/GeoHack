@@ -1,0 +1,7 @@
+<div class="form-check">
+  <input *ngFor="let dimension of dimensions" class="form-check-input" type="checkbox" value="" id="{{dimension.name}}">
+  <label class="form-check-label" title="{{dimension.description}}" for="{{dimension.name}}">
+    <i [ngClass]="bliService.getIcon(dimension.name)"></i>
+    {{dimension.name}} <a *ngIf="authService.profileRetrieved && authService.currentUser.isAdmin">  [e]</a>
+  </label>
+</div>

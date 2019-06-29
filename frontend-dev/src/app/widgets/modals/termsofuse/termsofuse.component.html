@@ -1,0 +1,15 @@
+    <div class="modal-header">
+      <h4 class="modal-title">Nutzungsbedingungen für das GeoPortal des Guten Lebens</h4>
+    </div>
+    <div class="modal-body">
+		<div class="modal-wrap modaltest">
+			<div class="modal-wrap-com">
+				<div class="container">
+					<div markdown [src]="'assets/markdown/Nutzungsbedingungen.md'"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="modal-footer"> 
+    	<button type="button" class="btn btn-primary" (click)="modalService.close('Close click')" ngbAutofocus>Akzeptieren</button>
+    </div>

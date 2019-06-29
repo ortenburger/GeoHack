@@ -1,0 +1,23 @@
+
+* Hibernate | https://mvnrepository.com/artifact/org.hibernate/hibernate-core |	LGPL 2.1
+* javax.el-api |https://mvnrepository.com/artifact/javax.el/javax.el-api | ( CDDL | GPL | GPL 2.0 )
+* org.postgresql | https://mvnrepository.com/artifact/org.postgresql/postgresql |(BSD 2-clause)
+* junit | https://mvnrepository.com/artifact/junit/junit |	EPL 1.0
+* jackson | https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson | (Apache 2.0 | CDDL 1.1 | GPL 2.0)
+* Java Servlet API | https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api | ( CDDL | GPL 2.0 )
+* Jersey | https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet | (Apache 2.0 | BSD | CDDL 1.1 | Public)
+* Javax WS RS API | https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api | (EPL 2.0)
+* Shiro | https://mvnrepository.com/artifact/org.apache.shiro/shiro-core | (Apache 2.0)
+* io.jsonwebtoken | https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt | (Apache 2.0)
+* org.slf4j | https://mvnrepository.com/artifact/org.slf4j/slf4j-api | MIT
+* ch.qos.logback | https://mvnrepository.com/artifact/ch.qos.logback/logback-classic | (EPL 1.0 | LGPL 2.1)
+* opencsv | https://mvnrepository.com/artifact/com.opencsv/opencsv | (Apache 2.0)
+* jaxb | https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api | (CDDL 1.1)
+* JavaBeans Activation Framework API JAR | https://mvnrepository.com/artifact/javax.activation/javax.activation-api/1.2.0 | (CDDL | GPL 2.0)
+
+
+Dependencies:
+
+* Maven (Apache 2.0)
+* Postgresql (Postgresql-License)
+* Tomcat (Apache 2.0)

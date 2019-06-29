@@ -1,0 +1,41 @@
+<div class="elementwrap">
+	<form [formGroup]="form">
+		<div class="elementinfo">
+			<div class="form-group card-header edit_header">
+				<div (click)="infoCollapsed= !infoCollapsed"
+					[attr.aria-expanded]="!infoCollapsed" aria-controls="collapseInfo"
+					class="collapseInfo">
+					<h5><i class="" aria-hidden="true">&nbsp;</i>Ort des Guten Lebens<i
+						[ngClass]="{'fa':true,'fa-lg':true,'fa-angle-down':!infoCollapsed,'fa-angle-right':infoCollapsed, 'fa-right':true}"
+						aria-hidden="true">&nbsp;</i></h5>
+				</div>
+			</div>
+			<div id="collapseInfo" [ngbCollapse]="infoCollapsed">
+				<div class="card">
+					<div class="card-body">
+						<div class="form-group row">
+							<label  class="col-sm-3 col-form-label">
+								<strong>BLI-Dimensionen</strong>
+							</label>
+
+							<div class="col-sm-8">
+			      				<app-bli class="bli-app" [node]="node" [displayType]="'checkboxes_icons'"></app-bli>
+							</div>
+
+						</div>
+
+						<div class="form-group row">
+							<label class="col-sm-3 col-form-label">
+								<strong>Beschreibung</strong>
+							</label>
+							<div class="col-sm-8">
+								<textarea formControlName="description" class="form-control" id="descriptionTextarea" rows="10" placeholder="Was passiert an diesem Ort? Warum ist er ein Ort des Guten Lebens? Wer ist dort aktiv?"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+

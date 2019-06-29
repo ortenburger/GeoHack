@@ -1,0 +1,24 @@
+.city{
+	font-size:0.75em;
+	color:#eee;
+	margin-left:1em;
+}
+
+.searchinput {
+	border-radius: 0;
+	border: solid #94c11f;
+	border-right: 0px;
+	width:405px;
+	box-shadow:none;
+}
+
+
+::ng-deep #ngb-typeahead-0 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0px;
+  border: none;
+  border-radius: 0;
+}

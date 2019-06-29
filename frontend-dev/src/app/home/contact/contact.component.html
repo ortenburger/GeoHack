@@ -1,0 +1,38 @@
+<div class="widget-wrap big-widget">
+	<div class="container contact pagecontainer">
+		<h1 class="entry-title">Kontakt GeoPortal</h1>
+		<!--<h5>Transformationsstadt</h5>
+		<a href="mailto:info@transformationsstadt.de"><span
+			class="green_link">info@transformationsstadt.de</span></a> <br>-->
+		<h5>GeoPortal des Gutens Lebens</h5>
+		<a href="mailto:geoportal@transformationsstadt.de">geoportal@transformationsstadt.de</a>
+		<br>
+	</div>
+	<br>
+	<div *ngIf="show_contact_formular" class="container">
+		<h3>Kontaktformular</h3>
+		<form>
+			<div class="form-group">
+				<label for="contactFormControlInput1">E-Mail</label> <input
+					type="email" class="form-control" id="contactFormControlInput1"
+					placeholder="name@beispiel.com" disabled>
+			</div>
+			<div class="form-group">
+				<label for="contactFormControlInput2">Name</label> <input
+					type="email" class="form-control" id="contactFormControlInput2"
+					placeholder="" disabled>
+			</div>
+			<div class="form-group">
+				<label for="contactFormControlInput3">Betreff</label> <input
+					type="email" class="form-control" id="contactFormControlInput3"
+					placeholder="" disabled>
+			</div>
+			<div class="form-group">
+				<label for="contactFormControlTextarea1">Nachricht</label>
+				<textarea class="form-control" id="contectFormControlTextarea1"
+					rows="3" disabled></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary" disabled>Senden</button>
+		</form>
+	</div>
+</div>

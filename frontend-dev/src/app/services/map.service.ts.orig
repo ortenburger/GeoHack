@@ -1,0 +1,511 @@
+<<<<<<< HEAD
+import { Injectable } from '@angular/core';
+
+import OlMap from 'ol/map';
+import OlXYZ from 'ol/source/xyz';
+import OlVectorSource from 'ol/source/Vector'
+import OlTileLayer from 'ol/layer/tile';
+import OlView from 'ol/view';
+import OlProj from 'ol/proj';
+import OlFeature from 'ol/Feature';
+import { Icon as OlIcon, Style as OlStyle } from 'ol/style';
+import OlVectorLayer from 'ol/layer/vector';
+import { fromLonLat } from 'ol/proj';
+import OlPoint from 'ol/geom/Point';
+import { Stroke as OlStroke, Fill as OlFill } from 'ol/style';
+import { LogService } from './log.service';
+import { OsmNode } from '../models/OsmNode';
+import { DataGroup } from '../models/DataGroup';
+import { defaults as OlDefaultControls } from 'ol/control.js';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class MapService {
+
+  map: OlMap;
+  source: OlXYZ;
+  layer: OlTileLayer;
+  view: OlView;
+  zoom: number;
+  coordinates: [ number,number ];
+  mapLayer: OlTileLayer;
+  iconLayer: OlVectorLayer;
+  icons: Array<OlFeature>;
+  layers: Array<any>;
+  text:string;
+
+  constructor(private logger:LogService) {
+        this.layers=new Array<any>(); 
+        this.icons = new Array<OlFeature>();
+        this.coordinates = [7.147,51.26];
+        this.changeText();
+        this.zoom = 12;
+        
+        this.iconLayer = new OlVectorLayer({
+            style: function(feature) {
+              return feature.get('style');
+            },
+            source: new OlVectorSource({features: this.icons})
+        });
+        
+        this.source = new OlXYZ({
+            url: 'http://tile.osm.org/{z}/{x}/{y}.png'
+        });
+        
+        this.mapLayer = new OlTileLayer({
+            source: this.source
+        });
+        
+        this.view = new OlView({
+            center: fromLonLat(this.coordinates),
+            zoom: this.zoom
+        });
+    }
+
+    createElement(coords){
+        
+        let iconFeature = new OlFeature(new OlPoint(fromLonLat(coords)));
+        
+        //https://www.flaticon.com/free-icon/map-marker_33622
+        iconFeature.set('style', this.createStyle('assets/img/map-marker.png', undefined));
+        return iconFeature;
+        //this.icons.push(iconFeature);
+       
+        /*
+        if(this.map){
+            this.map.removeLayer(this.iconLayer);
+            this.map.addLayer(new OlVectorLayer({
+                style: function(feature) {
+                  return feature.get('style');
+                },
+                source: new OlVectorSource({features: this.icons})
+            }));
+        }*/
+    }
+    
+    
+    createStyle(src, img) {
+        
+        return new OlStyle({
+          image: new OlIcon(/** @type {module:ol/style/Icon~Options} */ ({
+            /*anchor:[0.5,0.4],*/
+            crossOrigin: 'anonymous',
+            src: src,
+            img: img,
+            imgSize: img ? [img.width, img.height] : undefined
+          }))
+        });
+    }
+    
+
+    
+    show(node: OsmNode){
+       this.logger.debug("Going to "+JSON.stringify(node,null,3));
+       this.view = new OlView({
+            center: fromLonLat([(node.lon),(node.lat)]),
+            zoom: 14
+       });
+       this.map.setView(this.view);
+       this.icons = new Array<OlFeature>();
+       this.icons.push(this.createElement([(node.lon),(node.lat)]));
+       
+       this.map.removeLayer(this.iconLayer);
+       this.iconLayer = new OlVectorLayer({
+            style: function(feature) {
+              return feature.get('style');
+            },
+            source: new OlVectorSource({features: this.icons})
+       });
+       this.map.addLayer(this.iconLayer);
+    }
+    showGroup(group:DataGroup){
+            
+    }
+    initMap(){
+        this.layers.push(this.mapLayer);
+        this.layers.push(this.iconLayer);
+        this.map = new OlMap({
+            target: 'map',
+            layers: this.layers,
+            view: this.view,
+            controls:null
+        });
+        
+		//this.createElement([7.15,51.30]);
+        
+    }
+    
+    zoomIn(){
+    	if(this.zoom<18){
+    		this.zoom++;
+		}
+		this.map.setView(
+		new OlView({
+            center: fromLonLat(this.coordinates),
+            zoom: this.zoom
+        }));
+		
+    }
+    
+    zoomOut(){
+    	if(this.zoom>0){
+    		this.zoom--;
+    	}
+    	this.map.setView(
+		new OlView({
+            center: fromLonLat(this.coordinates),
+            zoom: this.zoom
+        }));
+    }
+	
+	changeText(){
+	}
+}
+=======
+    import { Injectable } from '@angular/core';
+
+    import OlMap from 'ol/map';
+    import OlXYZ from 'ol/source/xyz';
+    import OlVectorSource from 'ol/source/Vector'
+    import OlTileLayer from 'ol/layer/tile';
+    import OlView from 'ol/view';
+    import OlProj from 'ol/proj';
+    import OlExtent from 'ol/extent';
+    import OlFeature from 'ol/Feature';
+    import { Icon as OlIcon, Style as OlStyle } from 'ol/style';
+    import OlVectorLayer from 'ol/layer/vector';
+    import { fromLonLat } from 'ol/proj';
+    import { transformExtent } from 'ol/proj';
+    import OlPoint from 'ol/geom/Point';
+    import { Stroke as OlStroke, Fill as OlFill } from 'ol/style';
+    import { LogService } from './log.service';
+    import { OsmNode } from '../models/OsmNode';
+    import { defaults as OlDefaultControls } from 'ol/control.js';
+    import { OlMapBrowserEvent } from 'ol/events';
+
+    import { OsmNodeService } from './osm-node.service';
+    //OlTransforms.transformExtent(extent,'EPSG:3857','EPSG:4326');
+    @Injectable({
+    providedIn: 'root'
+    })
+    export class MapService {
+    static self: MapService;
+    map: OlMap;
+    source: OlXYZ;
+    layer: OlTileLayer;
+    view: OlView;
+    zoom: number;
+    coordinates: [ number,number ];
+    mapLayer: OlTileLayer;
+    iconLayer: OlVectorLayer;
+    icons: Array<OlFeature>;
+    layers: Array<any>;
+    text:string;
+
+    currentNodeSet:Array<OsmNode>;
+    constructor(
+        private logger:LogService,
+        private osmNodeService: OsmNodeService
+
+        ) {
+            MapService.self = this;
+            this.layers=new Array<any>();
+            this.currentNodeSet=new Array<OsmNode>();
+            this.icons = new Array<OlFeature>();
+            this.coordinates = [7.147,51.26];
+            this.changeText();
+            this.zoom = 12;
+            
+
+            this.iconLayer = new OlVectorLayer({
+                style: function(feature) {
+                return feature.get('style');
+                },
+                source: new OlVectorSource({features: this.icons})
+            });
+
+            this.source = new OlXYZ({
+                //url: 'http://tile.osm.org/{z}/{x}/{y}.png'
+                url:'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
+            });
+
+            this.mapLayer = new OlTileLayer({
+                source: this.source
+            });
+
+            this.view = new OlView({
+                center: fromLonLat(this.coordinates),
+                zoom: this.zoom
+            });
+        }
+
+        createElement(coords,node){
+            if(node.mapId== -1){
+                node.mapId = parseInt(node.osmId)+""+(Math.floor(Math.random()*100000)+1);
+            }
+            let iconFeature = new OlFeature(new OlPoint(fromLonLat(coords)));
+
+            //https://www.flaticon.com/free-icon/map-marker_33622
+            iconFeature.set('style', this.createStyle('assets/img/map-marker.png', undefined));
+            iconFeature.setId(parseInt(node.mapId));
+            return iconFeature;
+            //this.icons.push(iconFeature);
+
+            /*
+            if(this.map){
+                this.map.removeLayer(this.iconLayer);
+                this.map.addLayer(new OlVectorLayer({
+                    style: function(feature) {
+                    return feature.get('style');
+                    },
+                    source: new OlVectorSource({features: this.icons})
+                }));
+            }*/
+        }
+
+
+        createStyle(src, img) {
+
+            return new OlStyle({
+            image: new OlIcon(/** @type {module:ol/style/Icon~Options} */ ({
+                /*anchor:[0.5,0.4],*/
+                crossOrigin: 'anonymous',
+                src: src,
+                img: img,
+                imgSize: img ? [img.width, img.height] : undefined
+            }))
+            });
+        }
+
+        fitView(){
+            this.map.getView().fit(this.iconLayer.getSource().getExtent());
+        }
+        addNode(node:OsmNode){
+            this.icons.push(this.createElement([(node.lon),(node.lat)],node));
+            this.map.removeLayer(this.iconLayer);
+            this.iconLayer = new OlVectorLayer({
+                style: function(feature) {
+                return feature.get('style');
+                },
+                source: new OlVectorSource({features: this.icons})
+            });
+        
+            this.map.addLayer(this.iconLayer);
+            this.currentNodeSet.push(node);
+        }
+        showNodes(nodes: Array<OsmNode>){
+        this.currentNodeSet = nodes;
+        let center = {'lon':0,'lat':0};
+        let bbox = {'minlon':0,'minlat':0,'maxlon':0,'maxlat':0};
+        let nodeCount=0;
+        for(let node of nodes){
+            if(node.hasCoordinates()){
+                center.lon += node.lon;
+                center.lat += node.lat;
+                if(bbox.minlon>node.lon){
+                    bbox.minlon=node.lon;
+                }
+                if(bbox.minlat>node.lat){
+                    bbox.minlat=node.lat;
+                }
+                if(bbox.maxlon < node.lon){
+                    bbox.maxlon=node.lon;
+                }
+                if(bbox.maxlat < node.lat){
+                    bbox.maxlat = node.lat;
+                }
+                nodeCount++;
+            }
+        }
+        
+        center.lon=center.lon/nodeCount;
+        center.lat=center.lat/nodeCount;
+        this.view = new OlView({
+                center: fromLonLat([(center.lon),(center.lat)]),
+        });
+        
+        this.map.setView(this.view);
+        this.icons = new Array<OlFeature>();
+        for(let node of nodes){
+            this.icons.push(this.createElement([(node.lon),(node.lat)],node));
+        }
+        this.map.removeLayer(this.iconLayer);
+        this.iconLayer = new OlVectorLayer({
+                style: function(feature) {
+                return feature.get('style');
+                },
+                source: new OlVectorSource({features: this.icons})
+        });
+        this.map.getView().fit(this.iconLayer.getSource().getExtent());
+        this.map.addLayer(this.iconLayer);
+        }
+
+        show(node: OsmNode){
+        this.currentNodeSet=new Array<OsmNode>();
+        this.currentNodeSet.push(node);
+        this.logger.debug("Going to "+JSON.stringify(node,null,3));
+        this.view = new OlView({
+                center: fromLonLat([(node.lon),(node.lat)]),
+                zoom: 14
+        });
+        this.map.setView(this.view);
+        this.icons = new Array<OlFeature>();
+        this.icons.push(this.createElement([(node.lon),(node.lat)],node));
+
+        this.map.removeLayer(this.iconLayer);
+        this.iconLayer = new OlVectorLayer({
+                style: function(feature) {
+                return feature.get('style');
+                },
+                source: new OlVectorSource({features: this.icons})
+        });
+        this.map.addLayer(this.iconLayer);
+
+        
+        }
+        showConnection(lhs:OsmNode,rhs:OsmNode){
+
+        }
+        removeConnection(lhs:OsmNode,rhs:OsmNode){
+
+        }
+
+        removeNode(node:OsmNode){
+            let nodeIdx:any;
+            let iconIdx:any;
+            if(node.mapId==-1){
+                this.logger.debug("cannot remove from map: mapId not set.");
+            }
+            for(let idx in this.currentNodeSet){
+                if(this.currentNodeSet[idx].mapId == node.mapId){
+                    nodeIdx=idx;
+                }
+            }
+
+            for(let idx in this.icons){
+                if(this.icons[idx].getId() == node.mapId){
+                    iconIdx=idx;
+                }
+            }
+            
+            if(nodeIdx !== -1){
+                delete this.currentNodeSet[nodeIdx];
+            }
+            
+            if(iconIdx !== -1){
+                delete this.icons[iconIdx];
+            }
+            
+            this.map.removeLayer(this.iconLayer);
+            this.iconLayer = new OlVectorLayer({
+                    style: function(feature) {
+                    return feature.get('style');
+                    },
+                    source: new OlVectorSource({features: this.icons})
+            });
+            this.map.addLayer(this.iconLayer);
+            
+        }
+
+        togglePeerVisibility(parent: OsmNode,peer: OsmNode){
+            
+            if(peer.mapId == -1){
+                this.addNode(peer);
+                this.showConnection(parent,peer);
+                this.fitView();
+                this.logger.debug("Showing peer "+peer.name);
+                return;
+            }
+            let isVisible = false;
+            for(let node of this.currentNodeSet){
+                if(node.mapId == peer.mapId){
+                    isVisible=true;
+                }
+            }
+            if(isVisible){
+                this.removeConnection(parent,peer);
+                this.removeNode(peer);
+                this.logger.debug("Hiding peer "+peer.name);
+            }else{
+                this.addNode(peer);
+                this.showConnection(parent,peer);
+                this.fitView();
+                this.logger.debug("Showing peer "+peer.name);
+            }
+
+        }
+
+        getBoundingBox(format:string){
+
+            let defaultFormat = 'EPSG:4326';
+            if(!format){
+                format=defaultFormat;
+            }
+            let extent = this.map.getView().calculateExtent(this.map.getSize());
+            let coords = transformExtent(extent,'EPSG:3857',format);
+            return coords;
+        }
+        initMap(){
+            this.layers.push(this.mapLayer);
+            this.layers.push(this.iconLayer);
+            this.map = new OlMap({
+                target: 'map',
+                layers: this.layers,
+                view: this.view,
+                controls:null
+            });
+            
+            //this.createElement([7.15,51.30]);
+            let handler = this.clickHandler;
+            this.map.on('click', this.clickHandler);
+        }
+        internalClickHandler(ev: OlMapBrowserEvent){
+            //let map=ev.map;
+            let map=this.map;
+            let pixel = ev.pixel;
+            let features = map.getFeaturesAtPixel(pixel);
+            
+            let data=features;
+            if(data && data.length > 0){
+                console.log("first feature"+JSON.stringify(data[0].getId()));
+                for(let node of this.currentNodeSet){
+                    if(node.mapId == data[0].getId()){
+                        this.osmNodeService.showDetails(node);
+                    }
+                }
+                
+            }else{
+                console.log("no feature there..");
+            }
+        }
+        clickHandler(ev: OlMapBrowserEvent){
+            // get back to typescript/angular-scope..
+            MapService.self.internalClickHandler(ev);
+        }
+        zoomIn(){
+            if(this.zoom<18){
+                this.zoom++;
+            }
+            this.map.setView(
+            new OlView({
+                center: fromLonLat(this.coordinates),
+                zoom: this.zoom
+            }));
+        }
+
+        zoomOut(){
+            if(this.zoom>0){
+                this.zoom--;
+            }
+            this.map.setView(
+            new OlView({
+                center: fromLonLat(this.coordinates),
+                zoom: this.zoom
+            }));
+        }
+
+        changeText(){
+        }
+    }
+>>>>>>> 25fad191c969aeda5ab444eb7d345c078407d8dd

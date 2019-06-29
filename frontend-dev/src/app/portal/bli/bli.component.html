@@ -1,0 +1,149 @@
+<div class="">
+
+	<!-- liste / default -->
+	<ul class="bli-list" *ngIf="displayType=='default' || !displayType">
+		<li *ngFor="let dimension of bliService.dimensions"><i
+			[ngClass]="bliService.getIcon(dimension.name)"></i> <span
+			title="{{dimension.description}}">{{dimension.name}}</span> <a
+			*ngIf="authService.profileRetrieved && authService.currentUser.isAdmin"></a>
+		</li>
+	</ul>
+
+	<!-- Icons (alle dimensionen von node)-->
+	<div *ngIf="displayType=='icons' || displayType=='icons_and_labels'"
+		class="bli-icons">
+
+		<div class="list-group">
+			<div *ngIf="hasDimension(node,'Wohnbedingungen')"
+				class="list-group-item">
+				<div class="bliicon2 bliicon-housing">
+					<div *ngIf="displayType=='icons_and_labels'">Wohnbedingungen</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Gemeinschaft')"
+				class="list-group-item">
+				<div class="bliicon2 bliicon-community">
+					<div *ngIf="displayType=='icons_and_labels'">Gemeinschaft</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Bildung')" class="list-group-item">
+				<div class="bliicon2 bliicon-education">
+					<div *ngIf="displayType=='icons_and_labels'">Bildung</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Gesundheit')" class="list-group-item">
+				<div class="bliicon2 bliicon-health">
+					<div *ngIf="displayType=='icons_and_labels'">Gesundheit</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Einkommen')" class="list-group-item">
+				<div class="bliicon2 bliicon-income">
+					<div *ngIf="displayType=='icons_and_labels'">Einkommen</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Infrastruktur')"
+				class="list-group-item">
+				<div class="bliicon2 bliicon-infrastructure">
+					<div *ngIf="displayType=='icons_and_labels'">Infrastruktur</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Freizeit und Kultur')"
+				class="list-group-item">
+				<div class="bliicon2 bliicon-leisure">
+					<div *ngIf="displayType=='icons_and_labels'">Freizeit und Kultur</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Umwelt')" class="list-group-item">
+				<div class="bliicon2 bliicon-nature">
+					<div *ngIf="displayType=='icons_and_labels'">Umwelt</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Zufriedenheit')"
+				class="list-group-item">
+				<div class="bliicon2 bliicon-satisfaction">
+					<div *ngIf="displayType=='icons_and_labels'">Zufriedenheit</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Sicherheit')" class="list-group-item">
+				<div class="bliicon2 bliicon-security">
+					<div *ngIf="displayType=='icons_and_labels'">Sicherheit</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Arbeit')" class="list-group-item">
+				<div class="bliicon2 bliicon-work">
+					<div *ngIf="displayType=='icons_and_labels'">Arbeit</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Engagement/Beteiligung')"
+				class="list-group-item">
+				<div class="bliicon2 bliicon-engagement">
+					<div *ngIf="displayType=='icons_and_labels'">Engagement / Beteiligung</div>
+				</div>
+			</div>
+			<div *ngIf="hasDimension(node,'Work-Life-Balance')"
+				class="list-group-item">
+				<div class="bliicon2 bliicon-wlbalance">
+					<div *ngIf="displayType=='icons_and_labels'">Work-Life-Balance</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Checkboxen / Alle Dimensionen / Auf node-->
+	<div *ngIf="displayType=='checkboxes'" class="bli-checkboxes">
+		<div *ngFor="let dimension of bliService.dimensions">
+			<input (change)="node.toggleDimension(dimension)" [checked]="hasDimension(node,dimension.name)" type="checkbox">
+			<label class="checklabel">{{dimension.name}}</label>
+		</div>
+	</div>
+
+	<!-- Checkboxen / Alle Dimensionen ohne icons / Auf node-->
+	<div *ngIf="displayType=='checkboxes_non_icons'" class="bli-checkboxes">
+			<div class="form-check" *ngFor="let dimension of bliService.dimensions">
+			  <input (change)="node.toggleDimension(dimension)" [checked]="hasDimension(node,dimension.name)" class="form-check-input" type="checkbox" value="" id="defaultCheck2" checked disabled>
+			  <label class="form-check-label checklabel" for="defaultCheck2">
+			    {{dimension.name}}
+			  </label>
+			</div>
+	</div>
+
+	<!-- Checkboxen / Alle Dimensionen / Auf node-->
+	<div *ngIf="displayType=='checkboxes_icons'" class="bli-checkboxes">
+		<div *ngFor="let dimension of bliService.dimensions" [ngClass]="bliService.getIconClass(dimension.name)" class="">
+			<input class="bli-check"(change)="node.toggleDimension(dimension)" [checked]="hasDimension(node,dimension.name)" type="checkbox">
+			<label class="checklabel col col-form-label">{{dimension.name}}</label>
+		</div>
+	</div>
+	<!-- Checkboxen-Liste f�r die Filter / Auf array / alle dimensionen-->
+
+	<div *ngIf="displayType=='checkboxesArray' && dimensions"
+		class="bli-checkboxes">
+		<div *ngFor="let dimension of bliService.dimensions">
+			<label class="dimension-name">{{dimension.name}}</label> <input
+				(change)="toggleDimensionOnOutputArray(dimension)"
+				[checked]="dimensions.indexOf(dimension)>=0" type="checkbox">
+		</div>
+	</div>
+
+	<!-- Checkboxen-Liste f�r Filter mit Icons / auf array / alle dimensionen-->
+	<!--
+	<div *ngIf="displayType=='checkboxesArray_icons' && dimensions"
+		class="bli-checkboxes">
+		<div *ngFor="let dimension of bliService.dimensions"
+			[ngClass]="bliService.getIconClass(dimension.name)">
+			<label class="dimension-name">{{dimension.name}}</label> <input
+				(change)="toggleDimensionOnOutputArray(dimension)"
+				[checked]="dimensions.indexOf(dimension)>=0" type="checkbox">
+		</div>
+	</div>
+	-->
+	<div *ngIf="displayType=='checkboxesArray_icons' && dimensions" class="list-group bli-checkboxes">
+		<div *ngFor="let dimension of bliService.dimensions"
+			[ngClass]="bliService.getIconClass(dimension.name)" class="list-group-item">
+			{{dimension.name}}
+			<label	class="switch"><input type="checkbox" (change)="toggleDimensionOnOutputArray(dimension)" [checked]="dimensions.indexOf(dimension)>=0">
+			<span class="slider round"></span></label>
+		</div>
+	</div>
+</div>

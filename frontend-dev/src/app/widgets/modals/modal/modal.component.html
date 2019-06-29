@@ -1,0 +1,148 @@
+
+
+<!--
+<div class="widget-wrap left-aligned-widget">
+	<button class="btn btn-lg btn-outline-primary" (click)="modalService.open(auth)">Launch AuthComponent mit wrap</button>
+	<button class="btn btn-lg btn-outline-primary" (click)="modalService.openLg(auth2)">Launch AuthComponent</button>
+	<button class="btn btn-lg btn-outline-primary" (click)="modalService.open(auth2,true)">Launch AuthComponent hintergrund klickt weg</button>
+	<button class="btn btn-lg btn-outline-primary" (click)="modalService.open(createEntry)">createEntryComponent</button>
+	<button class="btn btn-lg btn-outline-primary" (click)="modalService.openLg(userconditions,true)">userconditionsComponent</button>
+	<button class="btn btn-lg btn-outline-primary" (click)="modalService.open(contentpublic,true)">ContentPublicComponent</button>
+	<button class="btn btn-lg btn-outline-primary" (click)="modalService.open(unsafedcontent,true)">UnsafedcontentComponent</button>
+	<button class="btn btn-lg btn-outline-primary" (click)="modalService.openLg(termsofuse,true)">TermsofuseComponent</button>
+	<button class="btn btn-lg btn-outline-primary" (click)="modalService.open(networkpartnersearch,true)">NetworkpartnersearchComponent</button>
+	<button class="btn btn-lg btn-outline-primary" (click)="modalService.openLg(addsomething,true)">addsomethingComponent</button>
+</div>
+  -->
+
+<!-- edit -->
+
+<div #content></div>
+
+<!-- x -->
+<ng-template #auth let-c="close" let-d="dismiss">
+	<button type="button" class="close" aria-label="Close" (click)="modalService.close('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  		<app-auth (closeModal)="modalService.close()" [asModal]="true"></app-auth>
+</ng-template>	
+
+
+<ng-template #auth2 let-c="close" let-d="dismiss">
+  		<app-auth [asModal]="true"></app-auth>
+</ng-template>	
+
+<!-- userconditions -->
+<ng-template #userconditions let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Nutzungs- und Teilnahmebedingungen</h4>
+      <button type="button" class="close" aria-label="Close" ngbAutofocus (click)="modalService.close('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+		<app-userconditions [asModal]="true" class="modal-wrap modaltest"></app-userconditions>
+	</div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modalService.close('Close click')">Schließen</button>
+    </div>
+</ng-template>	
+
+<!-- content public -->
+<ng-template #contentpublic let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Änderungen veröffentlicht.</h4>
+    </div>
+    <div class="modal-body">
+		<app-contentpublic [asModal]="true" class="modal-wrap modaltest"></app-contentpublic>
+	</div>
+    <div class="modal-footer"> 
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Zurück zum Bearbeiten</button>
+      <button type="button" class="btn btn-primary" (click)="modalService.close('Close click')" ngbAutofocus>Alles klar!</button>
+    </div>
+</ng-template>
+
+<!-- unsafedcontent -->
+<ng-template #unsafedcontent let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Achtung</h4>
+    </div>
+    <div class="modal-body">
+		<app-unsafedcontent [asModal]="true" class="modal-wrap modaltest"></app-unsafedcontent>
+	</div>
+    <div class="modal-footer"> 
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Änderungen verwerfen</button>
+      <button type="button" class="btn btn-primary" (click)="modalService.close('Close click')" ngbAutofocus>Auf dieser Seite bleiben</button>
+    </div>
+</ng-template>
+
+<!-- termsofuse -->
+<ng-template #termsofuse let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Nutzungsbedingungen für das GeoPortal des Guten Lebens</h4>
+    </div>
+    <div class="modal-body">
+		<app-termsofuse [asModal]="true" class="modal-wrap modaltest"></app-termsofuse>
+	</div>
+    <div class="modal-footer"> 
+    	<button type="button" class="btn btn-primary" (click)="modalService.close('Close click')" ngbAutofocus>Akzeptieren</button>
+    </div>
+</ng-template>
+
+<!-- networkpartnersearch -->
+<ng-template #networkpartnersearch let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Netzwerkpartner suchen</h4>
+    </div>
+    <div class="modal-body">
+		<app-networkpartnersearch [asModal]="true" class="modal-wrap modaltest"></app-networkpartnersearch>
+	</div>
+    <div class="modal-footer"> 
+    	<button type="button" class="btn btn-primary" (click)="modalService.close('Close click')" ngbAutofocus>Auswahl hinzufügen</button>
+    </div>
+</ng-template>
+
+<!-- addsomething -->
+<ng-template #addsomething let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Etwas Eintragen</h4>
+    </div>
+    <div class="modal-body">
+		<app-addsomething [asModal]="true" class="modal-wrap modaltest"></app-addsomething>
+	</div>
+    <div class="modal-footer"> 
+    	<button type="button" class="btn btn-primary" (click)="modalService.close('Close click')" ngbAutofocus>Alles klar!</button>
+    </div>
+</ng-template>
+
+<!-- addcategory -->
+<ng-template #addcategory let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Neue Kategorie hinzufügen</h4>
+      <button type="button" class="close" aria-label="Close"  (click)="modalService.close('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+		<app-addcategory [asModal]="true" class="modal-wrap modaltest"></app-addcategory>
+	</div>
+    <div class="modal-footer"> 
+    	<button type="button" class="btn btn-primary" (click)="modalService.close('Close click')" ngbAutofocus>Auswahl hinzufügen</button>
+    </div>
+</ng-template>
+
+<!-- login -->
+<ng-template #login let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Anmelden</h4>
+      <button type="button" class="close" aria-label="Close"  (click)="modalService.close('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+		<app-login [asModal]="true" class="modal-wrap modaltest"></app-login>
+	</div>
+    <div class="modal-footer"> 
+    	<a href="https://www.openstreetmap.org/user/new" target="_blank"><button type="button" class="btn btn-primary" ngbAutofocus>Bei Openstreetmap registrieren</button></a>
+    </div>
+</ng-template>
