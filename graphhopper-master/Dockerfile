@@ -24,4 +24,4 @@ EXPOSE 8989
 
 ENTRYPOINT [ "./graphhopper.sh", "web" ]
 
-CMD [ "/data/europe_germany_berlin.pbf" ]
+CMD [ "/data/nordrhein-westfalen-latest.osm.pbf" ]
