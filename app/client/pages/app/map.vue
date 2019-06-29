@@ -5,8 +5,41 @@
             <v-btn @click="get_data" :disabled="loading">
                 get_line
             </v-btn>
+            <v-btn @click="get_coords" :disabled="loading">
+                get_coords
+            </v-btn>
+            <v-text-field
+                    v-model="address"
+                    label="Enter the destination address here"
+            ></v-text-field>
+
+            <v-layout row>
+                <v-flex>
+                    <v-text-field
+                            v-model="origin"
+                            label="Origin"
+                    ></v-text-field>
+                </v-flex>
+                <v-flex>
+                    <v-text-field
+                            v-model="dest"
+                            label="Destination"
+                    ></v-text-field>
+                </v-flex>
+                <v-flex>
+                    <v-select
+                            value="Transport"
+                            v-model="trasport"
+                            :items="['bike','foot','car']"
+                            menu-props="auto, overflowY"
+
+                    ></v-select>
+                </v-flex>
+            </v-layout>
+
+
             <no-ssr>
-                <l-map class="mini-map" :zoom="12" :center="[ 51.2917076298,7.2510191991 ]">
+                <l-map class="mini-map" :zoom="12" :center="center">
                     <l-tile-layer
                             url="https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"
                     ></l-tile-layer>
@@ -90,13 +123,15 @@
                         >
 
                         </l-geo-json>
-                        <v-goe-json
-                                :geojson="geojsons"
-                        >
 
-                        </v-goe-json>
                     </div>
+                    <l-geo-json
+                            :geojson="geojsons"
+                            :options-style="styleFunction"
 
+                    >
+
+                    </l-geo-json>
                 </l-map>
             </no-ssr>
         </v-container>
@@ -109,8 +144,8 @@
   import {users, banks, courses, acts} from "./jsons.js";
   import {stadteile} from "./Stadtbezirke_EPSG4326_JSON.js";
 
-  var api_host =
-      "https://graphhopper.com/api/1//route?point=50.04963%2C8.569411&point=50.048238%2C8.574176&type=geojson&locale=de-DE&vehicle=foot&weighting=fastest&elevation=true&key=e341f9a9-da78-4cfd-bb37-3c682e921182&instructions=false&points_encoded=false";
+  var app_key = "e341f9a9-da78-4cfd-bb37" + "-" + "3c682e921182";
+
 
   // var api_host = "http://localhost:5000/";
   // if (!location.hostname.includes("127.0.0.1") && !location.hostname.includes("localhost")) {
@@ -123,14 +158,11 @@
   }
 
   axios.defaults.headers.get = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Credentials": "true",
+    // "Access-Control-Allow-Origin": "*",
+    // "Access-Control-Allow-Credentials": "true",
     "Content-Type": "application/json"
   };
   axios.defaults.method = "get";
-  var api_aindex = axios.create({
-    url: api_host
-  });
 
   export default {
 
@@ -138,9 +170,11 @@
 
       // Travel time describes the stage on which it is traveling
       users: users,
+      address:null,
       banks: banks,
-      point_a: [51.217469, 6.804767],
-      point_b: [51.2191094, 6.8043112],
+      center: [51.2917076298, 7.2510191991],
+      origin: "51.217469, 6.804767",
+      dest: "51.2191094, 6.8043112",
       acts: acts,
       show: false,
       geojson: null,
@@ -170,35 +204,63 @@
         opacity: 0.3,
         fillOpacity: 0.3
       },
+      trasport: 'car',
       loading: false,
       geojsons: [{type: "Point", coordinates: [7.2510191991, 51.2917076298]}]
     }),
     methods: {
 
-      get_data: function (start_loc) {
+      get_data: function () {
         this.loading = true;
         this.geojsons = [];
-        this.markers = [[], [], []];
-        api_aindex(
-            {
-              data: JSON.parse(
-                  JSON.stringify({
-                    start: [start_loc[1], start_loc[0]],
-                    source: this.sources[this.long_stay]
-                  })
-              )
-            }
-            //"https://rawgit.com/gregoiredavid/france-geojson/master/regions/pays-de-la-loire/communes-pays-de-la-loire.geojson"
-        ).then(response => {
-          console.log("Fetching");
-          this.geojsons = response.data["polygons"];
-          this.markers = response.data["locs"];
-          this.loading = false;
-        });
+
+        console.log("Starting Axsios", this.api_host);
+        var url_1 = "https://graphhopper.com/api/1//route?point=" + this.origin + "&point=" + this.dest + "&type=geojson&locale=de-DE&vehicle=" + this.trasport + "&weighting=fastest&elevation=true&key=" + app_key + "&instructions=false&points_encoded=false";
+        axios
+            .get(url_1)
+            .then(response => {
+              console.log("Loading");
+              this.geojsons = response.data.paths[0].points;
+              console.log(this.geojsons);
+              this.loading = false;
+              this.center = [this.geojsons.coordinates[0][1], this.geojsons.coordinates[0][0]];
+            })
+            .catch(error => {
+              // Handle Errors here.
+              this.loading = false;
+
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.log(errorCode, errorMessage);
+              // ...
+            });
+      },
+      //This get work with HERE API
+      get_coords: function () {
+        this.loading = true;
+        console.log("Starting Axsios get_coords");
+        let url_1 = "https://geocoder.api.here.com/6.2/geocode.json?searchtext=" + this.address + "&app_id=jmkpDC63yWSbK3" + "644Zdi&app_code=lBPRtQcZIyXg" + "WurwgzCUkw&gen=8";
+        axios
+            .get(url_1)
+            .then(response => {
+              console.log("Loading");
+              let dest_temp = response.data.Response.View[0].Result[0].Location.NavigationPosition[0];
+              this.dest = dest_temp.Latitude + "," + dest_temp.Longitude;
+              console.log("Dest",this.dest);
+              this.loading = false;
+            })
+            .catch(error => {
+              // Handle Errors here.
+              this.loading = false;
+
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.log(errorCode, errorMessage);
+              // ...
+            });
       }
     },
     watch: {},
-    computed: {},
     created() {
       for (let i = 0; i < acts.length; i++) {
         let user = acts[i].user;
@@ -211,6 +273,11 @@
 
     },
     computed: {
+      api_host() {
+        console.log("Get api_host");
+        var url_1 = "https://graphhopper.com/api/1//route?point=" + this.origin + "&point=" + this.dest + "&type=geojson&locale=de-DE&vehicle=foot&weighting=fastest&elevation=true&key=" + app_key + "&instructions=false&points_encoded=false";
+        return url_1
+      },
       options() {
         return {
           onEachFeature: this.onEachFeatureFunction
