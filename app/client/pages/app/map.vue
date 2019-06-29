@@ -63,14 +63,7 @@
                     >
 
                     </l-geo-json>
-                    <l-geo-json v-if="show"
-                                :options="options"
-                                :geojson="mundraub"
-                                :options-style="styleFunction"
 
-                    >
-
-                    </l-geo-json>
                 </l-map>
             </no-ssr>
         </v-container>
