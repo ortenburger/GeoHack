@@ -1,7 +1,7 @@
 graphhopper:
 
   # OpenStreetMap input file
-  # datareader.file: some.pbf
+  datareader.file: nordrhein-westfalen-latest.osm.pbf
 
   ##### Vehicles #####
 
