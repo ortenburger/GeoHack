@@ -49,23 +49,15 @@
             ],
             "type" : "Polygon"
          },
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_326.pdf",
-            "Id" : "0",
-            "ZONE" : "326"
-         },
-         "type" : "Feature"
-      },
-      {
          "type" : "Feature",
          "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_O.pdf",
-            "ZONE" : "O",
-            "Id" : "0"
-         },
+            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_326.pdf",
+            "ZONE" : "326"
+         }
+      },
+      {
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -237,19 +229,25 @@
                      51.2803293638313
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "O",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_O.pdf"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "ZONE" : "8",
             "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_8.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "8",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_8.pdf"
          },
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -473,10 +471,13 @@
                      51.2835797499161
                   ]
                ]
-            ]
-         }
+            ],
+            "type" : "Polygon"
+         },
+         "type" : "Feature"
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -717,14 +718,14 @@
             ]
          },
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_17.pdf",
-            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
             "ZONE" : "17",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_17.pdf",
+            "Id" : "0"
+         }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -873,16 +874,15 @@
             ]
          },
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_21.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_21.pdf",
             "ZONE" : "21",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "Id" : "0"
+         }
       },
       {
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -1078,25 +1078,20 @@
                      51.2719858676576
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
          "properties" : {
             "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_22.pdf",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_22.pdf",
             "ZONE" : "22",
             "Id" : "0"
-         },
-         "type" : "Feature"
+         }
       },
       {
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "ZONE" : "23",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_23.pdf"
-         },
          "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -1488,13 +1483,23 @@
                      51.2538310732451
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "properties" : {
+            "ZONE" : "23",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_23.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_65.pdf",
+            "ZONE" : "65",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
+         },
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -1646,26 +1651,13 @@
                      51.2742964908506
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
-         "type" : "Feature",
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "65",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_65.pdf",
-            "Dat_Besch" : "27.01.1992"
-         }
+         "type" : "Feature"
       },
       {
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_66.pdf",
-            "Id" : "0",
-            "ZONE" : "66"
-         },
-         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -1837,16 +1829,23 @@
                      51.2787816024218
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "66",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_66.pdf"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "Dat_Besch" : "27.01.1992",
             "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_67.pdf",
             "ZONE" : "67",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_67.pdf"
+            "Dat_Besch" : "27.01.1992"
          },
          "geometry" : {
             "type" : "Polygon",
@@ -2038,9 +2037,17 @@
                   ]
                ]
             ]
-         }
+         },
+         "type" : "Feature"
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_90.pdf",
+            "ZONE" : "90"
+         },
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -2195,24 +2202,11 @@
                ]
             ],
             "type" : "Polygon"
-         },
-         "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_90.pdf",
-            "ZONE" : "90",
-            "Id" : "0"
          }
       },
       {
-         "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_99.pdf",
-            "ZONE" : "99",
-            "Id" : "0"
-         },
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -2404,11 +2398,18 @@
                      51.2473685574887
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ZONE" : "99",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_99.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -2557,23 +2558,20 @@
             ]
          },
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_304.pdf",
-            "Id" : "0",
             "ZONE" : "304",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_304.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
+         }
       },
       {
          "properties" : {
             "Id" : "0",
-            "ZONE" : "303",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_303.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_303.pdf",
+            "ZONE" : "303"
          },
-         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -2829,11 +2827,14 @@
                      51.2651668009654
                   ]
                ]
-            ]
-         }
+            ],
+            "type" : "Polygon"
+         },
+         "type" : "Feature"
       },
       {
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -2861,25 +2862,25 @@
                      51.2477186110622
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
          "type" : "Feature",
          "properties" : {
-            "ZONE" : "305",
             "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_305.pdf"
+            "ZONE" : "305",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_305.pdf"
          }
       },
       {
          "properties" : {
-            "Dat_Besch" : "18.01.1989",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_H.pdf",
+            "Id" : "0",
             "ZONE" : "H",
-            "Id" : "0"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_H.pdf",
+            "Dat_Besch" : "18.01.1989"
          },
          "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -2995,8 +2996,7 @@
                      51.2055470452704
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          }
       },
       {
@@ -3149,19 +3149,13 @@
          },
          "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_V.pdf",
-            "ZONE" : "V",
             "Id" : "0",
-            "Dat_Besch" : "vor 1991"
+            "Dat_Besch" : "vor 1991",
+            "ZONE" : "V",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_V.pdf"
          }
       },
       {
-         "properties" : {
-            "ZONE" : "310 B",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_310_B.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
          "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
@@ -3317,10 +3311,23 @@
                   ]
                ]
             ]
+         },
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "310 B",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_310_B.pdf",
+            "Dat_Besch" : "27.01.1992"
          }
       },
       {
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_310_A-1.pdf",
+            "ZONE" : "310 A",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
+         },
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -3596,25 +3603,17 @@
                      51.2149120030181
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         },
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_310_A-1.pdf",
-            "ZONE" : "310 A",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
+            ]
          },
          "type" : "Feature"
       },
       {
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_310.pdf",
-            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_310.pdf",
             "ZONE" : "310",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          },
-         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -3701,11 +3700,11 @@
                   ]
                ]
             ]
-         }
+         },
+         "type" : "Feature"
       },
       {
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -4017,19 +4016,26 @@
                      51.2287955387095
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
          "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_309.pdf",
             "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_309.pdf",
             "ZONE" : "309",
             "Dat_Besch" : "27.01.1992"
          }
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "216",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_216.pdf",
+            "Dat_Besch" : "27.01.1992"
+         },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -4109,17 +4115,12 @@
                      51.1919817728458
                   ]
                ]
-            ]
-         },
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_216.pdf",
-            "ZONE" : "216",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            ],
+            "type" : "Polygon"
+         }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -4196,23 +4197,15 @@
             "type" : "Polygon"
          },
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_215.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_215.pdf",
             "ZONE" : "215",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "Id" : "0"
+         }
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_214.pdf",
-            "ZONE" : "214",
-            "Id" : "0"
-         },
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -4416,10 +4409,24 @@
                      51.2041330141363
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "properties" : {
+            "ZONE" : "214",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_214.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_213.pdf",
+            "ZONE" : "213",
+            "Dat_Besch" : "27.01.1992"
+         },
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -4518,17 +4525,18 @@
                ]
             ],
             "type" : "Polygon"
-         },
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_213.pdf",
-            "ZONE" : "213",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+         }
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "211",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_211.pdf",
+            "Dat_Besch" : "27.01.1992"
+         },
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -4608,27 +4616,12 @@
                      51.2154872625585
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         },
-         "type" : "Feature",
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_211.pdf",
-            "ZONE" : "211",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
+            ]
          }
       },
       {
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_210.pdf",
-            "Id" : "0",
-            "ZONE" : "210",
-            "Dat_Besch" : "1991"
-         },
          "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -4764,12 +4757,25 @@
                      51.2320041431608
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "1991",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_210.pdf",
+            "ZONE" : "210"
          }
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "1991",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_16.pdf",
+            "ZONE" : "16"
+         },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -4933,26 +4939,12 @@
                      51.1945928694454
                   ]
                ]
-            ]
-         },
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_16.pdf",
-            "ZONE" : "16",
-            "Id" : "0",
-            "Dat_Besch" : "1991"
-         },
-         "type" : "Feature"
+            ],
+            "type" : "Polygon"
+         }
       },
       {
-         "properties" : {
-            "Dat_Besch" : "1991",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_20.pdf",
-            "Id" : "0",
-            "ZONE" : "20"
-         },
-         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -5060,18 +5052,21 @@
                      51.2064990935083
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "20",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_20.pdf",
+            "Dat_Besch" : "1991"
          }
       },
       {
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_I.pdf",
-            "ZONE" : "I",
-            "Id" : "0",
-            "Dat_Besch" : "vor 1991"
-         },
          "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -5227,20 +5222,23 @@
                      51.2590411328842
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "properties" : {
+            "Dat_Besch" : "vor 1991",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_I.pdf",
+            "ZONE" : "I",
+            "Id" : "0"
          }
       },
       {
          "properties" : {
             "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_18.pdf",
-            "Id" : "0",
-            "ZONE" : "18"
+            "ZONE" : "18",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_18.pdf",
+            "Id" : "0"
          },
-         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -5396,19 +5394,20 @@
                      51.2531189982541
                   ]
                ]
-            ]
-         }
+            ],
+            "type" : "Polygon"
+         },
+         "type" : "Feature"
       },
       {
-         "type" : "Feature",
          "properties" : {
+            "Id" : "0",
             "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_19.pdf",
-            "ZONE" : "19",
-            "Id" : "0"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_19.pdf",
+            "ZONE" : "19"
          },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -5492,11 +5491,14 @@
                      51.2530708854023
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -5536,25 +5538,17 @@
                      51.2508007381674
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
-         "type" : "Feature",
          "properties" : {
             "Dat_Besch" : "27.01.1992",
-            "Id" : "0",
             "ZONE" : "19",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_19.pdf"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_19.pdf",
+            "Id" : "0"
          }
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "Id" : "0",
-            "ZONE" : "43",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_43.pdf"
-         },
          "geometry" : {
             "coordinates" : [
                [
@@ -5801,9 +5795,16 @@
                ]
             ],
             "type" : "Polygon"
+         },
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_43.pdf",
+            "ZONE" : "43",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -5856,22 +5857,15 @@
             "type" : "Polygon"
          },
          "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "Id" : "0",
             "ZONE" : "44",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_44.pdf"
-         },
-         "type" : "Feature"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_44.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
+         }
       },
       {
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "ZONE" : "45",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_45.pdf"
-         },
-         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -5911,19 +5905,20 @@
                      51.252699908946
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ZONE" : "45",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_45.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_48.pdf",
-            "ZONE" : "48",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         },
          "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -6147,12 +6142,19 @@
                      51.2466457238744
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "48",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_48.pdf"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -6304,20 +6306,24 @@
                      51.2452452075977
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
          "properties" : {
-            "Dat_Besch" : "27.01.1992",
             "Id" : "0",
-            "ZONE" : "49",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_49.pdf"
-         },
-         "type" : "Feature"
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_49.pdf",
+            "ZONE" : "49"
+         }
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_50.pdf",
+            "ZONE" : "50",
+            "Dat_Besch" : "27.01.1992"
+         },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -6405,24 +6411,17 @@
                      51.242251734169
                   ]
                ]
-            ]
-         },
-         "type" : "Feature",
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "50",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_50.pdf",
-            "Dat_Besch" : "27.01.1992"
+            ],
+            "type" : "Polygon"
          }
       },
       {
          "properties" : {
+            "Dat_Besch" : "27.01.1992",
             "ZONE" : "56",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_56.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_56.pdf",
+            "Id" : "0"
          },
-         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -6557,7 +6556,8 @@
                ]
             ],
             "type" : "Polygon"
-         }
+         },
+         "type" : "Feature"
       },
       {
          "geometry" : {
@@ -6751,15 +6751,16 @@
                ]
             ]
          },
+         "type" : "Feature",
          "properties" : {
             "Id" : "0",
-            "ZONE" : "58",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_58.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_58.pdf",
+            "ZONE" : "58"
+         }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -6847,21 +6848,19 @@
             ],
             "type" : "Polygon"
          },
-         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_236.pdf",
             "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
             "ZONE" : "236",
-            "Dat_Besch" : "27.01.1992"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_236.pdf"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_239.pdf",
             "ZONE" : "239",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_239.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          },
          "geometry" : {
             "type" : "Polygon",
@@ -6929,15 +6928,10 @@
                   ]
                ]
             ]
-         }
+         },
+         "type" : "Feature"
       },
       {
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "241",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_241.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
          "type" : "Feature",
          "geometry" : {
             "coordinates" : [
@@ -7001,9 +6995,22 @@
                ]
             ],
             "type" : "Polygon"
+         },
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "241",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_241.pdf",
+            "Dat_Besch" : "27.01.1992"
          }
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_321.pdf",
+            "ZONE" : "321",
+            "Dat_Besch" : "27.01.1992"
+         },
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -7066,13 +7073,6 @@
                   ]
                ]
             ]
-         },
-         "type" : "Feature",
-         "properties" : {
-            "ZONE" : "321",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_321.pdf",
-            "Dat_Besch" : "27.01.1992"
          }
       },
       {
@@ -7191,21 +7191,15 @@
             ],
             "type" : "Polygon"
          },
+         "type" : "Feature",
          "properties" : {
+            "Id" : "0",
             "Dat_Besch" : "27.01.1992",
             "ZONE" : "E",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_E.pdf"
-         },
-         "type" : "Feature"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_E.pdf"
+         }
       },
       {
-         "properties" : {
-            "ZONE" : "F",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_F.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
          "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
@@ -7397,16 +7391,16 @@
                   ]
                ]
             ]
+         },
+         "properties" : {
+            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_F.pdf",
+            "ZONE" : "F",
+            "Dat_Besch" : "27.01.1992"
          }
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "ZONE" : "G",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_G.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -7569,16 +7563,21 @@
                   ]
                ]
             ]
+         },
+         "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "G",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_G.pdf",
+            "Id" : "0"
          }
       },
       {
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_14.pdf",
-            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_14.pdf",
             "ZONE" : "14",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          },
-         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -7737,16 +7736,16 @@
                   ]
                ]
             ]
-         }
+         },
+         "type" : "Feature"
       },
       {
          "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_15_15A.pdf",
             "ZONE" : "15 + 15 A",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_15_15A.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          },
-         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -7929,10 +7928,12 @@
                ]
             ],
             "type" : "Polygon"
-         }
+         },
+         "type" : "Feature"
       },
       {
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -8052,25 +8053,17 @@
                      51.248781705092
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
+         "type" : "Feature",
          "properties" : {
             "Id" : "0",
             "ZONE" : "25",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_25.pdf",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_25.pdf",
             "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+         }
       },
       {
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_26.pdf",
-            "ZONE" : "26",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -8265,9 +8258,17 @@
                   ]
                ]
             ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "26",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_26.pdf",
+            "Id" : "0"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -8384,23 +8385,21 @@
             ]
          },
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_27.pdf",
             "Id" : "0",
             "ZONE" : "27",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_27.pdf",
             "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+         }
       },
       {
-         "type" : "Feature",
          "properties" : {
+            "Id" : "0",
             "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_28.pdf",
             "ZONE" : "28",
-            "Id" : "0"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_28.pdf"
          },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -8624,11 +8623,20 @@
                      51.2455959820619
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          }
       },
       {
+         "properties" : {
+            "ZONE" : "29",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_29.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
+         },
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -8760,18 +8768,11 @@
                      51.2368182069948
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         },
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_29.pdf",
-            "Id" : "0",
-            "ZONE" : "29"
-         },
-         "type" : "Feature"
+            ]
+         }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -8883,23 +8884,22 @@
             ],
             "type" : "Polygon"
          },
-         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_30.pdf",
-            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_30.pdf",
             "ZONE" : "30",
-            "Dat_Besch" : "27.01.1992"
+            "Id" : "0"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
             "ZONE" : "31",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_31.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_31.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          },
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -9099,11 +9099,17 @@
                      51.2463141926099
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         }
+            ]
+         },
+         "type" : "Feature"
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_32.pdf",
+            "ZONE" : "32",
+            "Dat_Besch" : "27.01.1992"
+         },
          "geometry" : {
             "coordinates" : [
                [
@@ -9163,15 +9169,16 @@
             ],
             "type" : "Polygon"
          },
-         "properties" : {
-            "ZONE" : "32",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_32.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
          "type" : "Feature"
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_33.pdf",
+            "ZONE" : "33"
+         },
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -9286,25 +9293,10 @@
                ]
             ],
             "type" : "Polygon"
-         },
-         "properties" : {
-            "ZONE" : "33",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_33.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+         }
       },
       {
-         "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "1991",
-            "Id" : "0",
-            "ZONE" : "34",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_34.pdf"
-         },
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -9444,7 +9436,15 @@
                      51.2560117975175
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_34.pdf",
+            "ZONE" : "34",
+            "Dat_Besch" : "1991",
+            "Id" : "0"
          }
       },
       {
@@ -9591,22 +9591,15 @@
                ]
             ]
          },
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_41.pdf",
-            "Id" : "0",
-            "ZONE" : "41",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
-      },
-      {
          "type" : "Feature",
          "properties" : {
             "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_209.pdf",
-            "ZONE" : "209",
+            "ZONE" : "41",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_41.pdf",
             "Id" : "0"
-         },
+         }
+      },
+      {
          "geometry" : {
             "coordinates" : [
                [
@@ -9657,15 +9650,21 @@
                ]
             ],
             "type" : "Polygon"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_209.pdf",
+            "ZONE" : "209"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_W_308.pdf",
             "ZONE" : "308",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_W_308.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          },
          "geometry" : {
             "coordinates" : [
@@ -9801,18 +9800,18 @@
                ]
             ],
             "type" : "Polygon"
-         }
+         },
+         "type" : "Feature"
       },
       {
-         "type" : "Feature",
          "properties" : {
             "Id" : "0",
-            "ZONE" : "1",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Heckighause_1.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Heckinghausen_1.pdf",
+            "ZONE" : "1"
          },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -10092,10 +10091,18 @@
                      51.2693503180227
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          }
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Heckinghausen_7.pdf",
+            "ZONE" : "7"
+         },
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -10286,16 +10293,15 @@
                   ]
                ]
             ]
-         },
-         "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Heckighause_7.pdf",
-            "Id" : "0",
-            "ZONE" : "7"
          }
       },
       {
+         "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "68",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Heckinghausen_68.pdf",
+            "Id" : "0"
+         },
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -10371,17 +10377,10 @@
                ]
             ]
          },
-         "type" : "Feature",
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Heckighause_68.pdf",
-            "ZONE" : "68",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         }
+         "type" : "Feature"
       },
       {
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -10525,15 +10524,16 @@
                      51.2733749384598
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
+         "type" : "Feature",
          "properties" : {
-            "ZONE" : "69",
             "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Heckighause_69.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "69",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Heckinghausen_69.pdf"
+         }
       },
       {
          "geometry" : {
@@ -10629,13 +10629,14 @@
          },
          "type" : "Feature",
          "properties" : {
-            "Id" : "0",
             "ZONE" : "70",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Heckighause_70.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Heckinghausen_70.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -10860,21 +10861,20 @@
             ]
          },
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Heckighause_306.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Heckinghausen_306.pdf",
             "ZONE" : "306",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "Id" : "0"
+         }
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "ZONE" : "323",
             "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Heckighause_323.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Heckinghausen_323.pdf",
+            "ZONE" : "323"
          },
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -11073,13 +11073,14 @@
       },
       {
          "properties" : {
-            "ZONE" : "307",
             "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_307.pdf",
-            "Dat_Besch" : "1991"
+            "Dat_Besch" : "1991",
+            "ZONE" : "307",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_307.pdf"
          },
          "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -11139,12 +11140,12 @@
                      51.2753709067439
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          }
       },
       {
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -11416,15 +11417,14 @@
                      51.2562640186188
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
          "type" : "Feature",
          "properties" : {
-            "Id" : "0",
+            "Dat_Besch" : "vor 1991",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_R_243.pdf",
             "ZONE" : "R, 243",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_R_243.pdf",
-            "Dat_Besch" : "vor 1991"
+            "Id" : "0"
          }
       },
       {
@@ -11493,20 +11493,13 @@
          },
          "type" : "Feature",
          "properties" : {
-            "Dat_Besch" : "1991",
             "Id" : "0",
             "ZONE" : "102 C",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_102_3.pdf"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_102_3.pdf",
+            "Dat_Besch" : "1991"
          }
       },
       {
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_102_2.pdf",
-            "Id" : "0",
-            "ZONE" : "102 B",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -11549,18 +11542,17 @@
                   ]
                ]
             ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_102_2.pdf",
+            "ZONE" : "102 B",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
-         "properties" : {
-            "ZONE" : "102 A",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_102_1.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -11596,12 +11588,19 @@
                      51.2106679299217
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_102_1.pdf",
+            "ZONE" : "102 A",
+            "Dat_Besch" : "27.01.1992"
          }
       },
       {
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -11881,19 +11880,20 @@
                      51.2415959470104
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
          "type" : "Feature",
          "properties" : {
             "ZONE" : "U",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_U.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_U.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -12021,26 +12021,19 @@
                      51.2480126625545
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_T.pdf",
-            "Id" : "0",
+            "Dat_Besch" : "vor 1991",
             "ZONE" : "T",
-            "Dat_Besch" : "vor 1991"
-         },
-         "type" : "Feature"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_T.pdf",
+            "Id" : "0"
+         }
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_S.pdf",
-            "Id" : "0",
-            "ZONE" : "S",
-            "Dat_Besch" : "vor 1991"
-         },
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -12100,17 +12093,17 @@
                      51.235908947094
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_S.pdf",
+            "ZONE" : "S",
+            "Dat_Besch" : "vor 1991",
+            "Id" : "0"
          }
       },
       {
-         "type" : "Feature",
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_S1.pdf",
-            "ZONE" : "S 1",
-            "Id" : "0",
-            "Dat_Besch" : "13.04.1999"
-         },
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -12157,18 +12150,17 @@
                   ]
                ]
             ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "S 1",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_S1.pdf",
+            "Dat_Besch" : "13.04.1999"
          }
       },
       {
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_Q.pdf",
-            "ZONE" : "Q",
-            "Id" : "0",
-            "Dat_Besch" : "vor 1991"
-         },
-         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -12352,12 +12344,25 @@
                      51.2668676335763
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Dat_Besch" : "vor 1991",
+            "ZONE" : "Q",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_Q.pdf",
+            "Id" : "0"
          }
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "84",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_84_1.pdf",
+            "Dat_Besch" : "27.01.1992"
+         },
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -12533,19 +12538,20 @@
                      51.2556276478426
                   ]
                ]
-            ]
-         },
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "ZONE" : "84",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_84_1.pdf"
+            ],
+            "type" : "Polygon"
          },
          "type" : "Feature"
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "82",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_82.pdf"
+         },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -12633,23 +12639,16 @@
                      51.2734672504758
                   ]
                ]
-            ]
-         },
-         "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "ZONE" : "82",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_82.pdf"
+            ],
+            "type" : "Polygon"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_81.pdf",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_81.pdf",
             "ZONE" : "81",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          },
          "geometry" : {
             "type" : "Polygon",
@@ -12813,11 +12812,11 @@
                   ]
                ]
             ]
-         }
+         },
+         "type" : "Feature"
       },
       {
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -13009,24 +13008,20 @@
                      51.2833760098303
                   ]
                ]
-            ]
-         },
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "80",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_80.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
-      },
-      {
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "5",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_5.pdf"
+            ],
+            "type" : "Polygon"
          },
          "type" : "Feature",
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_80.pdf",
+            "ZONE" : "80",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
+         }
+      },
+      {
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -13186,18 +13181,17 @@
                      51.2756064118449
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_5.pdf",
+            "ZONE" : "5",
+            "Id" : "0"
          }
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_P.pdf",
-            "ZONE" : "P",
-            "Id" : "0"
-         },
          "geometry" : {
             "coordinates" : [
                [
@@ -13388,15 +13382,20 @@
                ]
             ],
             "type" : "Polygon"
+         },
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "P",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_P.pdf",
+            "Dat_Besch" : "27.01.1992"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_2.pdf",
             "ZONE" : "2",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_2.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Id" : "0"
          },
          "geometry" : {
             "coordinates" : [
@@ -13528,9 +13527,17 @@
                ]
             ],
             "type" : "Polygon"
-         }
+         },
+         "type" : "Feature"
       },
       {
+         "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "3",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_3.pdf",
+            "Id" : "0"
+         },
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -13745,16 +13752,10 @@
                ]
             ],
             "type" : "Polygon"
-         },
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_3.pdf",
-            "ZONE" : "3",
-            "Id" : "0"
-         },
-         "type" : "Feature"
+         }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -14075,21 +14076,14 @@
             "type" : "Polygon"
          },
          "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_4.pdf",
             "ZONE" : "4",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_4.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
+         }
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "ZONE" : "71",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_71.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -14200,9 +14194,21 @@
                   ]
                ]
             ]
+         },
+         "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "71",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_71.pdf",
+            "Id" : "0"
          }
       },
       {
+         "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_74.pdf",
+            "ZONE" : "74",
+            "Id" : "0"
+         },
          "geometry" : {
             "coordinates" : [
                [
@@ -14330,17 +14336,10 @@
             ],
             "type" : "Polygon"
          },
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "Id" : "0",
-            "ZONE" : "74",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_74.pdf"
-         },
          "type" : "Feature"
       },
       {
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -14488,15 +14487,16 @@
                      51.2873581193986
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
+         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_77.pdf",
-            "ZONE" : "77",
             "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_77.pdf",
+            "ZONE" : "77"
+         }
       },
       {
          "geometry" : {
@@ -14610,15 +14610,22 @@
                ]
             ]
          },
+         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_78.pdf",
             "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
             "ZONE" : "78",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_78.pdf"
+         }
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_95.pdf",
+            "ZONE" : "95",
+            "Dat_Besch" : "02.04.2004"
+         },
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -14701,23 +14708,16 @@
                   ]
                ]
             ]
-         },
-         "properties" : {
-            "ZONE" : "95",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_95.pdf",
-            "Dat_Besch" : "02.04.2004"
-         },
-         "type" : "Feature"
+         }
       },
       {
-         "type" : "Feature",
          "properties" : {
             "Dat_Besch" : "28.07.1992",
-            "Id" : "0",
             "ZONE" : "242",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Rosdorf_242.pdf"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Ronsdorf_242.pdf",
+            "Id" : "0"
          },
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -14940,12 +14940,11 @@
       },
       {
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Rosdorf_M.pdf",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Ronsdorf_M.pdf",
             "ZONE" : "M",
-            "Id" : "0",
-            "Dat_Besch" : "vor 1991"
+            "Dat_Besch" : "vor 1991",
+            "Id" : "0"
          },
-         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -15312,9 +15311,16 @@
                ]
             ],
             "type" : "Polygon"
-         }
+         },
+         "type" : "Feature"
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "N",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Ronsdorf_N.pdf",
+            "Dat_Besch" : "vor 1991"
+         },
          "geometry" : {
             "coordinates" : [
                [
@@ -15502,17 +15508,17 @@
             ],
             "type" : "Polygon"
          },
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "N",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Rosdorf_N.pdf",
-            "Dat_Besch" : "vor 1991"
-         },
          "type" : "Feature"
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "vor 1991",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Ronsdorf_L.pdf",
+            "ZONE" : "L"
+         },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -15604,19 +15610,19 @@
                      51.2284579763545
                   ]
                ]
-            ]
-         },
-         "properties" : {
-            "Dat_Besch" : "vor 1991",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Rosdorf_L.pdf",
-            "Id" : "0",
-            "ZONE" : "L"
-         },
-         "type" : "Feature"
+            ],
+            "type" : "Polygon"
+         }
       },
       {
+         "properties" : {
+            "Dat_Besch" : "vor 1991",
+            "ZONE" : "K",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Ronsdorf_K.pdf",
+            "Id" : "0"
+         },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -15848,25 +15854,14 @@
                      51.2377061088995
                   ]
                ]
-            ]
-         },
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "K",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Rosdorf_K.pdf",
-            "Dat_Besch" : "vor 1991"
-         },
-         "type" : "Feature"
+            ],
+            "type" : "Polygon"
+         }
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "vor 1991",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Rosdorf_J_1.pdf",
-            "ZONE" : "J",
-            "Id" : "0"
-         },
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -16278,17 +16273,21 @@
                      51.2237702921588
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "vor 1991",
+            "ZONE" : "J",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Ronsdorf_J_1.pdf"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
             "Dat_Besch" : "vor 1991",
             "ZONE" : "X",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_X.pdf"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_X.pdf",
+            "Id" : "0"
          },
          "geometry" : {
             "coordinates" : [
@@ -16404,9 +16403,16 @@
                ]
             ],
             "type" : "Polygon"
-         }
+         },
+         "type" : "Feature"
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "08.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_9.pdf",
+            "ZONE" : "9"
+         },
          "geometry" : {
             "coordinates" : [
                [
@@ -16570,15 +16576,10 @@
             ],
             "type" : "Polygon"
          },
-         "properties" : {
-            "Dat_Besch" : "08.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_9.pdf",
-            "Id" : "0",
-            "ZONE" : "9"
-         },
          "type" : "Feature"
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -16810,23 +16811,22 @@
             ],
             "type" : "Polygon"
          },
-         "type" : "Feature",
          "properties" : {
-            "Dat_Besch" : "08.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_10.pdf",
             "Id" : "0",
+            "Dat_Besch" : "08.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_10.pdf",
             "ZONE" : "10"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_11.pdf",
+            "Dat_Besch" : "08.1992",
             "ZONE" : "11",
-            "Id" : "0",
-            "Dat_Besch" : "08.1992"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_11.pdf",
+            "Id" : "0"
          },
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -17090,19 +17090,19 @@
                      51.2714801181209
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         }
+            ]
+         },
+         "type" : "Feature"
       },
       {
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_12.pdf",
             "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_12.pdf",
             "ZONE" : "12",
             "Dat_Besch" : "27.01.1992"
          },
-         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -17290,17 +17290,16 @@
                      51.2797245366312
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         }
+            ]
+         },
+         "type" : "Feature"
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_13_2.pdf",
             "Id" : "0",
-            "ZONE" : "13"
+            "ZONE" : "13",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_13_2.pdf",
+            "Dat_Besch" : "27.01.1992"
          },
          "geometry" : {
             "type" : "Polygon",
@@ -17672,9 +17671,17 @@
                   ]
                ]
             ]
-         }
+         },
+         "type" : "Feature"
       },
       {
+         "properties" : {
+            "ZONE" : "35",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_35.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
+         },
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -17785,24 +17792,11 @@
                ]
             ],
             "type" : "Polygon"
-         },
-         "properties" : {
-            "ZONE" : "35",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_35.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+         }
       },
       {
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_36.pdf",
-            "Id" : "0",
-            "ZONE" : "36",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -18090,18 +18084,23 @@
                      51.2797667697382
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "36",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_36.pdf"
          }
       },
       {
          "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_37.pdf",
             "ZONE" : "37",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_37.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          },
-         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -18252,17 +18251,18 @@
                   ]
                ]
             ]
-         }
+         },
+         "type" : "Feature"
       },
       {
          "properties" : {
+            "Id" : "0",
             "Dat_Besch" : "27.01.1992",
             "ZONE" : "38",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_38.pdf"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_38.pdf"
          },
-         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -18434,20 +18434,13 @@
                      51.2808503030117
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         }
+            ]
+         },
+         "type" : "Feature"
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "08.1992",
-            "ZONE" : "39",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_39.pdf"
-         },
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -18647,16 +18640,23 @@
                      51.2712998404139
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "properties" : {
+            "Dat_Besch" : "08.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_39.pdf",
+            "ZONE" : "39",
+            "Id" : "0"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
             "ZONE" : "40",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_40.pdf"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_40.pdf",
+            "Id" : "0"
          },
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -18786,14 +18786,15 @@
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "Dat_Besch" : "12.1992",
             "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_59.pdf",
             "ZONE" : "59",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_59.pdf"
+            "Dat_Besch" : "12.1992"
          },
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -18969,20 +18970,18 @@
                      51.2855070592903
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          }
       },
       {
          "properties" : {
-            "Dat_Besch" : "12.1992",
-            "ZONE" : "60",
             "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_60.pdf"
+            "Dat_Besch" : "12.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_60.pdf",
+            "ZONE" : "60"
          },
          "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -19050,11 +19049,13 @@
                      51.3034248379435
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          }
       },
       {
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -19306,24 +19307,18 @@
                      51.2970239580968
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         },
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_61.pdf",
-            "Id" : "0",
-            "ZONE" : "61"
-         },
-         "type" : "Feature"
-      },
-      {
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_63.pdf",
-            "ZONE" : "63",
-            "Id" : "0"
+            ]
          },
          "type" : "Feature",
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "61",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_61.pdf"
+         }
+      },
+      {
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -19463,20 +19458,18 @@
                      51.2846213373945
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ZONE" : "63",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_63.pdf",
+            "Id" : "0"
          }
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "232",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_232.pdf",
-            "Dat_Besch" : "12.1991"
-         },
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -19540,12 +19533,24 @@
                      51.2784546993362
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "properties" : {
+            "Dat_Besch" : "12.1991",
+            "ZONE" : "232",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_232.pdf",
+            "Id" : "0"
          }
       },
       {
+         "properties" : {
+            "ZONE" : "233",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_233.pdf",
+            "Dat_Besch" : "08.1992",
+            "Id" : "0"
+         },
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -19681,18 +19686,15 @@
                      51.2761045492669
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
-         "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "08.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_233.pdf",
-            "ZONE" : "233",
-            "Id" : "0"
-         }
+         "type" : "Feature"
       },
       {
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -19844,25 +19846,22 @@
                      51.2742539505871
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
-         "type" : "Feature",
          "properties" : {
             "Dat_Besch" : "08.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_234.pdf",
-            "Id" : "0",
-            "ZONE" : "234"
+            "ZONE" : "234",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_234.pdf",
+            "Id" : "0"
          }
       },
       {
          "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_235.pdf",
+            "ZONE" : "235",
             "Dat_Besch" : "08.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_235.pdf",
-            "Id" : "0",
-            "ZONE" : "235"
+            "Id" : "0"
          },
-         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -20097,9 +20096,11 @@
                ]
             ],
             "type" : "Polygon"
-         }
+         },
+         "type" : "Feature"
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -20318,10 +20319,9 @@
          "properties" : {
             "Dat_Besch" : "27.01.1992",
             "ZONE" : "237",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_237.pdf"
-         },
-         "type" : "Feature"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_237.pdf",
+            "Id" : "0"
+         }
       },
       {
          "geometry" : {
@@ -20449,10 +20449,10 @@
          },
          "type" : "Feature",
          "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "ZONE" : "B",
             "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_B.pdf"
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_B.pdf",
+            "ZONE" : "B"
          }
       },
       {
@@ -20511,17 +20511,16 @@
                ]
             ]
          },
+         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_C.pdf",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_C.pdf",
             "ZONE" : "C",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
+         }
       },
       {
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -20597,17 +20596,19 @@
                      51.2337956969324
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
          "type" : "Feature",
          "properties" : {
-            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_Y.pdf",
             "ZONE" : "Y",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_Y.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -20823,16 +20824,22 @@
                ]
             ]
          },
-         "type" : "Feature",
          "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "Id" : "0",
             "ZONE" : "A",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_A.pdf"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_A.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
+         "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_D.pdf",
+            "ZONE" : "D",
+            "Id" : "0"
+         },
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -20904,27 +20911,13 @@
                      51.2455509788175
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
-         "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "ZONE" : "D",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_D.pdf"
-         }
+         "type" : "Feature"
       },
       {
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "ZONE" : "24",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_24.pdf"
-         },
          "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -21112,12 +21105,19 @@
                      51.2405834313061
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
+         },
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_24.pdf",
+            "ZONE" : "24",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -21265,33 +21265,32 @@
                      51.2244380938076
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
-         "type" : "Feature",
          "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_201.pdf",
             "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_201.pdf",
             "ZONE" : "201"
          }
       },
       {
+         "type" : "Feature",
          "properties" : {
             "Dat_Besch" : "27.01.1992",
-            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_202.pdf",
             "ZONE" : "202",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_202.pdf"
-         },
-         "type" : "Feature"
+            "Id" : "0"
+         }
       },
       {
          "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "ZONE" : "203 A",
             "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_203_A.pdf"
+            "ZONE" : "203 A",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_203_A.pdf",
+            "Dat_Besch" : "27.01.1992"
          },
-         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -21334,10 +21333,18 @@
                ]
             ],
             "type" : "Polygon"
-         }
+         },
+         "type" : "Feature"
       },
       {
+         "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "204",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_204.pdf",
+            "Id" : "0"
+         },
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -21381,26 +21388,13 @@
                      51.2273795780863
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         },
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_204.pdf",
-            "ZONE" : "204",
-            "Id" : "0"
+            ]
          },
          "type" : "Feature"
       },
       {
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_203.pdf",
-            "Id" : "0",
-            "ZONE" : "203",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -21456,12 +21450,20 @@
                      51.2300963631429
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "203",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_203.pdf",
+            "Dat_Besch" : "27.01.1992"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -21561,15 +21563,13 @@
                      51.2200616156945
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
-         "type" : "Feature",
          "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_204_A.pdf",
             "ZONE" : "204 A",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_204_A.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Id" : "0"
          }
       },
       {
@@ -21814,13 +21814,14 @@
          },
          "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_204_B.pdf",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_204_B.pdf",
             "ZONE" : "204 B",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -21970,21 +21971,20 @@
          },
          "properties" : {
             "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_205.pdf",
             "ZONE" : "205",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_205.pdf",
             "Id" : "0"
-         },
-         "type" : "Feature"
+         }
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_206.pdf",
             "ZONE" : "206",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_206.pdf",
-            "Dat_Besch" : "27.01.1992"
+            "Id" : "0"
          },
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -22068,12 +22068,14 @@
                      51.2402517775052
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         }
+            ]
+         },
+         "type" : "Feature"
       },
       {
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -22217,25 +22219,16 @@
                      51.230782049611
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
-         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_207_A.pdf",
-            "Id" : "0",
+            "Dat_Besch" : "10.1999",
             "ZONE" : "207 A",
-            "Dat_Besch" : "10.1999"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_207_A.pdf",
+            "Id" : "0"
          }
       },
       {
-         "type" : "Feature",
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "207 B",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_207_B.pdf",
-            "Dat_Besch" : "06.2000"
-         },
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -22342,6 +22335,13 @@
                   ]
                ]
             ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_207_B.pdf",
+            "ZONE" : "207 B",
+            "Dat_Besch" : "06.2000",
+            "Id" : "0"
          }
       },
       {
@@ -22418,12 +22418,19 @@
          },
          "type" : "Feature",
          "properties" : {
-            "ZONE" : "208",
             "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_208.pdf"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_208.pdf",
+            "ZONE" : "208"
          }
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "ZONE" : "311",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_311.pdf",
+            "Dat_Besch" : "10.1999"
+         },
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -22570,17 +22577,12 @@
                   ]
                ]
             ]
-         },
-         "type" : "Feature",
-         "properties" : {
-            "ZONE" : "311",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_311.pdf",
-            "Dat_Besch" : "10.1999"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -22680,25 +22682,21 @@
                      51.2318513035024
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
-         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_322.pdf",
             "Id" : "0",
-            "ZONE" : "322"
+            "ZONE" : "322",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_322.pdf"
          }
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_324.pdf",
             "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_324.pdf",
             "ZONE" : "324"
          },
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -22754,11 +22752,14 @@
                      51.2097246586634
                   ]
                ]
-            ]
-         }
+            ],
+            "type" : "Polygon"
+         },
+         "type" : "Feature"
       },
       {
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -22790,19 +22791,18 @@
                      51.2258841195723
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
+         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Vohwikel_325.pdf",
             "ZONE" : "101",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Vohwinkel_325.pdf",
             "Id" : "0"
-         },
-         "type" : "Feature"
+         }
       },
       {
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -23062,23 +23062,24 @@
                      51.2956924085264
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          },
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_328.pdf",
+            "Id" : "0",
             "ZONE" : "328",
-            "Id" : "0"
-         },
-         "type" : "Feature"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_328.pdf"
+         }
       },
       {
-         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_102_4.pdf",
+            "Id" : "0",
             "ZONE" : "102 D",
-            "Id" : "0"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_102_4.pdf"
          },
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -23138,11 +23139,11 @@
                      51.2141274763163
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -23223,13 +23224,13 @@
             "type" : "Polygon"
          },
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Rosdorf_327.pdf",
+            "Id" : "0",
             "ZONE" : "327",
-            "Id" : "0"
-         },
-         "type" : "Feature"
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Ronsdorf_327.pdf"
+         }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -23297,21 +23298,16 @@
                ]
             ]
          },
-         "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_330.pdf",
-            "ZONE" : "330",
-            "Id" : "0"
+            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_330.pdf",
+            "ZONE" : "330"
          }
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "331",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_331.pdf"
-         },
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -23371,12 +23367,18 @@
                      51.233094008412
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
+         },
+         "properties" : {
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_331.pdf",
+            "ZONE" : "331",
+            "Id" : "0"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -23572,19 +23574,25 @@
                      51.2874473298857
                   ]
                ]
-            ],
-            "type" : "Polygon"
+            ]
          },
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_96.pdf",
-            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_96.pdf",
             "ZONE" : "96",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
+         }
       },
       {
+         "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "52",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_52.pdf",
+            "Id" : "0"
+         },
+         "type" : "Feature",
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -23704,25 +23712,11 @@
                      51.2314007823509
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         },
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_52.pdf",
-            "ZONE" : "52",
-            "Id" : "0"
-         },
-         "type" : "Feature"
+            ]
+         }
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "ZONE" : "54",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_54.pdf"
-         },
          "geometry" : {
             "coordinates" : [
                [
@@ -23857,16 +23851,15 @@
                ]
             ],
             "type" : "Polygon"
+         },
+         "properties" : {
+            "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_54.pdf",
+            "ZONE" : "54",
+            "Dat_Besch" : "27.01.1992"
          }
       },
       {
-         "type" : "Feature",
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_55.pdf",
-            "ZONE" : "55",
-            "Id" : "0",
-            "Dat_Besch" : "27.01.1992"
-         },
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -24061,6 +24054,13 @@
                   ]
                ]
             ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ZONE" : "55",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_55.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       },
       {
@@ -24235,24 +24235,23 @@
             ],
             "type" : "Polygon"
          },
-         "properties" : {
-            "ZONE" : "238",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_238.pdf",
-            "Dat_Besch" : "22.10.1992"
-         },
-         "type" : "Feature"
-      },
-      {
          "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_53.pdf",
-            "ZONE" : "53",
             "Id" : "0",
-            "Dat_Besch" : "1991"
+            "Dat_Besch" : "22.10.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_238.pdf",
+            "ZONE" : "238"
+         }
+      },
+      {
+         "properties" : {
+            "Dat_Besch" : "1991",
+            "ZONE" : "53",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_53.pdf",
+            "Id" : "0"
          },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -24496,20 +24495,28 @@
                      51.2113403440102
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          }
       },
       {
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_217.pdf",
-            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_217.pdf",
             "ZONE" : "217",
-            "Dat_Besch" : "27.01.1992"
+            "Id" : "0"
          },
          "type" : "Feature"
       },
       {
+         "properties" : {
+            "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Barmen_302.pdf",
+            "ZONE" : "302",
+            "Id" : "0"
+         },
          "geometry" : {
+            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -24641,18 +24648,18 @@
                      51.2540884329674
                   ]
                ]
-            ],
-            "type" : "Polygon"
-         },
-         "properties" : {
-            "ZONE" : "302",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Barme_302.pdf",
-            "Dat_Besch" : "27.01.1992"
+            ]
          },
          "type" : "Feature"
       },
       {
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "216",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_216.pdf"
+         },
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -24771,33 +24778,25 @@
                   ]
                ]
             ]
-         },
-         "properties" : {
-            "Id" : "0",
-            "ZONE" : "216",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_216.pdf",
-            "Dat_Besch" : "27.01.1992"
-         },
-         "type" : "Feature"
+         }
       },
       {
+         "type" : "Feature",
          "properties" : {
             "Dat_Besch" : "27.01.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Cronenberg_218.pdf",
             "ZONE" : "218",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Croeberg_218.pdf"
-         },
-         "type" : "Feature"
+            "Id" : "0"
+         }
       },
       {
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_57.pdf",
-            "Id" : "0",
-            "ZONE" : "57"
+            "ZONE" : "57",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_57.pdf",
+            "Id" : "0"
          },
          "type" : "Feature",
          "geometry" : {
-            "type" : "Polygon",
             "coordinates" : [
                [
                   [
@@ -24945,7 +24944,8 @@
                      51.2877082687919
                   ]
                ]
-            ]
+            ],
+            "type" : "Polygon"
          }
       },
       {
@@ -25086,13 +25086,14 @@
          },
          "type" : "Feature",
          "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_74.pdf",
-            "ZONE" : "74",
             "Id" : "0",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_74.pdf",
+            "ZONE" : "74",
             "Dat_Besch" : "27.01.1992"
          }
       },
       {
+         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -25305,21 +25306,13 @@
             ]
          },
          "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Oberbarme_6.pdf",
             "Id" : "0",
-            "ZONE" : "6"
-         },
-         "type" : "Feature"
+            "Dat_Besch" : "27.01.1992",
+            "ZONE" : "6",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Oberbarmen_6.pdf"
+         }
       },
       {
-         "properties" : {
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Uell_Katerberg_231.pdf",
-            "Id" : "0",
-            "ZONE" : "231",
-            "Dat_Besch" : "08.1992"
-         },
-         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -25670,16 +25663,16 @@
                   ]
                ]
             ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Id" : "0",
+            "Dat_Besch" : "08.1992",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Uell_Katernberg_231.pdf",
+            "ZONE" : "231"
          }
       },
       {
-         "properties" : {
-            "Dat_Besch" : "17.06.2005",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Elberfeld_325.pdf",
-            "Id" : "0",
-            "ZONE" : "325"
-         },
-         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                [
@@ -25742,16 +25735,16 @@
                ]
             ],
             "type" : "Polygon"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "Dat_Besch" : "17.06.2005",
+            "ZONE" : "325",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Elberfeld_325.pdf",
+            "Id" : "0"
          }
       },
       {
-         "properties" : {
-            "Dat_Besch" : "27.01.1992",
-            "ZONE" : "83",
-            "Id" : "0",
-            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigug/Lagerfeld-Beyeburg_83.pdf"
-         },
-         "type" : "Feature",
          "geometry" : {
             "type" : "Polygon",
             "coordinates" : [
@@ -25846,6 +25839,13 @@
                   ]
                ]
             ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ZONE" : "83",
+            "URL" : "http://www.wuppertal.de/geoportal/Verkehrsberuhigung/Langerfeld-Beyenburg_83.pdf",
+            "Dat_Besch" : "27.01.1992",
+            "Id" : "0"
          }
       }
    ],

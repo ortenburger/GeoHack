@@ -1,35 +1,33 @@
 {
-   "name" : "Verleih-E-Fahrraeder_EPSG4326_KML",
    "type" : "FeatureCollection",
    "features" : [
       {
+         "type" : "Feature",
          "properties" : {
-            "Verleiher" : "Utopiastadt gemeiützige GmbH - Bahhof Mirke"
+            "Verleiher" : "Utopiastadt gemeinnützige GmbH - Bahnhof Mirke"
          },
          "geometry" : {
+            "type" : "Point",
             "coordinates" : [
                7.14507175421639,
                51.2667260101318
-            ],
-            "type" : "Point"
-         },
-         "type" : "Feature"
+            ]
+         }
       },
       {
          "properties" : {
-            "Verleiher" : "Dickte Fahrräder"
+            "Verleiher" : "Dickten Fahrräder"
          },
+         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                7.19314040131471,
                51.2693565191014
             ],
             "type" : "Point"
-         },
-         "type" : "Feature"
+         }
       },
       {
-         "type" : "Feature",
          "geometry" : {
             "type" : "Point",
             "coordinates" : [
@@ -37,25 +35,25 @@
                51.2383443217044
             ]
          },
+         "type" : "Feature",
          "properties" : {
-            "Verleiher" : "pro-e-motio Wuppertal"
+            "Verleiher" : "pro-e-motion Wuppertal"
          }
       },
       {
          "properties" : {
             "Verleiher" : "Skaterhalle Wicked Woods"
          },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Point",
             "coordinates" : [
                7.22392476316177,
                51.279476212216
-            ]
-         },
-         "type" : "Feature"
+            ],
+            "type" : "Point"
+         }
       },
       {
-         "type" : "Feature",
          "geometry" : {
             "coordinates" : [
                7.12833656065487,
@@ -63,35 +61,36 @@
             ],
             "type" : "Point"
          },
+         "type" : "Feature",
          "properties" : {
             "Verleiher" : "Zweirad Otto"
          }
       },
       {
          "properties" : {
-            "Verleiher" : "Fleder Fuways"
+            "Verleiher" : "Flender Funways"
          },
+         "type" : "Feature",
          "geometry" : {
-            "type" : "Point",
             "coordinates" : [
                7.16526536317193,
                51.257458125372
-            ]
-         },
-         "type" : "Feature"
+            ],
+            "type" : "Point"
+         }
       },
       {
          "properties" : {
-            "Verleiher" : "IKEA-Eirichtugshaus"
+            "Verleiher" : "IKEA-Einrichtungshaus"
          },
+         "type" : "Feature",
          "geometry" : {
             "type" : "Point",
             "coordinates" : [
                7.25530092508475,
                51.3092673431409
             ]
-         },
-         "type" : "Feature"
+         }
       },
       {
          "properties" : {
@@ -99,25 +98,26 @@
          },
          "type" : "Feature",
          "geometry" : {
-            "type" : "Point",
             "coordinates" : [
                7.10610975866701,
                51.2578063703306
-            ]
+            ],
+            "type" : "Point"
          }
       },
       {
+         "properties" : {
+            "Verleiher" : "Christian Wolter"
+         },
          "type" : "Feature",
          "geometry" : {
-            "type" : "Point",
             "coordinates" : [
                7.18870982164399,
                51.2638499348627
-            ]
-         },
-         "properties" : {
-            "Verleiher" : "Christia Wolter"
+            ],
+            "type" : "Point"
          }
       }
-   ]
+   ],
+   "name" : "Verleih-E-Fahrraeder_EPSG4326_KML"
 }

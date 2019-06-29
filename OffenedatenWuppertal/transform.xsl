@@ -21,7 +21,7 @@
 		<xsl:text>}</xsl:text><xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
 	</xsl:template>
 	<xsl:template match="SimpleData">
-		<xsl:text>"</xsl:text><xsl:value-of select="@name" /><xsl:text>": "</xsl:text><xsl:value-of select="translate(text(), '\n', '')" /><xsl:text>"</xsl:text><xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
+		<xsl:text>"</xsl:text><xsl:value-of select="@name" /><xsl:text>": "</xsl:text><xsl:value-of select="text()" /><xsl:text>"</xsl:text><xsl:if test="position()!=last()"><xsl:text>,</xsl:text></xsl:if>
 	</xsl:template>
 	<xsl:template match="Point">
 		<xsl:text>
