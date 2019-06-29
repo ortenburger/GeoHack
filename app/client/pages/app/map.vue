@@ -119,10 +119,12 @@
                     <div v-if="show">
                         <l-geo-json
                                 v-for="(val, idx) in stadteile"
-                                :geojson="val"
+                                :geojson="val.geometry"
                                 v-key="idx"
                                 :options="options"
-                        />
+                        >
+
+                        </l-geo-json>
                     </div>
 
                 </l-map>
@@ -146,6 +148,9 @@
   // }
 
   // import {icon} from "leaflet";
+  function onEachFeature(feature, layer) {
+    layer.bindPopup("kljlkjlkjlk");
+  }
 
   axios.defaults.headers.post = {
     "Access-Control-Allow-Origin": "*",
@@ -166,6 +171,7 @@
       },
     },
     data: () => ({
+
       // Travel time describes the stage on which it is traveling
       users: users,
       banks: banks,
@@ -205,14 +211,18 @@
       onEachFeatureFunction() {
         return (feature, layer) => {
           layer.bindTooltip(
-              "<div>BEZIRK:" +
-              feature.properties.BEZIRK +
-              "</div><div>NAME: " +
-              feature.properties.NAME +
-              "</div>",
+              "TEXT:TEST",
               {permanent: false, sticky: true}
           );
         };
+      },
+      options: function () {
+        console.log({
+          onEachFeature: this.onEachFeatureFunction
+        });
+        return {
+          onEachFeature: this.onEachFeatureFunction
+        }
       },
       get_data: function (start_loc) {
         this.loading = true;
