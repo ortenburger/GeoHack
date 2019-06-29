@@ -29,7 +29,7 @@
             </v-expansion-panel>
 
 
-            <v-layout  row align-center>
+            <v-layout row align-center>
                 <v-flex xs-6 r-2>
                     <h3>In der Nähe:</h3>
                 </v-flex>
@@ -116,10 +116,15 @@
                             </l-popup>
                         </l-marker>
                     </div>
-                    <l-geo-json
-                            v-if="show"
-                            :geojson="geojson"
-                    />
+                    <div v-if="show">
+                        <l-geo-json
+                                v-for="(val, idx) in stadteile"
+                                :geojson="val"
+                                v-key="idx"
+                                :options="options"
+                        />
+                    </div>
+
                 </l-map>
             </no-ssr>
         </v-container>
@@ -130,6 +135,7 @@
   import axios from "axios";
   import Vue from "vue";
   import {users, banks, courses, acts} from "./jsons.js";
+  import {stadteile} from "./Stadtbezirke_EPSG4326_JSON.js";
 
   var api_host =
       "https://ohsrb65n38.execute-api.eu-central-1.amazonaws.com/proxy/";
@@ -152,13 +158,21 @@
   });
 
   export default {
+    computed: {
+      options() {
+        return {
+          onEachFeature: this.onEachFeatureFunction
+        };
+      },
+    },
     data: () => ({
       // Travel time describes the stage on which it is traveling
       users: users,
       banks: banks,
       acts: acts,
-      show:false,
+      show: false,
       geojson: null,
+      stadteile: null,
       locs: {
         banks: banks,
         users: users,
@@ -177,7 +191,6 @@
         false: 200
       },
       age: 35,
-
       markers: [[], [], []],
       style: {
         color: "#000",
@@ -189,6 +202,18 @@
       geojsons: [{type: "Point", coordinates: [8.43586, 49.01273]}]
     }),
     methods: {
+      onEachFeatureFunction() {
+        return (feature, layer) => {
+          layer.bindTooltip(
+              "<div>BEZIRK:" +
+              feature.properties.BEZIRK +
+              "</div><div>NAME: " +
+              feature.properties.NAME +
+              "</div>",
+              {permanent: false, sticky: true}
+          );
+        };
+      },
       get_data: function (start_loc) {
         this.loading = true;
         this.geojsons = [];
@@ -219,6 +244,8 @@
         this.users[user].act = acts[i];
         this.users[user].act.id = i;
       }
+      ;
+      this.stadteile = stadteile[0].features;
       axios
           .get(
               "https://rawgit.com/gregoiredavid/france-geojson/master/regions/pays-de-la-loire/communes-pays-de-la-loire.geojson"
