@@ -2,6 +2,9 @@
     <v-app>
         <v-container>
             <v-switch v-model="show" :label="`Anzeigen: ${show.toString()}`"></v-switch>
+            <v-switch
+                    v-for="(val,key) in fdata"
+                    v-model="fshow[key]" :label="key"/>
             <v-btn @click="get_data" :disabled="loading">
                 get_line
             </v-btn>
@@ -132,6 +135,43 @@
                     >
 
                     </l-geo-json>
+                    <l-geo-json v-if="show"
+                                :options="options"
+                                :geojson="mundraub"
+                                :options-style="styleFunction"
+
+                    >
+
+                    </l-geo-json>
+                    <!--MARKERS FOR FILTERS-->
+                    <div v-for="(filter, fkey) in fdata" :key="fkey"
+                         v-if="fshow[fkey]"
+                    >
+                        <l-marker
+                                v-for="(val,key) in filter.features"
+                                :lat-lng="[
+                                val.geometry.coordinates[0],
+                                val.geometry.coordinates[1]
+                                ]"
+                        >
+                            <l-icon :icon-anchor=" [30/2, 0]">
+                                <v-img height="30" width="30"
+                                       contain
+                                       src="https://mundraub.org/modules/custom/mundraub_map/img/campaigns.svg"/>
+                            </l-icon>
+                            <l-popup>
+                                <v-layout column style="text-align: center">
+
+                                    <v-flex v-for="(val1,key1) in val.properties">
+                                        {{key1}}:{{val1}}
+                                    </v-flex>
+                                </v-layout>
+
+                            </l-popup>
+
+                        </l-marker>
+                    </div>
+                    <!--END MARKERS FOR FILTERS-->
                 </l-map>
             </no-ssr>
         </v-container>
@@ -143,20 +183,10 @@
   import Vue from "vue";
   import {users, banks, courses, acts} from "./jsons.js";
   import {stadteile} from "./Stadtbezirke_EPSG4326_JSON.js";
+  import {mundraub} from "./mundraub.js";
 
   var app_key = "e341f9a9-da78-4cfd-bb37" + "-" + "3c682e921182";
-
-
-  // var api_host = "http://localhost:5000/";
-  // if (!location.hostname.includes("127.0.0.1") && !location.hostname.includes("localhost")) {
-  //   api_host = "http://localhost:5000";
-  // }
-
   // import {icon} from "leaflet";
-  function onEachFeature(feature, layer) {
-    layer.bindPopup("kljlkjlkjlk");
-  }
-
   axios.defaults.headers.get = {
     // "Access-Control-Allow-Origin": "*",
     // "Access-Control-Allow-Credentials": "true",
@@ -170,7 +200,13 @@
 
       // Travel time describes the stage on which it is traveling
       users: users,
-      address:null,
+      fdata: {
+        mundraub: mundraub,
+      },
+      fshow: {
+        mundraub:false,
+      },
+      address: null,
       banks: banks,
       center: [51.2917076298, 7.2510191991],
       origin: "51.217469, 6.804767",
@@ -209,7 +245,7 @@
       geojsons: [{type: "Point", coordinates: [7.2510191991, 51.2917076298]}]
     }),
     methods: {
-
+      //Calculating route with Graphhopper
       get_data: function () {
         this.loading = true;
         this.geojsons = [];
@@ -246,7 +282,7 @@
               console.log("Loading");
               let dest_temp = response.data.Response.View[0].Result[0].Location.NavigationPosition[0];
               this.dest = dest_temp.Latitude + "," + dest_temp.Longitude;
-              console.log("Dest",this.dest);
+              console.log("Dest", this.dest);
               this.loading = false;
             })
             .catch(error => {
@@ -296,12 +332,12 @@
       },
       onEachFeatureFunction() {
         return (feature, layer) => {
+          let tool_tip = "";
+          for (let key in feature.properties) {
+            tool_tip = tool_tip + "<div>" + key + ":" + feature.properties[key] + " </div>"
+          }
           layer.bindTooltip(
-              "<div>BEZIRK:" +
-              feature.properties.BEZIRK +
-              "</div><div>NAME: " +
-              feature.properties.NAME +
-              "</div>",
+              tool_tip,
               {permanent: false, sticky: true}
           );
         };
