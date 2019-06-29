@@ -4,8 +4,7 @@
             id="inspire"
 
     >
-    <v-img height="55" contain src="https://www.univiva.de/wp-content/uploads/2019/04/Logo_univiva_Claim_grau_4c.png">
-                            </v-img>
+
         <template v-if="true">
             <v-layout class="sun">
                 <v-bottom-nav
@@ -63,7 +62,7 @@
 
 
   export default {
-    name: "App",
+    name: "App1",
     components: {},
     data: () => ({
       dis: false,
