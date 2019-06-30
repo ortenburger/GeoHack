@@ -1,4 +1,5 @@
 module.exports = {
+
   mode: "universal",
   head: {
     title: "Uni Viva Social",
@@ -104,7 +105,8 @@ module.exports = {
           exception: true
         }
       }
-    ]
+    ],
+
   ],
   server: {
     port: 3000, // default: 3000
