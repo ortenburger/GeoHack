@@ -31,10 +31,12 @@
                                 val.geometry.coordinates[0]
                                 ]"
                                 >
-                                    <l-icon :icon-anchor=" [30/2, 0]">
-                                        <v-img height="30" width="30"
-                                               contain
-                                               src="https://mundraub.org/modules/custom/mundraub_map/img/campaigns.svg"/>
+                                    <l-icon
+                                            :icon-anchor=" [30/4, 30/4]"
+                                    >
+                                        <div style="font-size: 14px">📍</div>
+
+                                        <!--<v-img height="30" width="30" :src="source[toggle_exclusive].logo"/>-->
                                     </l-icon>
                                     <l-popup>
                                         <v-layout column style="text-align: center">
@@ -231,10 +233,10 @@
         return () => {
           return {
             weight: 2,
-            color: "#9ca8f1",
+            color: "#f11843",
             opacity: 1,
-            fillColor: "#7b83e4",
-            fillOpacity: 0.02
+            fillColor: "#e48591",
+            fillOpacity: 0.2
           };
         };
       },
