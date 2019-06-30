@@ -1,0 +1,536 @@
+var carsharing = {
+   "type" : "FeatureCollection",
+   "name" : "Carsharing_EPSG4326_KML",
+   "features" : [
+      {
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.1962329999988,
+               51.2676579994721
+            ]
+         },
+         "properties" : {
+            "ANZ_FAHRZ" : "4",
+            "ORT" : "42283 Wuppertal",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1710.html#stationdetails",
+            "NAME_STAT" : "Winkler",
+            "LAT_LON" : "51.267658, 7.196233",
+            "ADRESSE" : "Ibachstraße 19",
+            "ANBIETER" : "Cambio"
+         }
+      },
+      {
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.18801599999877,
+               51.2772769994721
+            ]
+         },
+         "properties" : {
+            "ANBIETER" : "Cambio",
+            "ADRESSE" : "Bromberger Straße  39-41",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1712.html#stationdetails",
+            "LAT_LON" : "51.277277, 7.188016",
+            "NAME_STAT" : "Bromberger",
+            "ANZ_FAHRZ" : "1",
+            "ORT" : "42281 Wuppertal"
+         }
+      },
+      {
+         "properties" : {
+            "ADRESSE" : "Schützenstraße 34",
+            "ANBIETER" : "Cambio",
+            "LAT_LON" : "51.279173, 7.187183",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1713.html#stationdetails",
+            "NAME_STAT" : "Schützen",
+            "ORT" : "42281 Wuppertal",
+            "ANZ_FAHRZ" : "1"
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.18718299999876,
+               51.2791729994721
+            ]
+         }
+      },
+      {
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.15364699999864,
+               51.2560969994719
+            ]
+         },
+         "properties" : {
+            "ANZ_FAHRZ" : "2",
+            "ORT" : "42103 Wuppertal",
+            "ANBIETER" : "Cambio",
+            "ADRESSE" : "Bundesallee 222",
+            "NAME_STAT" : "Kluse",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1717.html#stationdetails",
+            "LAT_LON" : "51.256097, 7.153647"
+         }
+      },
+      {
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.22078299999888,
+               51.2743599994722
+            ]
+         },
+         "properties" : {
+            "LAT_LON" : "51.274360, 7.220783",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1720.html#stationdetails",
+            "NAME_STAT" : "Rosenau",
+            "ANBIETER" : "Cambio",
+            "ADRESSE" : "Rosenau",
+            "ORT" : "42277 Wuppertal",
+            "ANZ_FAHRZ" : "4"
+         }
+      },
+      {
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.06558399999826,
+               51.2298289994713
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1721.html#stationdetails",
+            "NAME_STAT" : "Stationsgarten",
+            "LAT_LON" : "51.229829, 7.065584",
+            "ADRESSE" : "Vohwinkeler Straße 34",
+            "ANBIETER" : "Cambio",
+            "ORT" : "42329 Wuppertal",
+            "ANZ_FAHRZ" : "3"
+         }
+      },
+      {
+         "geometry" : {
+            "coordinates" : [
+               7.1437029999986,
+               51.2550139994718
+            ],
+            "type" : "Point"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ORT" : "42103 Wuppertal",
+            "ANZ_FAHRZ" : "3",
+            "ADRESSE" : "Alexanderstraße 18",
+            "ANBIETER" : "Cambio",
+            "NAME_STAT" : "Sparkasse",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1723.html#stationdetails",
+            "LAT_LON" : "51.255014, 7.143703"
+         }
+      },
+      {
+         "properties" : {
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1724.html#stationdetails",
+            "LAT_LON" : "51.263476, 7.177588",
+            "NAME_STAT" : "Engels",
+            "ADRESSE" : "Friedrich-Engels-Allee 237",
+            "ANBIETER" : "Cambio",
+            "ANZ_FAHRZ" : "3",
+            "ORT" : "42285 Wuppertal"
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "coordinates" : [
+               7.17758799999873,
+               51.263475999472
+            ],
+            "type" : "Point"
+         }
+      },
+      {
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.13832999999858,
+               51.2604049994718
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ORT" : "42105 Wuppertal",
+            "ANZ_FAHRZ" : "2",
+            "ADRESSE" : "Schreinerstraße 31",
+            "ANBIETER" : "Cambio",
+            "NAME_STAT" : "Marien",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1727.html#stationdetails",
+            "LAT_LON" : "51.260405, 7.138330"
+         }
+      },
+      {
+         "properties" : {
+            "ORT" : "42103 Wuppertal",
+            "ANZ_FAHRZ" : "2",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1746.html#stationdetails",
+            "NAME_STAT" : "Hoeft",
+            "LAT_LON" : "51.250456, 7.139764",
+            "ADRESSE" : "Steinbecker Meile",
+            "ANBIETER" : "Cambio"
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "coordinates" : [
+               7.13976399999858,
+               51.2504559994718
+            ],
+            "type" : "Point"
+         }
+      },
+      {
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.13941199999858,
+               51.2570619994718
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "NAME_STAT" : "Luise",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1747.html#stationdetails",
+            "LAT_LON" : "51.257062, 7.139412",
+            "ANBIETER" : "Cambio",
+            "ADRESSE" : "Luisenstraße",
+            "ANZ_FAHRZ" : "4",
+            "ORT" : "42103 Wuppertal"
+         }
+      },
+      {
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.1444629999986,
+               51.2654719994719
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ANZ_FAHRZ" : "1",
+            "ORT" : "42105 Wuppertal",
+            "ANBIETER" : "Cambio",
+            "ADRESSE" : "Helmholtzstraße 21",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/1813.html#stationdetails",
+            "NAME_STAT" : "Helmholtz",
+            "LAT_LON" : "51.265472, 7.144463"
+         }
+      },
+      {
+         "properties" : {
+            "ANZ_FAHRZ" : "2",
+            "ORT" : "42119 Wuppertal",
+            "ANBIETER" : "Cambio",
+            "ADRESSE" : "Max Horkheimer Straße 15",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/2019.html#stationdetails",
+            "LAT_LON" : "51.246096, 7.145871",
+            "NAME_STAT" : "Campus"
+         },
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.1458709999986,
+               51.2460959994718
+            ]
+         },
+         "type" : "Feature"
+      },
+      {
+         "geometry" : {
+            "coordinates" : [
+               7.13617499999857,
+               51.2600719994718
+            ],
+            "type" : "Point"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ANZ_FAHRZ" : "3",
+            "ORT" : "42105 Wuppertal",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/2054.html#stationdetails",
+            "NAME_STAT" : "Sattler",
+            "LAT_LON" : "51.260072, 7.136175",
+            "ANBIETER" : "Cambio",
+            "ADRESSE" : "Sattlerstraße 30"
+         }
+      },
+      {
+         "properties" : {
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/2637.html#stationdetails",
+            "NAME_STAT" : "Uellendahler",
+            "LAT_LON" : "51.265343, 7.147148",
+            "ADRESSE" : "Wiesenstraße 2",
+            "ANBIETER" : "Cambio",
+            "ORT" : "42105 Wuppertal",
+            "ANZ_FAHRZ" : "2"
+         },
+         "geometry" : {
+            "coordinates" : [
+               7.14714799999861,
+               51.2653429994719
+            ],
+            "type" : "Point"
+         },
+         "type" : "Feature"
+      },
+      {
+         "properties" : {
+            "ORT" : "42103 Wuppertal",
+            "ANZ_FAHRZ" : "2",
+            "ADRESSE" : "Luisenstraße",
+            "ANBIETER" : "Cambio",
+            "LAT_LON" : "51.254952, 7.134186",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/2682.html#stationdetails",
+            "NAME_STAT" : "Sophie"
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "coordinates" : [
+               7.13418599999856,
+               51.2549519994718
+            ],
+            "type" : "Point"
+         }
+      },
+      {
+         "properties" : {
+            "ADRESSE" : "Gathe 6",
+            "ANBIETER" : "Cambio",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/2717.html#stationdetails",
+            "NAME_STAT" : "Alte Feuerwache",
+            "LAT_LON" : "51.264397, 7.146458",
+            "ANZ_FAHRZ" : "1",
+            "ORT" : "42107 Wuppertal"
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.14645799999861,
+               51.2643969994719
+            ]
+         }
+      },
+      {
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.1442979999986,
+               51.2533379994718
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ANZ_FAHRZ" : "1",
+            "ORT" : "42103 Wuppertal",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/2749.html#stationdetails",
+            "LAT_LON" : "51.253338, 7.144298",
+            "NAME_STAT" : "Johannisberg",
+            "ANBIETER" : "Cambio",
+            "ADRESSE" : "Johannisberg"
+         }
+      },
+      {
+         "properties" : {
+            "LAT_LON" : "51.265991, 7.150379",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/2827.html#stationdetails",
+            "NAME_STAT" : "Republik",
+            "ADRESSE" : "Hagenauer Straße 29",
+            "ANBIETER" : "Cambio",
+            "ORT" : "42107 Wuppertal",
+            "ANZ_FAHRZ" : "1"
+         },
+         "geometry" : {
+            "coordinates" : [
+               7.15037899999862,
+               51.2659909994719
+            ],
+            "type" : "Point"
+         },
+         "type" : "Feature"
+      },
+      {
+         "type" : "Feature",
+         "geometry" : {
+            "coordinates" : [
+               7.22420599999889,
+               51.2715939994722
+            ],
+            "type" : "Point"
+         },
+         "properties" : {
+            "NAME_STAT" : "Waldeck",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/2832.html#stationdetails",
+            "LAT_LON" : "51.271594, 7.224206",
+            "ANBIETER" : "Cambio",
+            "ADRESSE" : "Waldeckstraße 10",
+            "ANZ_FAHRZ" : "2",
+            "ORT" : "42289 Wuppertal"
+         }
+      },
+      {
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.21827499999887,
+               51.2775629994722
+            ]
+         },
+         "properties" : {
+            "ORT" : "42277 Wuppertal",
+            "ANZ_FAHRZ" : "1",
+            "LAT_LON" : "51.277563, 7.218275",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/2894.html#stationdetails",
+            "NAME_STAT" : "Wichlinghauser",
+            "ANBIETER" : "Cambio",
+            "ADRESSE" : "Wichlinghauser Straße 36"
+         }
+      },
+      {
+         "properties" : {
+            "ADRESSE" : "Furter Hof / Hartmannufer",
+            "ANBIETER" : "Cambio",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/2957.html#stationdetails",
+            "NAME_STAT" : "Furter Hof",
+            "LAT_LON" : "51.258180, 7.163846",
+            "ORT" : "42285 Wuppertal",
+            "ANZ_FAHRZ" : "2"
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "coordinates" : [
+               7.16384599999867,
+               51.2581799994719
+            ],
+            "type" : "Point"
+         }
+      },
+      {
+         "geometry" : {
+            "coordinates" : [
+               7.14243899999859,
+               51.2485989994718
+            ],
+            "type" : "Point"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ADRESSE" : "Weidenstraße 25",
+            "ANBIETER" : "Cambio",
+            "NAME_STAT" : "Weiden",
+            "URL" : "http://www.cambio-carsharing.de/cms/carsharing/de/1/cms_f2_10019/stdws_info/stationen/station/3035.html#stationdetails",
+            "LAT_LON" : "51.248599, 7.142439",
+            "ORT" : "42117 Wuppertal",
+            "ANZ_FAHRZ" : "1"
+         }
+      },
+      {
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.13253304069549,
+               51.2455305653371
+            ]
+         },
+         "type" : "Feature",
+         "properties" : {
+            "URL" : "http://www.ruhrauto-e.de/ueber-ruhrautoe/standorte/",
+            "LAT_LON" : "51.245531, 7.132533",
+            "NAME_STAT" : "Villa Media",
+            "ADRESSE" : "Viehhofstraße 125",
+            "ANBIETER" : "RUHRAUTOE",
+            "ANZ_FAHRZ" : "1",
+            "ORT" : "42117 Wuppertal"
+         }
+      },
+      {
+         "geometry" : {
+            "coordinates" : [
+               7.15186647096183,
+               51.2555902240073
+            ],
+            "type" : "Point"
+         },
+         "type" : "Feature",
+         "properties" : {
+            "ORT" : "42103 Wuppertal",
+            "ANZ_FAHRZ" : "1",
+            "ADRESSE" : "Döppersberg 50",
+            "ANBIETER" : "Flinkster",
+            "NAME_STAT" : "Hbf Wuppertal",
+            "URL" : "https://www.flinkster.de/kundenbuchung/process.php?proc=station&f=3",
+            "LAT_LON" : "51.255590, 7.151866"
+         }
+      },
+      {
+         "properties" : {
+            "ORT" : "42117 Wuppertal",
+            "ANZ_FAHRZ" : "1",
+            "URL" : "https://www.flinkster.de/kundenbuchung/process.php?proc=station&f=3",
+            "NAME_STAT" : "W-VM",
+            "LAT_LON" : "51.245519, 7.132476",
+            "ADRESSE" : "Viehhofstraße 125",
+            "ANBIETER" : "Flinkster"
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.13247644342456,
+               51.2455187617196
+            ]
+         }
+      },
+      {
+         "properties" : {
+            "ANBIETER" : "Flinkster (Hertz)",
+            "ADRESSE" : "Clausenstraße 34",
+            "NAME_STAT" : "Hertz CL",
+            "URL" : "https://www.flinkster.de/kundenbuchung/process.php?proc=station&f=3",
+            "LAT_LON" : "51.271019, 7.166598",
+            "ANZ_FAHRZ" : "4",
+            "ORT" : "42285 Wuppertal"
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.16659811267811,
+               51.2710185679925
+            ]
+         }
+      },
+      {
+         "properties" : {
+            "ANZ_FAHRZ" : "0"
+         },
+         "type" : "Feature",
+         "geometry" : {
+            "coordinates" : [
+               7.13684470062096,
+               51.2584436231447
+            ],
+            "type" : "Point"
+         }
+      }
+   ]
+};
+export {
+  carsharing
+}
+
