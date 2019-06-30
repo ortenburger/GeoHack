@@ -42,12 +42,18 @@
                                         <v-layout column style="text-align: center">
 
                                             <v-flex v-for="(val1,key1) in val.properties">
-
-                                                <a v-if="key1==='node_id'"
-                                                   target="_blank"
-                                                   :href="'https://mundraub.org/map?nid='+val1">LINK</a>
-                                                <br/>
+                                                <p v-if="key1==='node_id'">
+                                                    <a
+                                                            target="_blank"
+                                                            :href="'https://mundraub.org/map?nid='+val1">LINK</a>
+                                                </p>
+                                                <p v-if="key1==='URL'">
+                                                    <a
+                                                            target="_blank"
+                                                            :href="val1">LINK</a>
+                                                </p>
                                                 {{key1}}:{{val1}}
+
                                             </v-flex>
                                         </v-layout>
 
