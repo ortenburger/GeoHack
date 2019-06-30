@@ -1,46 +1,46 @@
 <template>
     <v-app>
         <v-container>
-            <v-switch v-model="show" :label="`Anzeigen: ${show.toString()}`"></v-switch>
+            <v-layout>
+                <v-switch v-model="show" :label="`Anzeigen: ${show.toString()}`"></v-switch>
+                <v-btn @click="get_data" :disabled="loading">
+                    get_line
+                </v-btn>
+                <v-btn @click="get_coords" :disabled="loading">
+                    get_coords
+                </v-btn>
+                <v-text-field
+                        v-model="address"
+                        label="Enter the destination address here"
+                ></v-text-field>
 
-            <v-btn @click="get_data" :disabled="loading">
-                get_line
-            </v-btn>
-            <v-btn @click="get_coords" :disabled="loading">
-                get_coords
-            </v-btn>
-            <v-text-field
-                    v-model="address"
-                    label="Enter the destination address here"
-            ></v-text-field>
-
-            <v-layout row>
-                <v-flex>
-                    <v-text-field
-                            v-model="origin"
-                            label="Origin"
-                    ></v-text-field>
-                </v-flex>
-                <v-flex>
-                    <v-text-field
-                            v-model="dest"
-                            label="Destination"
-                    ></v-text-field>
-                </v-flex>
-                <v-flex>
-                    <v-select
-                            value="Transport"
-                            v-model="trasport"
-                            :items="['bike','foot','car']"
-                            menu-props="auto, overflowY"
-
-                    ></v-select>
-                </v-flex>
+                <v-layout row>
+                    <v-flex>
+                        <v-text-field
+                                v-model="origin"
+                                label="Origin"
+                        ></v-text-field>
+                    </v-flex>
+                    <v-flex>
+                        <v-text-field
+                                v-model="dest"
+                                label="Destination"
+                        ></v-text-field>
+                    </v-flex>
+                    <v-flex>
+                        <v-select
+                                value="Transport"
+                                v-model="trasport"
+                                :items="['bike','foot','car']"
+                                menu-props="auto, overflowY"
+                        ></v-select>
+                    </v-flex>
+                </v-layout>
             </v-layout>
 
 
             <no-ssr>
-                <l-map class="mini-map" :zoom="12" :center="center">
+                <l-map class="mini-map" :zoom="13" :center="center">
                     <l-tile-layer
                             url="https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"
                     ></l-tile-layer>
@@ -64,7 +64,7 @@
 
                     </l-geo-json>
                     <l-geo-json
-                            :geojson="routes"
+                            :geojson="routes.features[transport_idx]"
                             :options-style="styleFunction"
                     >
 
@@ -72,6 +72,91 @@
 
                 </l-map>
             </no-ssr>
+            <v-layout row>
+                <v-layout column>
+                    <v-flex>
+                        <v-btn @click="transport_idx=2">
+                            🚴‍
+                        </v-btn>
+                    </v-flex>
+                    <v-flex>
+                        zeit
+                    </v-flex>
+                    <v-flex>
+
+                        0.07
+                        0.12 / 0.25
+
+                    </v-flex>
+                </v-layout>
+                <v-layout column>
+                    <v-flex>
+                        <v-btn @click="transport_idx=1">
+                            🚎
+                        </v-btn>
+                    </v-flex>
+                    <v-flex>
+                        zeit
+                    </v-flex>
+                    <v-flex>
+                        co2
+                    </v-flex>
+                </v-layout>
+                <v-layout column>
+                    <v-flex>
+                        <v-btn @click="transport_idx=0">
+
+                            🚗
+                        </v-btn>
+                    </v-flex>
+                    <v-flex>
+                        zeit
+                    </v-flex>
+                    <v-flex>
+                        co2
+                    </v-flex>
+                </v-layout>
+                <v-layout column>
+                    <v-flex>
+                         <v-btn @click="transport_idx=2">
+                            🚶‍♀️
+                        </v-btn>
+                    </v-flex>
+                    <v-flex>
+                        zeit
+                    </v-flex>
+                    <v-flex>
+                        co2
+                    </v-flex>
+                </v-layout>
+                <v-layout column>
+                    <v-flex>
+                        <v-btn @click="transport_idx=2">
+                            🛵
+                        </v-btn>
+                    </v-flex>
+                    <v-flex>
+                        zeit
+                    </v-flex>
+                    <v-flex>
+                        co2
+                    </v-flex>
+                </v-layout>
+                <v-layout column>
+                    <v-flex>
+                        <v-btn @click="transport_idx=2">
+                            🚴‍🔄
+                        </v-btn>
+                    </v-flex>
+                    <v-flex>
+                        zeit
+                    </v-flex>
+                    <v-flex>
+                        co2
+                    </v-flex>
+                </v-layout>
+
+            </v-layout>
         </v-container>
     </v-app>
 </template>
@@ -97,13 +182,14 @@
 
       // Travel time describes the stage on which it is traveling
       address: null,
-      routes:routes,
-      center: [51.2917076298, 7.2510191991],
+      routes: routes,
+      // center: [51.2917076298, 7.2510191991],
       origin: "51.217469, 6.804767",
       dest: "51.2191094, 6.8043112",
       show: false,
       geojson: null,
       stadteile: null,
+      transport_idx:0,
 
       trasport: "car",
       markers: [[], [], []],
@@ -168,6 +254,15 @@
 
     },
     computed: {
+      center(){
+        // routes.features[this.transport_idx].geometry.coordinates[0]
+        let coords = [
+            routes.features[0].geometry.coordinates[0][1],
+            routes.features[0].geometry.coordinates[0][0]
+        ]
+        return coords //[51.2917076298, 7.2510191991]
+      },
+
       api_host() {
         console.log("Get api_host");
         var url_1 = "https://graphhopper.com/api/1//route?point=" + this.origin + "&point=" + this.dest + "&type=geojson&locale=de-DE&vehicle=foot&weighting=fastest&elevation=true&key=" + app_key + "&instructions=false&points_encoded=false";
@@ -182,10 +277,10 @@
         return () => {
           return {
             weight: 2,
-            color: "#9ca8f1",
+            color: "#f11843",
             opacity: 1,
-            fillColor: "#7b83e4",
-            fillOpacity: 0.02
+            fillColor: "#e48591",
+            fillOpacity: 0.05
           };
         };
       },
