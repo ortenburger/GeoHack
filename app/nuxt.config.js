@@ -2,7 +2,7 @@ module.exports = {
 
   mode: "universal",
   head: {
-    title: "Uni Viva Social",
+    title: "Bewegte Stadt",
     dir: {
       // assets: 'custom-assets',
       // layouts: 'custom-layouts',

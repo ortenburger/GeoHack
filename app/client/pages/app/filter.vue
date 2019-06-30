@@ -8,8 +8,9 @@
             <v-switch
                     small
                     v-for="(val,key) in fdata"
-                    v-model="fshow[key]" :label="key"
+                    v-model="fshow[key]" :label="fdata[key].title"
                     v-if="!datasets_filter||datasets_filter===''||(datasets_filter&&key.toLowerCase().includes(datasets_filter.toLowerCase()))"
+                    style="display: inline-block; width: 33%;"
             />
             <no-ssr>
                 <l-map class="mini-map" :zoom="12" :center="center">
@@ -22,7 +23,7 @@
                     <div v-for="(filter, fkey) in fdata" :key="fkey"
                          v-if="fshow[fkey]"
                     >
-                        <div v-for="(val,key) in filter.features" :key="key">
+                        <div v-for="(val,key) in filter.geojson.features" :key="key">
                             <!--Markers for the Point-->
                             <div v-if="val.geometry.type==='Point'">
                                 <l-marker :lat-lng="[
@@ -87,18 +88,50 @@
       // Travel time describes the stage on which it is traveling
       datasets_filter: null,
       fdata: {
-        mundraub: mundraub,
-        carsharing: carsharing,
-        charg_station_cars: charg_station_cars,
-        charg_station_bikes: charg_station_bikes,
-        Radabstellanlagen: Radabstellanlagen,
-        Schwebebahnhoefe: Schwebebahnhoefe,
-        Verleih_E_Fahrraeder: Verleih_E_Fahrraeder,
-        Zugaenge_Bahntrassenradwege: Zugaenge_Bahntrassenradwege,
-        Naturschutzgebiete: null,
-        Radrouten: null,
-        Stadtbezirke: null,
-        // Tempo30:null
+        mundraub: {
+          title: 'Mundraub',
+          geojson: mundraub
+        },
+        carsharing: {
+          title: 'Carsharing',
+          geojson: carsharing
+        },
+        charg_station_cars: {
+          title: 'E-Auto Ladestationen',
+          geojson: charg_station_cars
+        },
+        charg_station_bikes: {
+          title: 'E-Bike Ladestationen',
+          geojson: charg_station_bikes
+        },
+        Radabstellanlagen: {
+          title: 'Radabstellanlagen',
+          geojson: Radabstellanlagen
+        },
+        Schwebebahnhoefe: {
+          title: 'Schwebebahnhöfe',
+          geonjson: Schwebebahnhoefe
+        },
+        Verleih_E_Fahrraeder: {
+          title: 'E-Bike Verleih',
+          geojson: Verleih_E_Fahrraeder
+        },
+        Zugaenge_Radtrassen: {
+          title: 'Radtrassen Zugänge',
+          geojson: Zugaenge_Bahntrassenradwege
+        },
+        Naturschutzgebiete: {
+          title: 'Naturschutzgebiete',
+          geojson: null
+        },
+        Radrouten: {
+          title: 'Radrouten',
+          geojson: null
+        },
+        Stadtbezirke: {
+          title: 'Stadtteile',
+          geojson: null
+        }
       },
       fshow: {
         mundraub: false,
@@ -123,7 +156,7 @@
             .get("Radrouten_EPSG4326_KML.json")
             .then(response => {
               console.log("Loading:");
-              this.fdata.Radrouten = response.data;
+              this.fdata.Radrouten.geojson = response.data;
 
             })
             .catch(error => {
@@ -137,7 +170,7 @@
             .get("Naturschutzgebiete_EPSG4326_JSON.json")
             .then(response => {
               console.log("Loading:");
-              this.fdata.Naturschutzgebiete = response.data;
+              this.fdata.Naturschutzgebiete.geojson = response.data;
 
             })
             .catch(error => {
@@ -151,7 +184,7 @@
             .get("Stadtbezirke_EPSG4326_JSON.json")
             .then(response => {
               console.log("Loading:");
-              this.fdata.Stadtbezirke = response.data;
+              this.fdata.Stadtbezirke.geojson = response.data;
 
             })
             .catch(error => {
