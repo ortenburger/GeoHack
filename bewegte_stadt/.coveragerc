@@ -1,0 +1,5 @@
+[run]
+include = bewegte_stadt/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
