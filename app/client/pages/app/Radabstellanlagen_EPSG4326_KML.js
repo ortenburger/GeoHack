@@ -2367,13 +2367,6 @@ var Radabstellanlagen = {
       },
       {
          "type" : "Feature",
-         "properties" : {
-            "ANZAHL_ABS" : "0",
-            "ANZAHL_BÜG" : "0"
-         }
-      },
-      {
-         "type" : "Feature",
          "geometry" : {
             "type" : "Point",
             "coordinates" : [
@@ -2871,4 +2864,3 @@ var Radabstellanlagen = {
 export {
   Radabstellanlagen
 }
-
