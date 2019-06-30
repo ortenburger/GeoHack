@@ -42,6 +42,11 @@
                                         <v-layout column style="text-align: center">
 
                                             <v-flex v-for="(val1,key1) in val.properties">
+
+                                                <a v-if="key1==='node_id'"
+                                                   target="_blank"
+                                                   :href="'https://mundraub.org/map?nid='+val1">LINK</a>
+                                                <br/>
                                                 {{key1}}:{{val1}}
                                             </v-flex>
                                         </v-layout>
@@ -64,6 +69,37 @@
                         </div>
 
                     </div>
+                    <l-marker :lat-lng="[
+                    routes.features[0].geometry.coordinates[0][1],
+                    routes.features[0].geometry.coordinates[0][0],
+                    ]">
+                        <l-icon
+                                :icon-anchor=" [30/2, 30/2]"
+                        >
+                            <div style="font-size: 18px">🏡️</div>
+
+                            <!--<v-img height="30" width="30" :src="source[toggle_exclusive].logo"/>-->
+                        </l-icon>
+                    </l-marker>
+                    <l-marker :lat-lng="[
+                    routes.features[0].geometry.coordinates[routes.features[0].geometry.coordinates.length-1][1],
+                    routes.features[0].geometry.coordinates[routes.features[0].geometry.coordinates.length-1][0],
+                    ]">
+                        <l-icon
+                                :icon-anchor=" [30/2, 30/2]"
+                        >
+                            <div style="font-size: 18px">🏊‍♀️</div>
+
+                            <!--<v-img height="30" width="30" :src="source[toggle_exclusive].logo"/>-->
+                        </l-icon>
+                    </l-marker>
+                    <l-geo-json
+                            :geojson="routes.features[0]"
+                            :options-style="styleFunction"
+                    >
+
+                    </l-geo-json>
+
                     <!--END MARKERS FOR FILTERS-->
                 </l-map>
             </no-ssr>
@@ -82,6 +118,7 @@
   import {Schwebebahnhoefe} from "./Schwebebahnhoefe_EPSG4326_JSON.js";
   import {Verleih_E_Fahrraeder} from "./Verleih-E-Fahrraeder_EPSG4326_KML.js";
   import {Zugaenge_Bahntrassenradwege} from "./Zugaenge-Bahntrassenradwege-Punkte_EPSG4326_KML.js";
+  import {routes} from "./routes.js";
 
 
   export default {
@@ -89,6 +126,7 @@
     data: () => ({
       // Travel time describes the stage on which it is traveling
       datasets_filter: null,
+      routes: routes,
       fdata: {
         mundraub: {
           title: 'Mundraub',
@@ -149,7 +187,10 @@
         Stadtbezirke: false,
         // Tempo30: false,
       },
-      center: [51.2917076298, 7.2510191991],
+      center: [
+        routes.features[0].geometry.coordinates[0][1],
+        routes.features[0].geometry.coordinates[0][0]
+      ],
       loading: false,
     }),
     methods: {
@@ -244,7 +285,16 @@
         return (feature, layer) => {
           let tool_tip = "";
           for (let key in feature.properties) {
-            tool_tip = tool_tip + "<div>" + key + ":" + feature.properties[key] + " </div>"
+            if (key === "node_id") {
+              let a = "<a href='https://mundraub.org/map?nid="
+                  + feature.properties[key]
+                  + "'>LINK</a>";
+              tool_tip = tool_tip + "<div>" + key + ":" + a + " </div>"
+            }
+            else {
+              tool_tip = tool_tip + "<div>" + key + ":" + feature.properties[key] + " </div>"
+            }
+
           }
           layer.bindTooltip(
               tool_tip,
