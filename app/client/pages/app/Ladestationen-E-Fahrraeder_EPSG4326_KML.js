@@ -1,0 +1,136 @@
+var charg_station_bikes = {
+   "name" : "Ladestationen-E-Fahrraeder_EPSG4326_KML",
+   "type" : "FeatureCollection",
+   "features" : [
+      {
+         "properties" : {
+            "Status" : "online",
+            "Standort" : "Fertighauswelt Wuppertal"
+         },
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.24953103249294,
+               51.3114059835629
+            ]
+         },
+         "type" : "Feature"
+      },
+      {
+         "type" : "Feature",
+         "geometry" : {
+            "coordinates" : [
+               7.13214300881783,
+               51.2065789804065
+            ],
+            "type" : "Point"
+         },
+         "properties" : {
+            "Standort" : "Evangelische Gemeinde Emmaus",
+            "Status" : "online"
+         }
+      },
+      {
+         "type" : "Feature",
+         "geometry" : {
+            "coordinates" : [
+               7.2253724888066,
+               51.2803042125223
+            ],
+            "type" : "Point"
+         },
+         "properties" : {
+            "Status" : "online",
+            "Standort" : "Skaterhalle Wicked Woods"
+         }
+      },
+      {
+         "type" : "Feature",
+         "properties" : {
+            "Status" : "online",
+            "Standort" : "Bergische Museumsbahn"
+         },
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.11212082305516,
+               51.1913497542293
+            ]
+         }
+      },
+      {
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.15139505702322,
+               51.232292999881
+            ]
+         },
+         "properties" : {
+            "Status" : "online",
+            "Standort" : "Station Natur und Umwelt"
+         },
+         "type" : "Feature"
+      },
+      {
+         "geometry" : {
+            "coordinates" : [
+               7.18765532118653,
+               51.2450084007983
+            ],
+            "type" : "Point"
+         },
+         "properties" : {
+            "Status" : "online",
+            "Standort" : "Bauhaus"
+         },
+         "type" : "Feature"
+      },
+      {
+         "type" : "Feature",
+         "geometry" : {
+            "coordinates" : [
+               7.13246246730238,
+               51.2454751653967
+            ],
+            "type" : "Point"
+         },
+         "properties" : {
+            "Status" : "online",
+            "Standort" : "Villa Media"
+         }
+      },
+      {
+         "type" : "Feature",
+         "properties" : {
+            "Status" : "online",
+            "Standort" : "Einkaufszentrum Aktenta Vohwinkel"
+         },
+         "geometry" : {
+            "coordinates" : [
+               7.07045612503649,
+               51.2319353704407
+            ],
+            "type" : "Point"
+         }
+      },
+      {
+         "properties" : {
+            "Status" : "online",
+            "Standort" : "RENT A BIKE WUPPERTAL ESKESBERG"
+         },
+         "geometry" : {
+            "type" : "Point",
+            "coordinates" : [
+               7.10750513757683,
+               51.2587282595627
+            ]
+         },
+         "type" : "Feature"
+      }
+   ]
+};
+
+export {
+  charg_station_bikes
+}
