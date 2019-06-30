@@ -1,33 +1,36 @@
 <template>
     <v-app>
         <v-container>
-            <v-layout>
-                <v-switch v-model="show" :label="`Anzeigen: ${show.toString()}`"></v-switch>
-                <v-btn @click="get_data" :disabled="loading">
-                    get_line
-                </v-btn>
-                <v-btn @click="get_coords" :disabled="loading">
-                    get_coords
-                </v-btn>
-                <v-text-field
-                        v-model="address"
-                        label="Enter the destination address here"
-                ></v-text-field>
-
+            <v-layout column>
+                <!--<v-switch v-model="show" :label="`Anzeigen: ${show.toString()}`"></v-switch>-->
                 <v-layout row>
-                    <v-flex>
+                    <v-btn small @click="get_data" :disabled="loading">
+                        Neue Route Berechnen
+                    </v-btn>
+                    <v-btn small @click="get_coords" :disabled="loading">
+                        Zielcoordinaten
+                    </v-btn>
+                </v-layout>
+
+
+                <v-layout row wrap>
+                    <v-text-field
+                            v-model="address"
+                            label="Zieladresse"
+                    ></v-text-field>
+                    <v-flex v-if="false">
                         <v-text-field
                                 v-model="origin"
                                 label="Origin"
                         ></v-text-field>
                     </v-flex>
-                    <v-flex>
+                    <v-flex shrink>
                         <v-text-field
                                 v-model="dest"
-                                label="Destination"
+                                label="Ziel Coordinaten"
                         ></v-text-field>
                     </v-flex>
-                    <v-flex>
+                    <v-flex shrink>
                         <v-select
                                 value="Transport"
                                 v-model="trasport"
@@ -40,7 +43,7 @@
 
 
             <no-ssr>
-                <l-map class="mini-map" :zoom="13" :center="center">
+                <l-map class="mini-map" :zoom="14" :center="center">
                     <l-tile-layer
                             url="https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"
                     ></l-tile-layer>
@@ -63,6 +66,30 @@
                     >
 
                     </l-geo-json>
+                    <l-marker :lat-lng="[
+                    routes.features[0].geometry.coordinates[0][1],
+                    routes.features[0].geometry.coordinates[0][0],
+                    ]">
+                        <l-icon
+                                :icon-anchor=" [30/2, 30/2]"
+                        >
+                            <div style="font-size: 18px">🏡️</div>
+
+                            <!--<v-img height="30" width="30" :src="source[toggle_exclusive].logo"/>-->
+                        </l-icon>
+                    </l-marker>
+                    <l-marker :lat-lng="[
+                    routes.features[0].geometry.coordinates[routes.features[0].geometry.coordinates.length-1][1],
+                    routes.features[0].geometry.coordinates[routes.features[0].geometry.coordinates.length-1][0],
+                    ]">
+                        <l-icon
+                                :icon-anchor=" [30/2, 30/2]"
+                        >
+                            <div style="font-size: 18px">🏊‍♀️</div>
+
+                            <!--<v-img height="30" width="30" :src="source[toggle_exclusive].logo"/>-->
+                        </l-icon>
+                    </l-marker>
                     <l-geo-json
                             :geojson="routes.features[transport_idx]"
                             :options-style="styleFunction"
@@ -203,7 +230,7 @@
       show: false,
       geojson: null,
       stadteile: null,
-      transport_idx:0,
+      transport_idx: 0,
 
       trasport: "car",
       markers: [[], [], []],
@@ -217,7 +244,10 @@
         this.loading = true;
         this.geojsons = [];
 
-        var url_1 = "https://graphhopper.com/api/1//route?point=" + this.origin + "&point=" + this.dest + "&type=geojson&locale=de-DE&vehicle=" + this.trasport + "&weighting=fastest&elevation=true&key=" + app_key + "&instructions=false&points_encoded=false";
+        var url_1 = "https://graphhopper.com/api/1//route?point=" +
+            routes.features[0].geometry.coordinates[0][1] + "," +
+            routes.features[0].geometry.coordinates[0][0] +
+            "&point=" + this.dest + "&type=geojson&locale=de-DE&vehicle=" + this.trasport + "&weighting=fastest&elevation=true&key=" + app_key + "&instructions=false&points_encoded=false";
         axios
             .get(url_1)
             .then(response => {
@@ -225,7 +255,7 @@
               this.geojsons = response.data.paths[0].points;
               console.log(this.geojsons);
               this.loading = false;
-              this.center = [this.geojsons.coordinates[0][1], this.geojsons.coordinates[0][0]];
+              // this.center = [this.geojsons.coordinates[0][1], this.geojsons.coordinates[0][0]];
             })
             .catch(error => {
               // Handle Errors here.
@@ -268,12 +298,12 @@
 
     },
     computed: {
-      center(){
+      center() {
         // routes.features[this.transport_idx].geometry.coordinates[0]
         let coords = [
-            routes.features[0].geometry.coordinates[0][1],
-            routes.features[0].geometry.coordinates[0][0]
-        ]
+          routes.features[0].geometry.coordinates[0][1],
+          routes.features[0].geometry.coordinates[0][0]
+        ];
         return coords //[51.2917076298, 7.2510191991]
       },
 
