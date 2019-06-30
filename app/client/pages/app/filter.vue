@@ -10,7 +10,7 @@
                     v-for="(val,key) in fdata"
                     v-model="fshow[key]" :label="fdata[key].title"
                     v-if="!datasets_filter||datasets_filter===''||(datasets_filter&&key.toLowerCase().includes(datasets_filter.toLowerCase()))"
-                    style="display: inline-block; width: 33%;"
+                    style="display: inline-block; width: 33%; margin-top: 0"
             />
             <no-ssr>
                 <l-map class="mini-map" :zoom="12" :center="center">

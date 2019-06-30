@@ -73,22 +73,54 @@
                 </l-map>
             </no-ssr>
             <v-layout row>
-                <v-layout column>
+            <v-layout column>
+                <v-flex>
+                     <v-btn @click="transport_idx=2">
+                        🚶‍♀️
+                    </v-btn>
+                </v-flex>
+                <v-flex>
+                    0.97 km / 12 min.
+                </v-flex>
+                <v-flex>
+                    0 g/km CO<sub>2</sub>
+                </v-flex>
+                <v-flex>
+                    0 g CO<sub>2</sub>
+                </v-flex>
+            </v-layout>
+            <v-layout column>
                     <v-flex>
-                        <v-btn @click="transport_idx=2">
+                        <v-btn @click="transport_idx=0">
                             🚴‍
                         </v-btn>
                     </v-flex>
                     <v-flex>
-                        zeit
+                        1.38 km / 8 min.
                     </v-flex>
                     <v-flex>
-
-                        0.07
-                        0.12 / 0.25
-
+                      0 g/km CO<sub>2</sub>
+                    </v-flex>
+                    <v-flex>
+                      0 g CO<sub>2</sub>
                     </v-flex>
                 </v-layout>
+                <!--v-layout column>
+                    <v-flex>
+                        <v-btn @click="transport_idx=0">
+                            🚴‍🔄
+                        </v-btn>
+                    </v-flex>
+                    <v-flex>
+                        1.38 km / 8 min.
+                    </v-flex>
+                    <v-flex>
+                        0 g/km CO<sub>2</sub>
+                    </v-flex>
+                    <v-flex>
+                      0 g CO<sub>2</sub>
+                    </v-flex>
+                </v-layout-->
                 <v-layout column>
                     <v-flex>
                         <v-btn @click="transport_idx=1">
@@ -96,10 +128,29 @@
                         </v-btn>
                     </v-flex>
                     <v-flex>
-                        zeit
+                        1.41 km / 12 min.
                     </v-flex>
                     <v-flex>
-                        co2
+                        75 g/km CO<sub>2</sub>
+                    </v-flex>
+                    <v-flex>
+                      105.75 g CO<sub>2</sub>
+                    </v-flex>
+                </v-layout>
+                <v-layout column>
+                    <v-flex>
+                        <v-btn @click="transport_idx=0">
+                            🛵
+                        </v-btn>
+                    </v-flex>
+                    <v-flex>
+                        1.38 km / 4 min.
+                    </v-flex>
+                    <v-flex>
+                        77 g/km CO<sub>2</sub>
+                    </v-flex>
+                    <v-flex>
+                        106.26 g CO<sub>2</sub>
                     </v-flex>
                 </v-layout>
                 <v-layout column>
@@ -110,52 +161,15 @@
                         </v-btn>
                     </v-flex>
                     <v-flex>
-                        zeit
+                        1.38 km / 4 min.
                     </v-flex>
                     <v-flex>
-                        co2
+                        127 g/km CO<sub>2</sub>
+                    </v-flex>
+                    <v-flex>
+                        175.26 g CO<sub>2</sub>
                     </v-flex>
                 </v-layout>
-                <v-layout column>
-                    <v-flex>
-                         <v-btn @click="transport_idx=2">
-                            🚶‍♀️
-                        </v-btn>
-                    </v-flex>
-                    <v-flex>
-                        zeit
-                    </v-flex>
-                    <v-flex>
-                        co2
-                    </v-flex>
-                </v-layout>
-                <v-layout column>
-                    <v-flex>
-                        <v-btn @click="transport_idx=2">
-                            🛵
-                        </v-btn>
-                    </v-flex>
-                    <v-flex>
-                        zeit
-                    </v-flex>
-                    <v-flex>
-                        co2
-                    </v-flex>
-                </v-layout>
-                <v-layout column>
-                    <v-flex>
-                        <v-btn @click="transport_idx=2">
-                            🚴‍🔄
-                        </v-btn>
-                    </v-flex>
-                    <v-flex>
-                        zeit
-                    </v-flex>
-                    <v-flex>
-                        co2
-                    </v-flex>
-                </v-layout>
-
             </v-layout>
         </v-container>
     </v-app>
