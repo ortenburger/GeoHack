@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "routes",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { }, "geometry": { "type": "LineString", "coordinates": [ [ 7.144986, 51.266556 ], [ 7.144543, 51.266302 ], [ 7.143744, 51.266226 ], [ 7.144024, 51.264764 ], [ 7.146865, 51.26497 ], [ 7.147237, 51.264991 ], [ 7.148466, 51.270481 ], [ 7.149245, 51.272802 ], [ 7.148028, 51.272581 ], [ 7.14617, 51.274029 ] ] } }
+]
+}

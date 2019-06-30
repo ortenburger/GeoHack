@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "route_points",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "route_fid": 0, "route_point_id": 0, "desc": "continue onto Mirker Straße", "gh_distance": 45.6, "gh_time": 8214, "gh_direction": "SW", "gh_azimuth": 240.4, "gh_sign": 0 }, "geometry": { "type": "Point", "coordinates": [ 7.144986, 51.266556 ] } },
+{ "type": "Feature", "properties": { "route_fid": 0, "route_point_id": 1, "desc": "turn right onto Mirker Straße", "gh_distance": 56.3, "gh_time": 8099, "gh_direction": "W", "gh_azimuth": 261.31, "gh_sign": 2 }, "geometry": { "type": "Point", "coordinates": [ 7.144543, 51.266302 ] } },
+{ "type": "Feature", "properties": { "route_fid": 0, "route_point_id": 2, "desc": "turn left onto Neue Nordstraße", "gh_distance": 163.7, "gh_time": 23567, "gh_direction": "S", "gh_azimuth": 173.16, "gh_sign": -2 }, "geometry": { "type": "Point", "coordinates": [ 7.143744, 51.266226 ] } },
+{ "type": "Feature", "properties": { "route_fid": 0, "route_point_id": 3, "desc": "turn left onto Wiesenstraße", "gh_distance": 199.0, "gh_time": 28654, "gh_direction": "E", "gh_azimuth": 83.4, "gh_sign": -2 }, "geometry": { "type": "Point", "coordinates": [ 7.144024, 51.264764 ] } },
+{ "type": "Feature", "properties": { "route_fid": 0, "route_point_id": 4, "desc": "continue onto Wiesenstraße", "gh_distance": 26.0, "gh_time": 3739, "gh_direction": "E", "gh_azimuth": 84.92, "gh_sign": 0 }, "geometry": { "type": "Point", "coordinates": [ 7.146865, 51.26497 ] } },
+{ "type": "Feature", "properties": { "route_fid": 0, "route_point_id": 5, "desc": "turn left onto Uellendahler Straße, L 70", "gh_distance": 621.4, "gh_time": 49707, "gh_direction": "N", "gh_azimuth": 11.9, "gh_sign": -2 }, "geometry": { "type": "Point", "coordinates": [ 7.147237, 51.264991 ] } },
+{ "type": "Feature", "properties": { "route_fid": 0, "route_point_id": 6, "desc": "continue onto Uellendahler Straße, L 70", "gh_distance": 265.0, "gh_time": 21199, "gh_direction": "N", "gh_azimuth": 3.31, "gh_sign": 0 }, "geometry": { "type": "Point", "coordinates": [ 7.148466, 51.270481 ] } },
+{ "type": "Feature", "properties": { "route_fid": 0, "route_point_id": 7, "desc": "turn left onto In der Mirke", "gh_distance": 89.9, "gh_time": 12949, "gh_direction": "W", "gh_azimuth": 284.0, "gh_sign": -2 }, "geometry": { "type": "Point", "coordinates": [ 7.149245, 51.272802 ] } },
+{ "type": "Feature", "properties": { "route_fid": 0, "route_point_id": 8, "desc": "turn right onto In der Mirke", "gh_distance": 252.9, "gh_time": 36413, "gh_direction": "N", "gh_azimuth": 346.95, "gh_sign": 2 }, "geometry": { "type": "Point", "coordinates": [ 7.148028, 51.272581 ] } },
+{ "type": "Feature", "properties": { "route_fid": 0, "route_point_id": 9, "gh_distance": 0.0, "gh_time": 0, "gh_sign": 4 }, "geometry": { "type": "Point", "coordinates": [ 7.14617, 51.274029 ] } }
+]
+}
