@@ -236,7 +236,7 @@
       markers: [[], [], []],
 
       loading: false,
-      geojsons: [{type: "Point", coordinates: [7.2510191991, 51.2917076298]}]
+      geojsons: null
     }),
     methods: {
       //Calculating route with Graphhopper
