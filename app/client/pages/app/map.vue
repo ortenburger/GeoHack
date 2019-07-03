@@ -99,24 +99,24 @@
 
                 </l-map>
             </no-ssr>
-            <v-layout row>
-            <v-layout column>
-                <v-flex>
-                     <v-btn @click="transport_idx=2">
-                        🚶‍♀️
-                    </v-btn>
-                </v-flex>
-                <v-flex>
-                    0.97 km / 12 min.
-                </v-flex>
-                <v-flex>
-                    0 g/km CO<sub>2</sub>
-                </v-flex>
-                <v-flex>
-                    0 g CO<sub>2</sub>
-                </v-flex>
-            </v-layout>
-            <v-layout column>
+            <v-layout row v-if="!geojsons">
+                <v-layout column>
+                    <v-flex>
+                        <v-btn @click="transport_idx=2">
+                            🚶‍♀️
+                        </v-btn>
+                    </v-flex>
+                    <v-flex>
+                        0.97 km / 12 min.
+                    </v-flex>
+                    <v-flex>
+                        0 g/km CO<sub>2</sub>
+                    </v-flex>
+                    <v-flex>
+                        0 g CO<sub>2</sub>
+                    </v-flex>
+                </v-layout>
+                <v-layout column>
                     <v-flex>
                         <v-btn @click="transport_idx=0">
                             🚴‍
@@ -126,10 +126,10 @@
                         1.38 km / 8 min.
                     </v-flex>
                     <v-flex>
-                      0 g/km CO<sub>2</sub>
+                        0 g/km CO<sub>2</sub>
                     </v-flex>
                     <v-flex>
-                      0 g CO<sub>2</sub>
+                        0 g CO<sub>2</sub>
                     </v-flex>
                 </v-layout>
                 <!--v-layout column>
@@ -161,7 +161,7 @@
                         75 g/km CO<sub>2</sub>
                     </v-flex>
                     <v-flex>
-                      105.75 g CO<sub>2</sub>
+                        105.75 g CO<sub>2</sub>
                     </v-flex>
                 </v-layout>
                 <v-layout column>
