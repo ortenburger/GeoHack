@@ -9,7 +9,7 @@
 		<jersey2.version>2.27</jersey2.version>
 		<jaxrs.version>2.1</jaxrs.version>
 		<shiro.version>1.4.0</shiro.version>
-		<spring.version>5.1.8.RELEASE</spring.version>
+		<spring.version>5.2.3.RELEASE</spring.version>
 		<springdata.version>2.1.9.RELEASE</springdata.version>
 		<hibernate.version>5.4.2.Final</hibernate.version>
 		
